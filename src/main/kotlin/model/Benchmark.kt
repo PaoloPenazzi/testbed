@@ -2,10 +2,20 @@ package model
 
 import kotlinx.serialization.Serializable
 
-interface Benchmark {
-    val simulator: Simulator
-    val input: String
-}
+@Serializable
+data class Benchmark(val strategy: Strategy,
+                     val simulators: List<Simulator>)
 
 @Serializable
-data class BenchmarkImpl(override val simulator: SimulatorImpl, override val input: String): Benchmark
+data class Strategy(val multiThreaded: Boolean,
+                    val executionOrder: List<String>)
+
+@Serializable
+data class Simulator(val name: String,
+                     val version: String,
+                     val scenarios: List<Scenario>)
+
+@Serializable
+data class Scenario(val name: String,
+                    val description: String,
+                    val input: String)
