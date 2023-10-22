@@ -1,0 +1,4 @@
+simulator:
+  name: "Alchemist"
+  version: "28.0.1"
+input: "src/main/yaml/simulation.yml"
