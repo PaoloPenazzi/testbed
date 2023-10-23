@@ -1,10 +1,7 @@
-import parsing.ParserImpl
+import controller.ControllerImpl
 
 fun main(args: Array<String>) {
-    println("Hello World!")
-    val parser = ParserImpl()
-    val benchmark = parser.parse("src/main/yaml/testbed-input.yml")
-    println(benchmark)
-    // val alchemistDriver = AlchemistDriver()
-    // alchemistDriver.runAlchemist()
+    // Run the controller
+    val controller = ControllerImpl()
+    controller.run("./src/main/yaml/testbed-input.yml")
 }
