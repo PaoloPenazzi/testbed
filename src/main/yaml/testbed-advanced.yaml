@@ -1,0 +1,30 @@
+Benchmark:
+  - SimulationStrategy:
+      Multithread: false
+      ExecutionOrder:
+        "1": Alchemist-Sapere-Tutorial
+        "2": NS3-Tutorial
+        "3": Alchemist-Protelis-Tutorial
+
+  - Simulator: NS3
+    SimulatorVersion: "3.29"
+    Scenarios:
+      - Scenario: NS3-Tutorial
+        Name: NS3 Tutorial
+        Description: A tutorial to NS3
+        Required:
+          SimulationFilePath: "src/main/resources/tutorial.cc"
+
+  - Simulator: Alchemist
+    SimulatorVersion: "28.0.1"
+    Scenarios:
+      - Scenario: Alchemist-Sapere-Tutorial
+        Name: Alchemist Sapere Tutorial
+        Description: A tutorial to Alchemist and Sapere incarnation
+        Required:
+          SimulationFilePath: "src/main/yaml/sapere-tutorial.yaml"
+      - Scenario: Alchemist-Protelis-Tutorial
+        Name: Alchemist Protelis Tutorial
+        Description: A tutorial to Alchemist and Protelis incarnation
+        Required:
+          SimulationFilePath: "src/main/yaml/protelis-tutorial.yaml"
