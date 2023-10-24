@@ -1,10 +1,8 @@
 package executors
 
-import it.unibo.alchemist.Alchemist
-
-class AlchemistDriver {
-    fun runAlchemist() {
+class Alchemist: SimulatorExecutor {
+    override fun run(input: String) {
         println("starting Alchemist...")
-        Alchemist.main(arrayOf("run", "./src/main/yaml/simulation.yml"))
+        println("Alchemist path $input")
     }
 }
