@@ -1,8 +1,7 @@
 package parsing
 
-import model.Benchmark
 import com.charleskorn.kaml.Yaml
-import model.BenchmarkImpl
+import model.Benchmark
 import java.io.File
 
 interface Parser {
@@ -12,6 +11,6 @@ interface Parser {
 class ParserImpl: Parser {
     override fun parse(path: String): Benchmark {
         val inputFile = File(path)
-        return Yaml.default.decodeFromString(BenchmarkImpl.serializer(), inputFile.readText())
+        return Yaml.default.decodeFromString(Benchmark.serializer(), inputFile.readText())
     }
 }
