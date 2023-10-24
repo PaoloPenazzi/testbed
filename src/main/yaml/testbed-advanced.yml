@@ -1,6 +1,6 @@
 Benchmark:
   - SimulationStrategy:
-      Multithread: false
+      Multithreaded: false
       ExecutionOrder:
         "1": Alchemist-Sapere-Tutorial
         "2": NS3-Tutorial
