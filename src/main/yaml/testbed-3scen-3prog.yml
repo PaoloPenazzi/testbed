@@ -11,15 +11,15 @@ simulators:
     scenarios:
       - name: NS3-Tutorial
         description: A tutorial to NS3
-        input: "src/main/resources/tutorial.cc"
+        scenarioConfiguration: "src/main/resources/tutorial.cc"
 
   - name: Alchemist
     version: "28.0.1"
     scenarios:
       - name: Alchemist-Sapere
         description: A tutorial to Alchemist and Sapere incarnation
-        input: "src/main/yaml/sapere-tutorial.yaml"
+        scenarioConfiguration: "src/main/yaml/alchemist-input.yml"
 
       - name: Alchemist-Protelis
         description: A tutorial to Alchemist and Protelis incarnation
-        input: "src/main/yaml/protelis-tutorial.yaml"
+        scenarioConfiguration: "src/main/yaml/alchemist-input.yml"

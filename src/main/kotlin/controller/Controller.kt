@@ -21,7 +21,7 @@ class ControllerImpl : Controller {
         val scenarioMap: Map<String, Pair<String, String>> = benchmark.simulators
             .flatMap { simulator ->
                 simulator.scenarios.map { scenario ->
-                    scenario.name to (simulator.name to scenario.input)
+                    scenario.name to (simulator.name to scenario.scenarioConfiguration)
                 }
             }
             .toMap()
