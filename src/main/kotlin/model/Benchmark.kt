@@ -18,4 +18,10 @@ data class Simulator(val name: String,
 @Serializable
 data class Scenario(val name: String,
                     val description: String,
-                    val input: String)
+                    val scenarioConfiguration: String,
+                    val programs: List<Program> = emptyList())
+
+@Serializable
+data class Program(val name: String,
+                   val description: String,
+                   val input: String)
