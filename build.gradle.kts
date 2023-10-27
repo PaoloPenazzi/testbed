@@ -26,7 +26,7 @@ dependencies {
     implementation("it.unibo.alchemist:alchemist-incarnation-protelis:28.4.3")
     implementation("it.unibo.alchemist:alchemist-incarnation-sapere:28.4.3")
     implementation("it.unibo.alchemist:alchemist-incarnation-scafi:28.4.3")
-    implementation("it.unibo.alchemist:alchemist-swingui:28.4.2")
+    implementation("it.unibo.alchemist:alchemist-swingui:28.4.3")
 }
 
 tasks.test {
