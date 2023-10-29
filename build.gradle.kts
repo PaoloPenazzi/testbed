@@ -21,6 +21,7 @@ sourceSets {
 
 dependencies {
     testImplementation(kotlin("test"))
+    implementation("org.yaml:snakeyaml:2.0")
     implementation("com.charleskorn.kaml:kaml:0.55.0")
     implementation("it.unibo.alchemist:alchemist:28.5.4")
     implementation("it.unibo.alchemist:alchemist-incarnation-protelis:28.5.4")

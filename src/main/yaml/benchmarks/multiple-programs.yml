@@ -1,15 +1,16 @@
 strategy:
   multiThreaded: false
   executionOrder:
-    - Alchemist-Protelis
+    - grid-random
+    - grid-gradient
 
 simulators:
   - name: Alchemist
     version: "28.0.1"
     scenarios:
-      - name: Alchemist-Protelis
+      - name: grid
         description: A tutorial to Alchemist and Protelis incarnation
-        scenarioConfiguration: "src/main/yaml/testbed-1scen-2prog.yml"
+        scenarioConfiguration: "src/main/yaml/grid.yml"
         programs:
           - name: gradient
             description: A gradient program
@@ -17,5 +18,4 @@ simulators:
 
           - name: random
             description: A random program
-            input: "src/main/yaml/gradient.yml"
-
+            input: "src/main/yaml/random.yml"
