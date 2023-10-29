@@ -95,7 +95,7 @@
       "val": 13
     },
     "molFilter": true,
-    "molString": "org:protelis:distanceTo",
+    "molString": "distanceTo",
     "molPropertyFilter": true,
     "property": "",
     "writingPropertyValue": false,

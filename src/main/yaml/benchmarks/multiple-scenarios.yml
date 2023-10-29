@@ -18,8 +18,8 @@ simulators:
     scenarios:
       - name: Alchemist-Sapere
         description: A tutorial to Alchemist and Sapere incarnation
-        scenarioConfiguration: "src/main/yaml/alchemist-input.yml"
+        scenarioConfiguration: "src/main/yaml/grid.yml"
 
       - name: Alchemist-Protelis
         description: A tutorial to Alchemist and Protelis incarnation
-        scenarioConfiguration: "src/main/yaml/alchemist-input.yml"
+        scenarioConfiguration: "src/main/yaml/grid.yml"
