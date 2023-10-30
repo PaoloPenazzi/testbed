@@ -30,3 +30,7 @@ deployments:
   programs:
     # Reference to the "gradient" list of programs
     *gradient
+
+terminate:
+  - type: AfterTime
+    parameters: 100

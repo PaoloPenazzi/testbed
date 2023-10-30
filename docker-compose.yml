@@ -1,9 +1,0 @@
-version: '1'
-
-services:
-  app:
-    container_name: testbed
-    build:
-      context: ./
-      dockerfile: Dockerfile
-    restart: always
