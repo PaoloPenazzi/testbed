@@ -24,7 +24,7 @@ dependencies {
     implementation("com.charleskorn.kaml:kaml:0.55.0")
     implementation("it.unibo.alchemist:alchemist:28.5.0")
     implementation("it.unibo.alchemist:alchemist-incarnation-protelis:28.5.0")
-    implementation("it.unibo.alchemist:alchemist-incarnation-sapere:28.4.4")
+    implementation("it.unibo.alchemist:alchemist-incarnation-sapere:28.5.0")
     implementation("it.unibo.alchemist:alchemist-incarnation-scafi:28.4.4")
     implementation("it.unibo.alchemist:alchemist-swingui:28.4.4")
 }
