@@ -11,17 +11,20 @@ infix fun Benchmark.addSimulator(simulator: Simulator): Benchmark {
 }
 
 @Serializable
-data class Strategy(val multiThreaded: Boolean,
-                    val executionOrder: List<String>)
+data class Strategy(val multiThreaded: Boolean = false,
+                    val executionOrder: List<String> = emptyList())
 
 @Serializable
 data class Simulator(val name: String,
                      val version: String,
-                     val scenarios: List<Scenario>)
+                     val scenarios: List<Scenario>) {
 
-infix fun Simulator.addScenario(scenario: Scenario): Simulator {
-    return this.copy(scenarios = scenarios + scenario)
+    infix fun addScenario(scenario: Scenario): Simulator {
+        return this.copy(scenarios = scenarios + scenario)
+    }
 }
+
+
 
 infix fun Simulator.removeScenario(scenario: Scenario): Simulator {
     return this.copy(scenarios = scenarios - scenario)

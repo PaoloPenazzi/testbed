@@ -20,30 +20,35 @@ class ParserImpl : Parser {
     }
 
     private fun addProgramsToScenarios(benchmark: Benchmark): Benchmark {
-        var flatBenchmark = benchmark.copy(simulators = emptyList())
-        benchmark.simulators.forEach { simulator ->
-            if (simulator.name == "Alchemist") {
-                var flatSimulator = simulator.copy(scenarios = emptyList())
-                simulator.scenarios.forEach { scenario ->
-                    if (scenario.input == "" && scenario.programs.isNotEmpty()) {
-                        scenario.programs.forEach { program ->
-                            val scenarioPath = "src/main/yaml/scenarios/${scenario.name}.yml"
-                            val programPath = "src/main/yaml/programs/${program.name}.yml"
-                            mergeYamls(scenarioPath, programPath)
-                            val inputPath = "src/main/yaml/generated/${scenario.name}-${program.name}.yml"
-                            flatSimulator = flatSimulator addScenario (scenario
-                                    withInput inputPath
-                                    withPrograms emptyList()
-                                    withName "${scenario.name}-${program.name}")
+        return benchmark.copy(
+            simulators = benchmark.simulators.map { simulator ->
+                if (simulator.name == "Alchemist") {
+                    simulator.copy(
+                        scenarios = simulator.scenarios.fold(emptyList()) { acc, scenario ->
+                            if (scenario.input == "" && scenario.programs.isNotEmpty()) {
+                                acc + scenario.programs.map { program ->
+                                    val scenarioPath = "src/main/yaml/scenarios/${scenario.name}.yml"
+                                    val programPath = "src/main/yaml/programs/${program.name}.yml"
+                                    mergeYamls(scenarioPath, programPath)
+                                    val inputPath = "src/main/yaml/generated/${scenario.name}-${program.name}.yml"
+                                    Scenario(
+                                        name = "${scenario.name}-${program.name}",
+                                        description = scenario.description,
+                                        scenarioConfiguration = scenario.scenarioConfiguration,
+                                        input = inputPath,
+                                        programs = emptyList()
+                                    )
+                                }
+                            } else {
+                                acc
+                            }
                         }
-                    }
+                    )
+                } else {
+                    simulator
                 }
-                flatBenchmark = flatBenchmark addSimulator flatSimulator
-            } else {
-                flatBenchmark = flatBenchmark addSimulator simulator
             }
-        }
-        return flatBenchmark
+        )
     }
 
     private fun mergeYamls(scenarioPath: String, programPath: String) {
@@ -52,7 +57,7 @@ class ParserImpl : Parser {
         val programName = programPath.split("/").last().split(".").first()
         val scenarioYAML = String(Files.readAllBytes(Paths.get(scenarioPath)))
         val programYAML = String(Files.readAllBytes(Paths.get(programPath)))
-        val scenarioData : LinkedHashMap<String, Any> = yaml.load(scenarioYAML)
+        val scenarioData: LinkedHashMap<String, Any> = yaml.load(scenarioYAML)
         val programData: List<LinkedHashMap<String, Any>> = yaml.load(programYAML)
         val programsSection: LinkedHashMap<String, Any> = LinkedHashMap()
         programsSection["programs"] = programData
