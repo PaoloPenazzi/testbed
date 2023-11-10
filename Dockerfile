@@ -7,10 +7,10 @@ WORKDIR /app
 # Copy your Kotlin application files to the container
 COPY . /app
 
-RUN cd app/ ; chmod +x gradlew
+RUN chmod +x gradlew
 
 # Run the Gradle build
-RUN ./gradlew build
+RUN ./gradlew run
 
 # Command to run your application
 CMD ["java", "-jar", "build/libs/testbed-0.1.0.jar"]
