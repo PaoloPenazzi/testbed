@@ -1,7 +1,6 @@
 strategy:
   multiThreaded: false
   executionOrder:
-    - Alchemist-Sapere
     - NS3-Tutorial
     - Alchemist-Protelis
 
@@ -11,15 +10,11 @@ simulators:
     scenarios:
       - name: NS3-Tutorial
         description: A tutorial to NS3
-        scenarioConfiguration: "src/main/resources/tutorial.cc"
+        input: "src/main/resources/tutorial.cc"
 
   - name: Alchemist
     version: "28.0.1"
     scenarios:
-      - name: Alchemist-Sapere
-        description: A tutorial to Alchemist and Sapere incarnation
-        scenarioConfiguration: "src/main/yaml/grid.yml"
-
       - name: Alchemist-Protelis
         description: A tutorial to Alchemist and Protelis incarnation
-        scenarioConfiguration: "src/main/yaml/grid.yml"
+        input: "src/main/yaml/protelis-tutorial.yml"

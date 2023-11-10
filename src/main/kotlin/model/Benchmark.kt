@@ -34,7 +34,7 @@ infix fun Simulator.removeScenario(scenario: Scenario): Simulator {
 data class Scenario(val name: String,
                     val description: String,
                     val input: String = "",
-                    val scenarioConfiguration: String,
+                    val scenarioConfiguration: String = "",
                     val programs: List<Program> = emptyList())
 
 infix fun Scenario.withInput(input: String): Scenario {
