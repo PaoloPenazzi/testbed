@@ -3,6 +3,7 @@ strategy:
   executionOrder:
     - NS3-Tutorial
     - Alchemist-Protelis
+    - Alchemist-Sapere
 
 simulators:
   - name: NS3
@@ -17,4 +18,8 @@ simulators:
     scenarios:
       - name: Alchemist-Protelis
         description: A tutorial to Alchemist and Protelis incarnation
-        input: "src/main/yaml/protelis-tutorial.yml"
+        input: "src/main/yaml/scenarios/protelis-tutorial.yml"
+
+      - name: Alchemist-Sapere
+        description: A tutorial to Alchemist and Sapere incarnation
+        input: "src/main/yaml/scenarios/sapere-tutorial.yml"
