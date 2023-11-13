@@ -27,6 +27,7 @@ class ControllerImpl : Controller {
             .toMap()
        scenarioNameOrder.forEach { scenarioName ->
            val (simulatorName, inputPath) = scenarioMap[scenarioName]!!
+
            createExecutor(simulatorName, inputPath)
        }
     }
@@ -37,6 +38,8 @@ class ControllerImpl : Controller {
             "NS3" -> executors.NS3()
             else -> throw IllegalArgumentException("Simulator $simulatorName not found")
         }
-        driver.run(inputPath)
+        Thread{
+            driver.run(inputPath)
+        }.start()
     }
 }

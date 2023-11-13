@@ -40,7 +40,7 @@ class ParserImpl : Parser {
                                     )
                                 }
                             } else {
-                                acc
+                                acc + scenario
                             }
                         }
                     )
