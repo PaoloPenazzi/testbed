@@ -7,14 +7,12 @@ strategy:
 
 simulators:
   - name: NetLogo
-    version: "3.29"
     scenarios:
       - name: NetLogo-Tutorial
         description: A tutorial to NetLogo
         input: ""
 
   - name: Alchemist
-    version: "28.0.1"
     scenarios:
       - name: Alchemist-Protelis
         description: A tutorial to Alchemist and Protelis incarnation
