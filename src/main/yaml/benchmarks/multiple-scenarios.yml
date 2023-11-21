@@ -1,17 +1,17 @@
 strategy:
   multiThreaded: false
   executionOrder:
-    - NS3-Tutorial
+    - NetLogo-Tutorial
     - Alchemist-Protelis
     - Alchemist-Sapere
 
 simulators:
-  - name: NS3
+  - name: NetLogo
     version: "3.29"
     scenarios:
-      - name: NS3-Tutorial
-        description: A tutorial to NS3
-        input: "src/main/resources/tutorial.cc"
+      - name: NetLogo-Tutorial
+        description: A tutorial to NetLogo
+        input: ""
 
   - name: Alchemist
     version: "28.0.1"
@@ -23,3 +23,7 @@ simulators:
       - name: Alchemist-Sapere
         description: A tutorial to Alchemist and Sapere incarnation
         input: "src/main/yaml/scenarios/sapere-tutorial.yml"
+
+# duration
+# repetitions
+# some kind of metric and post-processing to diplay to the user
