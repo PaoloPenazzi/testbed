@@ -36,6 +36,7 @@ class ControllerImpl : Controller {
         val driver: SimulatorExecutor = when (simulatorName) {
             "Alchemist" -> executors.Alchemist()
             "NS3" -> executors.NS3()
+            "NetLogo" -> executors.NetLogo()
             else -> throw IllegalArgumentException("Simulator $simulatorName not found")
         }
         Thread{
