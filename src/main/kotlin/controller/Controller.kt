@@ -3,6 +3,7 @@ package controller
 import executors.SimulatorExecutor
 import model.Benchmark
 import parsing.ParserImpl
+import kotlinx.coroutines.*
 
 interface Controller {
     fun run(inputPath: String)
@@ -27,8 +28,7 @@ class ControllerImpl : Controller {
             .toMap()
        scenarioNameOrder.forEach { scenarioName ->
            val (simulatorName, inputPath) = scenarioMap[scenarioName]!!
-
-           createExecutor(simulatorName, inputPath)
+           runBlocking { createExecutor(simulatorName, inputPath) }
        }
     }
 
@@ -39,8 +39,6 @@ class ControllerImpl : Controller {
             "NetLogo" -> executors.NetLogo()
             else -> throw IllegalArgumentException("Simulator $simulatorName not found")
         }
-        Thread{
-            driver.run(inputPath)
-        }.start()
+        driver.run(inputPath)
     }
 }
