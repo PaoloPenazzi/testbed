@@ -32,3 +32,5 @@ out/
 .DS_Store
 
 NetLogo 6.2.0/
+
+*.jar
