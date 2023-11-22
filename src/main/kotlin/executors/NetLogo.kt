@@ -20,7 +20,7 @@ class NetLogo: SimulatorExecutor {
                 println(line)
             }
             process.waitFor()
-            println("[TESTEBED] NetLogo test run finished")
+            println("[TESTBED] NetLogo test run finished")
         } catch (e: Exception) {
             e.printStackTrace()
         }
