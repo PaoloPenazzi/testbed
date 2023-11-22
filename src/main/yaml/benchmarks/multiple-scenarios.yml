@@ -1,8 +1,8 @@
 strategy:
   multiThreaded: false
   executionOrder:
-    - NetLogo-Tutorial
     - Alchemist-Protelis
+    - NetLogo-Tutorial
     - Alchemist-Sapere
 
 simulators:
@@ -11,16 +11,19 @@ simulators:
       - name: NetLogo-Tutorial
         description: A tutorial to NetLogo
         input: ""
+        repetitions: 1
 
   - name: Alchemist
     scenarios:
       - name: Alchemist-Protelis
         description: A tutorial to Alchemist and Protelis incarnation
         input: "src/main/yaml/scenarios/protelis-tutorial.yml"
+        repetitions: 3
 
       - name: Alchemist-Sapere
         description: A tutorial to Alchemist and Sapere incarnation
         input: "src/main/yaml/scenarios/sapere-tutorial.yml"
+        repetitions: 3
 
 # duration
 # repetitions

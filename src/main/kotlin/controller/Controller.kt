@@ -19,17 +19,20 @@ class ControllerImpl : Controller {
     // Tricky method that simply calls createExecutor() in the right order
     private fun executeBenchmark(benchmark: Benchmark) {
         val scenarioNameOrder: List<String> = benchmark.strategy.executionOrder
-        val scenarioMap: Map<String, Pair<String, String>> = benchmark.simulators
+        val scenarioMap: Map<String, Triple<String, String, Int>> = benchmark.simulators
             .flatMap { simulator ->
                 simulator.scenarios.map { scenario ->
-                    scenario.name to (simulator.name to scenario.input)
+                    scenario.name to Triple(simulator.name, scenario.input, scenario.repetitions)
                 }
             }
             .toMap()
-       scenarioNameOrder.forEach { scenarioName ->
-           val (simulatorName, inputPath) = scenarioMap[scenarioName]!!
-           runBlocking { createExecutor(simulatorName, inputPath) }
-       }
+        println(scenarioMap)
+        scenarioNameOrder.forEach { scenarioName ->
+            val (simulatorName, inputPath) = scenarioMap[scenarioName]!!
+            for (i in 1..scenarioMap[scenarioName]!!.third) {
+                runBlocking { createExecutor(simulatorName, inputPath) }
+            }
+        }
     }
 
     private fun createExecutor(simulatorName: String, inputPath: String) {
