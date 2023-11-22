@@ -39,6 +39,7 @@ class ControllerImpl : Controller {
             "NetLogo" -> executors.NetLogo()
             else -> throw IllegalArgumentException("Simulator $simulatorName not found")
         }
+        println("[TESTBED] Running $simulatorName")
         driver.run(inputPath)
     }
 }
