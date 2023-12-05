@@ -4,8 +4,6 @@ var publishCmd = `
 `
 var config = require('semantic-release-preconfigured-conventional-commits');
 
-const releaseBranches = ["main"]
-
 config.plugins.push(
     [
         "@semantic-release/exec",
