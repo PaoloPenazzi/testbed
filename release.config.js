@@ -3,6 +3,9 @@ var publishCmd = `
 ./gradlew publishJsPackageToNpmjsRegistry || exit 4
 `
 var config = require('semantic-release-preconfigured-conventional-commits');
+
+const releaseBranches = ["main"]
+
 config.plugins.push(
     [
         "@semantic-release/exec",
