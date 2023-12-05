@@ -1,0 +1,12 @@
+strategy:
+  multiThreaded: false
+  executionOrder:
+    - Alchemist-Tutorial
+
+simulators:
+  - name: Alchemist
+    scenarios:
+      - name: Alchemist-Tutorial
+        description: A tutorial to Alchemist and Protelis incarnation
+        input: "src/commonMain/resources/alchemist/protelis-tutorial.yml"
+        repetitions: 1

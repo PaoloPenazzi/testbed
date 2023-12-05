@@ -1,23 +1,16 @@
-const config = require('semantic-release-preconfigured-conventional-commits')
-
-const publishCommands = `
-git tag -a -f \${nextRelease.version} \${nextRelease.version} -F CHANGELOG.md || exit 1
-git push --force origin \${nextRelease.version} || exit 2
+var publishCmd = `
+./gradlew -PstagingRepositoryId=\${process.env.STAGING_REPO_ID} releaseStagingRepositoryOnMavenCentral || exit 3
+./gradlew publishJsPackageToNpmjsRegistry || exit 4
 `
-
-const releaseBranches = ["main"]
-config.branches = releaseBranches
+var config = require('semantic-release-preconfigured-conventional-commits');
 config.plugins.push(
-    ["@semantic-release/exec", {
-        "publishCmd": publishCommands
-    }],
-    ["@semantic-release/github", {
-        "assets": [
-        ]
-    }],
-    ["@semantic-release/git", {
-        "assets": ["CHANGELOG.md", "package.json"],
-        "message": "chore(release)!: [skip ci] ${nextRelease.version} released"
-    }],
+    [
+        "@semantic-release/exec",
+        {
+            "publishCmd": publishCmd,
+        }
+    ],
+    "@semantic-release/github",
+    "@semantic-release/git",
 )
 module.exports = config

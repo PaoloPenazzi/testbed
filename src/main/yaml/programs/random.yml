@@ -1,5 +1,0 @@
-- time-distribution: 1
-  program: >
-    def aFunction() = 1
-    aFunction() * self.nextRandomDouble()
-- program: send
