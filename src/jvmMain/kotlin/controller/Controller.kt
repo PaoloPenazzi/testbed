@@ -4,6 +4,7 @@ import executors.SimulatorExecutor
 import model.Benchmark
 import parsing.ParserImpl
 import kotlinx.coroutines.*
+import reader.ResultReader
 
 interface Controller {
     fun run(inputPath: String)
@@ -32,6 +33,7 @@ class ControllerImpl : Controller {
             for (i in 1..scenarioMap[scenarioName]!!.third) {
                 runBlocking { createExecutor(simulatorName, inputPath) }
             }
+            createReader(simulatorName)
         }
     }
 
@@ -43,5 +45,13 @@ class ControllerImpl : Controller {
         }
         println("[TESTBED] Running $simulatorName")
         driver.run(inputPath)
+    }
+
+    private fun createReader(simulatorName: String) {
+        val reader: ResultReader = when (simulatorName) {
+            "Alchemist" -> reader.AlchemistResultReaderImpl()
+            else -> throw IllegalArgumentException("Simulator $simulatorName not found")
+        }
+        reader.read()
     }
 }

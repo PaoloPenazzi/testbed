@@ -10,3 +10,4 @@ simulators:
         description: A tutorial to Alchemist and Protelis incarnation
         input: "src/commonMain/resources/alchemist/protelis-tutorial.yml"
         repetitions: 1
+        duration: 10
