@@ -11,5 +11,9 @@ deployments:
     program: |
       def aFunction() = 1 aFunction() * self.nextRandomDouble()
   - {program: send}
+export:
+- type: CSVExporter
+  parameters: {fileNameRoot: test_export, interval: 2, exportPath: ./}
+  data: [time]
 terminate:
 - {type: AfterTime, parameters: 10}

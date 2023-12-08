@@ -25,7 +25,6 @@ class ParserImpl : Parser {
                 }
             }
         }
-
         return benchmark
     }
 
