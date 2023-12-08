@@ -11,4 +11,5 @@ local.properties
 
 NetLogo-6.4.0-64/
 
+*.csv
 *.jar
