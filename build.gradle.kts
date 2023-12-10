@@ -37,7 +37,7 @@ kotlin {
             dependencies {
                 implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3")
                 implementation("org.yaml:snakeyaml:2.2")
-                implementation("com.charleskorn.kaml:kaml:0.55.0")
+                implementation("com.charleskorn.kaml:kaml:0.56.0")
             }
         }
         val commonTest by getting {
