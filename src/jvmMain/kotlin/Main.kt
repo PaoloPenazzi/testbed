@@ -1,4 +1,6 @@
 import controller.ControllerImpl
+import reader.AlchemistResultReader
+import reader.AlchemistResultReaderImpl
 
 fun main(args: Array<String>) {
     // Run the controller

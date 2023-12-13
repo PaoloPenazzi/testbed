@@ -1,5 +1,5 @@
 package reader
 
 interface ResultReader {
-    fun read()
+    fun read(path: String)
 }
