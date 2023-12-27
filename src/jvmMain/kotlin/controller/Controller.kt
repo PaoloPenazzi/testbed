@@ -33,7 +33,7 @@ class ControllerImpl : Controller {
             for (i in 1..scenarioMap[scenarioName]!!.third) {
                 runBlocking { createExecutor(simulatorName, inputPath) }
             }
-            //createReader(simulatorName)
+            createReader(simulatorName)
         }
     }
 
@@ -52,6 +52,6 @@ class ControllerImpl : Controller {
             "Alchemist" -> reader.AlchemistResultReaderImpl()
             else -> throw IllegalArgumentException("Simulator $simulatorName not found")
         }
-        reader.read()
+        reader.read("./export.csv")
     }
 }

@@ -35,7 +35,7 @@ kotlin {
     sourceSets {
         val commonMain by getting {
             dependencies {
-                implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3")
+                implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.8.0-RC")
                 implementation("org.yaml:snakeyaml:2.2")
                 implementation("com.charleskorn.kaml:kaml:0.55.0")
                 implementation("com.opencsv:opencsv:5.9")
