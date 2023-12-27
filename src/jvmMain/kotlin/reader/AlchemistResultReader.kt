@@ -13,6 +13,7 @@ class AlchemistResultReaderImpl : AlchemistResultReader {
         clearCSV(path)
         formatHeaders(path)
         val values = getValues(path)
+        println(values)
     }
 
     private fun clearCSV(path: String) {
@@ -38,8 +39,8 @@ class AlchemistResultReaderImpl : AlchemistResultReader {
         Files.write(Paths.get(path), modifiedLines, StandardCharsets.UTF_8)
     }
 
-    private fun getValues(path: String): Map<String, List<String>> {
-        val csvDataMap = mutableMapOf<String, MutableList<String>>()
+    private fun getValues(path: String): Map<String, List<Any>> {
+        val csvDataMap = mutableMapOf<String, MutableList<Any>>()
 
         FileReader(path).use { fileReader ->
             val csvReader = CSVReader(fileReader)

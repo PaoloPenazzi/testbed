@@ -13,7 +13,7 @@ deployments:
   - {program: send}
 export:
 - type: CSVExporter
-  parameters: {fileNameRoot: test_export, interval: 2, exportPath: ./}
+  parameters: {fileNameRoot: export, interval: 5, exportPath: ./}
   data: [time]
 terminate:
 - {type: AfterTime, parameters: 10}
