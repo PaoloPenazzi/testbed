@@ -1,6 +1,8 @@
-package reader
+package listeners
 
+import com.opencsv.CSVReader
 import java.io.File
+import java.io.FileReader
 import java.nio.charset.StandardCharsets
 import java.nio.file.Files
 import java.nio.file.Paths
@@ -19,21 +21,5 @@ class NetLogoListenerImpl : NetLogoListener {
             lines.removeFirst()
         }
         Files.write(Paths.get(inputFilePath), lines, StandardCharsets.UTF_8)
-    }
-
-    private fun getValues(path: String): Metric {
-        val csvDataMap = mutableMapOf<String, MutableList<Any>>()
-        // Read the first line to get the headers
-        // Read each column and add it to the map, with the header as key
-        File(path).forEachLine { line ->
-            val columns = line.split(",")
-            columns.forEachIndexed { index, column ->
-                if (index < columns.size) {
-                    csvDataMap[columns[index]]?.add(column)
-                }
-            }
-        }
-        println(csvDataMap)
-        return csvDataMap
     }
 }
