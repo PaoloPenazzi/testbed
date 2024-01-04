@@ -6,17 +6,17 @@ import java.nio.charset.StandardCharsets
 import java.nio.file.Files
 import java.nio.file.Paths
 
-interface AlchemistResultReader : ResultReader
+interface AlchemistListener : Listener
 
-class AlchemistResultReaderImpl : AlchemistResultReader {
-    override fun read(path: String) {
-        clearCSV(path)
-        formatHeaders(path)
-        val values = getValues(path)
-        println(values)
+class AlchemistListenerImpl : AlchemistListener {
+    override fun readCsv(path: String): Metric {
+        cleanCSV(path)
+        formatCSV(path)
+        return getValues(path)
     }
 
-    private fun clearCSV(path: String) {
+    // Remove from the Alchemist output all the excess lines before parsing the .csv file.
+    private fun cleanCSV(path: String) {
         val lines = Files.readAllLines(Paths.get(path), StandardCharsets.UTF_8)
         val regexPatterns = listOf(
             Regex("#.*#"),
@@ -30,7 +30,8 @@ class AlchemistResultReaderImpl : AlchemistResultReader {
         Files.write(Paths.get(path), modifiedLines, StandardCharsets.UTF_8)
     }
 
-    private fun formatHeaders(path: String) {
+    // Format each line of the .csv file to make the parsing easier.
+    private fun formatCSV(path: String) {
         val lines = Files.readAllLines(Paths.get(path), StandardCharsets.UTF_8)
         val modifiedLines = lines.map { line ->
             val modifiedLine = line.replace(Regex("# "), "")
@@ -39,7 +40,8 @@ class AlchemistResultReaderImpl : AlchemistResultReader {
         Files.write(Paths.get(path), modifiedLines, StandardCharsets.UTF_8)
     }
 
-    private fun getValues(path: String): Map<String, List<Any>> {
+    // Parse the .csv file to get a data structure.
+    private fun getValues(path: String): Metric {
         val csvDataMap = mutableMapOf<String, MutableList<Any>>()
 
         FileReader(path).use { fileReader ->

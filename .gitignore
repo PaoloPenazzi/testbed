@@ -9,7 +9,7 @@ local.properties
 ### Mac OS ###
 .DS_Store
 
-NetLogo-6.4.0-64/
+NetLogo 6.4.0/
 
 *.csv
 *.jar
