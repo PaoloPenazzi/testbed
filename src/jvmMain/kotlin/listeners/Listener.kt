@@ -1,6 +1,7 @@
 package listeners
 
 import com.opencsv.CSVReader
+import java.io.File
 import java.io.FileReader
 
 typealias Metric = Map<String, List<Any>>
@@ -28,7 +29,7 @@ interface Listener {
                 }
             }
         }
-        println(csvDataMap)
+        File (path).delete()
         return csvDataMap
     }
 }

@@ -1,10 +1,12 @@
+import controller.ControllerImpl
+import executors.NetLogo
 import listeners.NetLogoListenerImpl
 
 fun main(args: Array<String>) {
     // Run the controller
     args.forEach { println(it) }
-    //val controller = ControllerImpl()
-    //controller.run("./src/commonMain/yaml/benchmarks/test-duration.yml")
+    val controller = ControllerImpl()
+    controller.run("./src/commonMain/yaml/benchmarks/multiple-scenarios.yml")
 
     // NetLogo test run
     //val sim = NetLogo()
