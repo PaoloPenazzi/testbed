@@ -16,7 +16,7 @@ data class Simulator(val name: String,
 
 @Serializable
 data class Scenario(val name: String,
-                    val description: String,
+                    val description: String = "",
                     val input: String = "",
                     val repetitions: Int = 1,
                     val duration: Int = 0)

@@ -4,13 +4,16 @@ import executors.SimulatorExecutor
 import model.Benchmark
 import parsing.ParserImpl
 import kotlinx.coroutines.*
-import reader.ResultReader
+import listeners.Metric
+import listeners.Listener
 
 interface Controller {
     fun run(inputPath: String)
 }
 
 class ControllerImpl : Controller {
+    private var output: Map<String, Metric> = mapOf()
+
     override fun run(inputPath: String) {
         val parser = ParserImpl()
         val benchmark = parser.parse(inputPath)
@@ -27,13 +30,17 @@ class ControllerImpl : Controller {
                 }
             }
             .toMap()
-        println(scenarioMap)
         scenarioNameOrder.forEach { scenarioName ->
             val (simulatorName, inputPath) = scenarioMap[scenarioName]!!
             for (i in 1..scenarioMap[scenarioName]!!.third) {
-                runBlocking { createExecutor(simulatorName, inputPath) }
+                runBlocking {
+                    createExecutor(simulatorName, inputPath)
+                    val reader = createReader(simulatorName)
+                    val runName = "$simulatorName-$i"
+                    val metric = reader.readCsv("./export.csv")
+                    output = output + mapOf(runName to metric)
+                }
             }
-            createReader(simulatorName)
         }
     }
 
@@ -47,11 +54,12 @@ class ControllerImpl : Controller {
         driver.run(inputPath)
     }
 
-    private fun createReader(simulatorName: String) {
-        val reader: ResultReader = when (simulatorName) {
-            "Alchemist" -> reader.AlchemistResultReaderImpl()
+    private fun createReader(simulatorName: String): Listener {
+        val reader: Listener = when (simulatorName) {
+            "Alchemist" -> listeners.AlchemistListenerImpl()
+            "NetLogo" -> listeners.NetLogoListenerImpl()
             else -> throw IllegalArgumentException("Simulator $simulatorName not found")
         }
-        reader.read("./export.csv")
+        return reader
     }
 }
