@@ -1,8 +1,5 @@
 package listeners
 
-import com.opencsv.CSVReader
-import java.io.File
-import java.io.FileReader
 import java.nio.charset.StandardCharsets
 import java.nio.file.Files
 import java.nio.file.Paths
@@ -16,7 +13,7 @@ class NetLogoListenerImpl : NetLogoListener {
     }
 
     private fun cleanCSV(inputFilePath: String) {
-        val lines = Files.readAllLines(Paths.get(inputFilePath), StandardCharsets.UTF_8)
+        var lines = Files.readAllLines(Paths.get(inputFilePath), StandardCharsets.UTF_8)
         repeat(6) {
             lines.removeFirst()
         }

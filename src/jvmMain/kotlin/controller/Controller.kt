@@ -36,12 +36,13 @@ class ControllerImpl : Controller {
                 runBlocking {
                     createExecutor(simulatorName, inputPath)
                     val reader = createReader(simulatorName)
-                    val runName = "$simulatorName-$i"
+                    val runName = "$scenarioName-$i"
                     val metric = reader.readCsv("./export.csv")
                     output = output + mapOf(runName to metric)
                 }
             }
         }
+        println("[TESTBED] Output: $output")
     }
 
     private fun createExecutor(simulatorName: String, inputPath: String) {

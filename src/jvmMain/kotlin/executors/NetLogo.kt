@@ -12,7 +12,7 @@ class NetLogo: SimulatorExecutor {
         val netlogoFolder = File("NetLogo 6.4.0")
 
         try {
-            val processBuilder = ProcessBuilder(netLogoPath, "--headless", "--model", modelPath, "--setup-file", setupFilePath, "--table", "export.csv")
+            val processBuilder = ProcessBuilder(netLogoPath, "--headless", "--model", modelPath, "--setup-file", setupFilePath, "--table", "../export.csv")
                 .directory(netlogoFolder)
                 .redirectErrorStream(true)
 
