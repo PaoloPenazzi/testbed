@@ -1,12 +1,13 @@
 package executors
 
+import model.Scenario
 import java.io.BufferedReader
 import java.io.InputStreamReader
 
 interface Executor {
-    fun run(input: String) {
+    fun run(scenario: Scenario) {
         try {
-            val processBuilder = getCommand(input)
+            val processBuilder = getCommand(scenario)
 
             val process = processBuilder.start()
             val reader = BufferedReader(InputStreamReader(process.inputStream))
@@ -21,5 +22,5 @@ interface Executor {
         }
     }
 
-    fun getCommand(input: String): ProcessBuilder
+    fun getCommand(scenario: Scenario): ProcessBuilder
 }
