@@ -12,11 +12,13 @@ data class Strategy(val multiThreaded: Boolean = false,
 
 @Serializable
 data class Simulator(val name: String,
+                     val simulatorPath: String = "",
                      val scenarios: List<Scenario>)
 
 @Serializable
 data class Scenario(val name: String,
                     val description: String = "",
                     val input: String = "",
+                    val modelPath : String = "",
                     val repetitions: Int = 1,
                     val duration: Int = 0)

@@ -7,16 +7,11 @@ import java.nio.file.Paths
 interface NetLogoListener : Listener
 
 class NetLogoListenerImpl : NetLogoListener {
-    override fun readCsv(path: String): Metric {
-        cleanCSV(path)
-        return getValues(path)
-    }
-
-    private fun cleanCSV(inputFilePath: String) {
-        var lines = Files.readAllLines(Paths.get(inputFilePath), StandardCharsets.UTF_8)
+    override fun clearCSV(outputFilePath: String) {
+        var lines = Files.readAllLines(Paths.get(outputFilePath), StandardCharsets.UTF_8)
         repeat(6) {
             lines.removeFirst()
         }
-        Files.write(Paths.get(inputFilePath), lines, StandardCharsets.UTF_8)
+        Files.write(Paths.get(outputFilePath), lines, StandardCharsets.UTF_8)
     }
 }

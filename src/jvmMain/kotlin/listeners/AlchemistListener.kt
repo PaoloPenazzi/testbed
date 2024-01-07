@@ -7,14 +7,13 @@ import java.nio.file.Paths
 interface AlchemistListener : Listener
 
 class AlchemistListenerImpl : AlchemistListener {
-    override fun readCsv(path: String): Metric {
-        cleanCSV(path)
-        formatCSV(path)
-        return getValues(path)
+    override fun clearCSV(outputFilePath: String) {
+        removeExtraLines(outputFilePath)
+        formatLines(outputFilePath)
     }
 
     // Remove from the Alchemist output all the excess lines before parsing the .csv file.
-    private fun cleanCSV(path: String) {
+    private fun removeExtraLines(path: String) {
         val lines = Files.readAllLines(Paths.get(path), StandardCharsets.UTF_8)
         val regexPatterns = listOf(
             Regex("#.*#"),
@@ -29,7 +28,7 @@ class AlchemistListenerImpl : AlchemistListener {
     }
 
     // Format each line of the .csv file to make the parsing easier.
-    private fun formatCSV(path: String) {
+    private fun formatLines(path: String) {
         val lines = Files.readAllLines(Paths.get(path), StandardCharsets.UTF_8)
         val modifiedLines = lines.map { line ->
             val modifiedLine = line.replace(Regex("# "), "")
