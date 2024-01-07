@@ -1,9 +1,10 @@
 package executors
 
+import model.Scenario
 import java.io.File
 
 class NetLogoExecutor : Executor {
-    override fun getCommand(input: String): ProcessBuilder {
+    override fun getCommand(scenario: Scenario): ProcessBuilder {
         val netLogoPath = "./NetLogo_Console"
         val modelPath = "./models/IABM Textbook/chapter 4/Wolf Sheep Simple 5.nlogo"
         val setupFilePath = "../src/commonMain/resources/netlogo/netlogo-tutorial.xml"
