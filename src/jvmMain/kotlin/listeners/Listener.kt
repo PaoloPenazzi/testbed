@@ -7,10 +7,10 @@ import java.io.FileReader
 typealias Metric = Map<String, List<Any>>
 
 interface Listener {
-    fun readCsv(path: String): Metric
-
-    fun getValues(path: String): Metric {
+    fun readCsv(path: String): Metric {
         val csvDataMap = mutableMapOf<String, MutableList<Any>>()
+
+        clearCSV(path)
 
         FileReader(path).use { fileReader ->
             val csvReader = CSVReader(fileReader)
@@ -29,7 +29,9 @@ interface Listener {
                 }
             }
         }
-        File (path).delete()
+        File(path).delete()
         return csvDataMap
     }
+
+    fun clearCSV(outputFilePath: String)
 }

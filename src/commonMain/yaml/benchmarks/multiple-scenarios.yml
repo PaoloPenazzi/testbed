@@ -3,7 +3,6 @@ strategy:
   executionOrder:
     - Alchemist-Protelis
     - NetLogo-Tutorial
-    - Alchemist-Sapere
 
 simulators:
   - name: NetLogo
@@ -18,11 +17,5 @@ simulators:
       - name: Alchemist-Protelis
         description: A tutorial to Alchemist and Protelis incarnation
         input: "src/commonMain/resources/alchemist/protelis-tutorial.yml"
-        repetitions: 3
-        duration: 10
-
-      - name: Alchemist-Sapere
-        description: A tutorial to Alchemist and Sapere incarnation
-        input: "src/commonMain/resources/alchemist/sapere-tutorial.yml"
         repetitions: 1
-        duration: 100
+        duration: 10

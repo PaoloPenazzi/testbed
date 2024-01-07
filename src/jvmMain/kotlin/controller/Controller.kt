@@ -1,6 +1,6 @@
 package controller
 
-import executors.SimulatorExecutor
+import executors.Executor
 import model.Benchmark
 import parsing.ParserImpl
 import kotlinx.coroutines.*
@@ -46,9 +46,9 @@ class ControllerImpl : Controller {
     }
 
     private fun createExecutor(simulatorName: String, inputPath: String) {
-        val driver: SimulatorExecutor = when (simulatorName) {
-            "Alchemist" -> executors.Alchemist()
-            "NetLogo" -> executors.NetLogo()
+        val driver: Executor = when (simulatorName) {
+            "Alchemist" -> executors.AlchemistExecutor()
+            "NetLogo" -> executors.NetLogoExecutor()
             else -> throw IllegalArgumentException("Simulator $simulatorName not found")
         }
         println("[TESTBED] Running $simulatorName")
