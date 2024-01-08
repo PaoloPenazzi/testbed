@@ -5,9 +5,9 @@ import java.io.BufferedReader
 import java.io.InputStreamReader
 
 interface Executor {
-    fun run(scenario: Scenario) {
+    fun run(simulatorPath: String, scenario: Scenario) {
         try {
-            val processBuilder = getCommand(scenario)
+            val processBuilder = getCommand(simulatorPath, scenario)
 
             val process = processBuilder.start()
             val reader = BufferedReader(InputStreamReader(process.inputStream))
@@ -22,5 +22,5 @@ interface Executor {
         }
     }
 
-    fun getCommand(scenario: Scenario): ProcessBuilder
+    fun getCommand(simulatorPath: String, scenario: Scenario): ProcessBuilder
 }
