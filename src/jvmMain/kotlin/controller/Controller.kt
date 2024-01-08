@@ -7,6 +7,7 @@ import kotlinx.coroutines.*
 import listeners.Metric
 import listeners.Listener
 import model.Scenario
+import model.Simulator
 
 interface Controller {
     fun run(inputPath: String)
@@ -24,19 +25,19 @@ class ControllerImpl : Controller {
     // Tricky method that simply calls createExecutor() in the right order and the right number of times
     private fun executeBenchmark(benchmark: Benchmark) {
         val scenarioNameOrder: List<String> = benchmark.strategy.executionOrder
-        val scenarioMap: Map<String, Triple<String, Scenario, Int>> = benchmark.simulators
+        val scenarioMap: Map<String, Triple<Simulator, Scenario, Int>> = benchmark.simulators
             .flatMap { simulator ->
                 simulator.scenarios.map { scenario ->
-                    scenario.name to Triple(simulator.name, scenario, scenario.repetitions)
+                    scenario.name to Triple(simulator, scenario, scenario.repetitions)
                 }
             }
             .toMap()
         scenarioNameOrder.forEach { scenarioName ->
-            val (simulatorName, scenario) = scenarioMap[scenarioName]!!
+            val (simulator, scenario) = scenarioMap[scenarioName]!!
             for (i in 1..scenarioMap[scenarioName]!!.third) {
                 runBlocking {
-                    createExecutor(simulatorName, scenario)
-                    val reader = createReader(simulatorName)
+                    createExecutor(simulator.name, simulator.simulatorPath, scenario)
+                    val reader = createReader(simulator.name)
                     val runName = "$scenarioName-$i"
                     val metric = reader.readCsv("./export.csv")
                     output = output + mapOf(runName to metric)
@@ -46,14 +47,14 @@ class ControllerImpl : Controller {
         println("[TESTBED] Output: $output")
     }
 
-    private fun createExecutor(simulatorName: String, scenario: Scenario) {
-        val driver: Executor = when (simulatorName) {
+    private fun createExecutor(simulatorName: String, simulatorPath: String, scenario: Scenario) {
+        val executor: Executor = when (simulatorName) {
             "Alchemist" -> executors.AlchemistExecutor()
             "NetLogo" -> executors.NetLogoExecutor()
             else -> throw IllegalArgumentException("Simulator $simulatorName not found")
         }
         println("[TESTBED] Running $simulatorName")
-        driver.run(scenario)
+        executor.run(simulatorPath, scenario)
     }
 
     private fun createReader(simulatorName: String): Listener {

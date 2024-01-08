@@ -4,23 +4,18 @@ import model.Scenario
 import java.io.File
 
 class NetLogoExecutor : Executor {
-    override fun getCommand(scenario: Scenario): ProcessBuilder {
-        val netLogoPath = "./NetLogo_Console"
-        val modelPath = "./models/IABM Textbook/chapter 4/Wolf Sheep Simple 5.nlogo"
-        val setupFilePath = "../src/commonMain/resources/netlogo/netlogo-tutorial.xml"
-        val netlogoFolder = File("NetLogo 6.4.0")
-
+    override fun getCommand(simulatorPath: String, scenario: Scenario): ProcessBuilder {
         return ProcessBuilder(
-            netLogoPath,
+            "./NetLogo_Console",
             "--headless",
             "--model",
-            modelPath,
+            scenario.modelPath,
             "--setup-file",
-            setupFilePath,
+            scenario.input,
             "--table",
             "../export.csv"
         )
-            .directory(netlogoFolder)
+            .directory(File(simulatorPath))
             .redirectErrorStream(true)
     }
 }
