@@ -6,6 +6,7 @@ import listeners.Listener
 import model.*
 import parsing.ParserImpl
 import processing.process
+import view.View
 
 interface Controller {
     fun run(inputPath: String)
@@ -44,7 +45,7 @@ class ControllerImpl : Controller {
         }
         println("[TESTBED] Benchmark Output: $benchmarkOutput")
         val output = process(benchmarkOutput)
-        println("[TESTBED] Result: $output")
+        View(output)
     }
 
     private fun createExecutor(simulatorName: String, simulatorPath: String, scenario: Scenario) {
