@@ -1,20 +1,18 @@
 package controller
 
 import executors.Executor
-import model.Benchmark
-import parsing.ParserImpl
-import kotlinx.coroutines.*
-import listeners.Metric
+import kotlinx.coroutines.runBlocking
 import listeners.Listener
-import model.Scenario
-import model.Simulator
+import model.*
+import parsing.ParserImpl
+import processing.process
 
 interface Controller {
     fun run(inputPath: String)
 }
 
 class ControllerImpl : Controller {
-    private var output: Map<String, Metric> = mapOf()
+    private var benchmarkOutput: BenchmarkOutput = mapOf()
 
     override fun run(inputPath: String) {
         val parser = ParserImpl()
@@ -40,11 +38,13 @@ class ControllerImpl : Controller {
                     val reader = createReader(simulator.name)
                     val runName = "$scenarioName-$i"
                     val metric = reader.readCsv("./export.csv")
-                    output = output + mapOf(runName to metric)
+                    benchmarkOutput = benchmarkOutput + mapOf(runName to metric)
                 }
             }
         }
-        println("[TESTBED] Output: $output")
+        println("[TESTBED] Benchmark Output: $benchmarkOutput")
+        val output = process(benchmarkOutput)
+        println("[TESTBED] Result: $output")
     }
 
     private fun createExecutor(simulatorName: String, simulatorPath: String, scenario: Scenario) {

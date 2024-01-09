@@ -1,10 +1,9 @@
 package listeners
 
 import com.opencsv.CSVReader
+import model.Metric
 import java.io.File
 import java.io.FileReader
-
-typealias Metric = Map<String, List<Any>>
 
 interface Listener {
     fun readCsv(path: String): Metric {
