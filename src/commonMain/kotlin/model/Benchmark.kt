@@ -2,6 +2,11 @@ package model
 
 import kotlinx.serialization.Serializable
 
+typealias Metric = Map<String, List<Any>>
+typealias BenchmarkOutput = Map<String, Metric>
+typealias Result = Pair<String, Any>
+typealias Output = Map<String, List<Result>>
+
 @Serializable
 data class Benchmark(val strategy: Strategy,
                      val simulators: List<Simulator>)

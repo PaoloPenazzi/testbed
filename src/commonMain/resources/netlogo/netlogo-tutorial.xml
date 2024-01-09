@@ -4,14 +4,14 @@
     <experiment name="netlogo-tutorial" repetitions="1" runMetricsEveryStep="false">
         <setup>setup</setup>
         <go>go</go>
-        <timeLimit steps="2000"/>
+        <timeLimit steps="1000"/>
         <metric>count wolves</metric>
         <metric>count sheep</metric>
         <metric>sum [grass-amount] of patches</metric>
         <enumeratedValueSet variable="energy-gain-from-grass">
             <value value="2"/>
         </enumeratedValueSet>
-        <steppedValueSet variable="number-of-wolves" first="5" step="1" last="15"/>
+        <steppedValueSet first="5" last="15" step="1" variable="number-of-wolves"/>
         <enumeratedValueSet variable="movement-cost">
             <value value="0.5"/>
         </enumeratedValueSet>
