@@ -1,6 +1,11 @@
 import org.danilopianini.gradle.mavencentral.JavadocJar
+import org.gradle.internal.impldep.org.apache.commons.compress.archivers.tar.TarArchiveInputStream
 import org.gradle.internal.os.OperatingSystem
 import org.jetbrains.kotlin.gradle.plugin.mpp.KotlinNativeTarget
+import java.net.URL
+import java.nio.file.Files
+import java.nio.file.Paths
+import java.util.zip.GZIPInputStream
 
 plugins {
     alias(libs.plugins.kotlin.multiplatform)
@@ -35,17 +40,22 @@ kotlin {
     sourceSets {
         val commonMain by getting {
             dependencies {
-                implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.8.0-RC2")
-                implementation("org.yaml:snakeyaml:2.2")
-                implementation("com.charleskorn.kaml:kaml:0.55.0")
-                implementation("com.opencsv:opencsv:5.9")
+                implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.2")
                 implementation("org.jetbrains.kotlinx:kotlinx-io-core:0.3.0")
+                implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.8.0-RC2")
             }
         }
         val commonTest by getting {
             dependencies {
                 implementation(libs.bundles.kotlin.testing.common)
                 implementation(libs.bundles.kotest.common)
+            }
+        }
+        val jvmMain by getting {
+            dependencies {
+                implementation("org.yaml:snakeyaml:2.2")
+                implementation("com.charleskorn.kaml:kaml:0.55.0")
+                implementation("com.opencsv:opencsv:5.9")
             }
         }
         val jvmTest by getting {
@@ -92,15 +102,6 @@ kotlin {
      */
     macosX64(nativeSetup)
     macosArm64(nativeSetup)
-    iosArm64(nativeSetup)
-    iosX64(nativeSetup)
-    iosSimulatorArm64(nativeSetup)
-    watchosArm32(nativeSetup)
-    watchosX64(nativeSetup)
-    watchosSimulatorArm64(nativeSetup)
-    tvosArm64(nativeSetup)
-    tvosX64(nativeSetup)
-    tvosSimulatorArm64(nativeSetup)
 
     targets.all {
         compilations.all {
@@ -198,5 +199,70 @@ publishing {
                 artifact(tasks.javadocJar)
             }
         }
+    }
+}
+
+tasks.register("getNetLogo", DownloadNetLogoTask::class)
+
+open class DownloadNetLogoTask : DefaultTask() {
+
+    @Input
+    val netLogoVersion = "6.2.0" // Change this to the desired NetLogo version
+
+    @Input
+    val netLogoUrl = "https://ccl.northwestern.edu/netlogo/download/6.2.0/NetLogo-${netLogoVersion}-64.tgz"
+
+    init {
+        group = "custom"
+        description = "Download NetLogo and unpack files"
+    }
+
+    @TaskAction
+    fun downloadAndUnpack() {
+        val osName = System.getProperty("os.name").lowercase()
+
+        val archiveExtension = when {
+            osName.contains("nix") || osName.contains("nux") || osName.contains("mac") -> "tgz"
+            else -> throw UnsupportedOperationException("Unsupported operating system: $osName")
+        }
+
+        val archiveFileName = "NetLogo-${netLogoVersion}-64.$archiveExtension"
+        val archivePath = Paths.get(project.rootDir.toString(), archiveFileName)
+
+        val netLogoDir = Paths.get(project.rootDir.toString(), "NetLogo-${netLogoVersion}")
+
+        // Download NetLogo
+        URL(netLogoUrl).openStream().use { input ->
+            Files.copy(input, archivePath)
+        }
+
+        // Unpack NetLogo
+        when {
+            osName.contains("nix") || osName.contains("nux") || osName.contains("mac") -> {
+                Files.createDirectories(netLogoDir)
+                Files.newInputStream(archivePath).use { input ->
+                    GZIPInputStream(input).use { gzipInput ->
+                        TarArchiveInputStream(gzipInput).use { tarInput ->
+                            var entry = tarInput.nextTarEntry
+                            while (entry != null) {
+                                val entryPath = netLogoDir.resolve(entry.name)
+                                if (entry.isDirectory) {
+                                    Files.createDirectories(entryPath)
+                                } else {
+                                    Files.newOutputStream(entryPath).use { output ->
+                                        tarInput.copyTo(output)
+                                    }
+                                }
+                                entry = tarInput.nextTarEntry
+                            }
+                        }
+                    }
+                }
+            }
+            else -> throw UnsupportedOperationException("Unsupported operating system: $osName")
+        }
+
+        // Delete the compressed archive
+        Files.delete(archivePath)
     }
 }

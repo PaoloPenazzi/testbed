@@ -4,8 +4,19 @@ import kotlinx.serialization.Serializable
 
 typealias Metric = Map<String, List<Any>>
 typealias BenchmarkOutput = Map<String, Metric>
-typealias Result = Pair<String, Any>
-typealias Output = Map<String, List<Result>>
+
+data class Result(val description: String,
+                  val value: List<Any>,
+                  val visualisationType: VisualisationType)
+
+typealias Output = List<Result>
+
+enum class VisualisationType {
+    SINGLE_VALUE,
+    LIST,
+    LINE_CHART,
+}
+
 
 @Serializable
 data class Benchmark(val strategy: Strategy,
