@@ -6,6 +6,13 @@ import java.io.File
 import java.io.FileReader
 
 interface Listener {
+
+    /**
+     * Reads the CSV file containing the simulation results.
+     *
+     * @param path The path of the CSV file.
+     * @return A map with the column names as keys and the values as a list of values.
+     */
     fun readCsv(path: String): Metric {
         val csvDataMap = mutableMapOf<String, MutableList<Any>>()
 
@@ -32,5 +39,11 @@ interface Listener {
         return csvDataMap
     }
 
+    /**
+     * Clears the CSV file containing the simulation results.
+     * Remove any extra lines from the CSV file and format each line to make the parsing easier.
+     *
+     * @param outputFilePath The path of the CSV file.
+     */
     fun clearCSV(outputFilePath: String)
 }

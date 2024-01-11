@@ -4,9 +4,7 @@ import java.nio.charset.StandardCharsets
 import java.nio.file.Files
 import java.nio.file.Paths
 
-interface AlchemistListener : Listener
-
-class AlchemistListenerImpl : AlchemistListener {
+class AlchemistListenerImpl : Listener {
     override fun clearCSV(outputFilePath: String) {
         removeExtraLines(outputFilePath)
         formatLines(outputFilePath)
