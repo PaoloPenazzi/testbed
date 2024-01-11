@@ -8,8 +8,7 @@ class View(output: Output) {
         output.forEach { result ->
             when (result.visualisationType) {
                 VisualisationType.SINGLE_VALUE -> println(result.description + result.value[0])
-                VisualisationType.LIST -> println(result.description + result.value)
-                VisualisationType.LINE_CHART -> println(result.description + result.value)
+                VisualisationType.LIST_OF_VALUES -> println(result.description + result.value)
             }
         }
     }

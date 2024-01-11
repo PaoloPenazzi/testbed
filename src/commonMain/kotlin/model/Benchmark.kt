@@ -13,8 +13,7 @@ typealias Output = List<Result>
 
 enum class VisualisationType {
     SINGLE_VALUE,
-    LIST,
-    LINE_CHART,
+    LIST_OF_VALUES
 }
 
 

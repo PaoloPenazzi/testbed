@@ -12,7 +12,7 @@ simulators:
         description: A tutorial to NetLogo
         input: "../src/commonMain/resources/netlogo/netlogo-tutorial.xml"
         modelPath: "./models/IABM Textbook/chapter 4/Wolf Sheep Simple 5.nlogo"
-        repetitions: 1
+        repetitions: 3
 
   - name: Alchemist
     simulatorPath: "./"
