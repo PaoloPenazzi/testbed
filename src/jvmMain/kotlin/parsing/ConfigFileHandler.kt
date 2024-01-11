@@ -4,15 +4,18 @@ import model.Scenario
 import org.w3c.dom.Document
 import org.w3c.dom.Element
 import org.w3c.dom.Node
+import org.w3c.dom.NodeList
 import org.yaml.snakeyaml.Yaml
 import java.io.File
 import java.io.FileReader
 import java.io.FileWriter
 import javax.xml.parsers.DocumentBuilderFactory
-
+import javax.xml.transform.TransformerFactory
+import javax.xml.transform.dom.DOMSource
+import javax.xml.transform.stream.StreamResult
 
 interface ConfigFileHandler {
-    fun editConfigurationFile(scenario: Scenario)
+    fun editConfigurationFile(scenario: Scenario) {}
 }
 
 class AlchemistConfigFileHandler : ConfigFileHandler {
@@ -43,42 +46,5 @@ class AlchemistConfigFileHandler : ConfigFileHandler {
         // Close the files
         inputFile.close()
         outputFile.close()
-    }
-}
-
-class NetLogoConfigFileHandler : ConfigFileHandler {
-    override fun editConfigurationFile(scenario: Scenario) {
-        //insertDuration(scenario.input, scenario.duration)
-    }
-
-    private fun insertDuration(inputPath: String, duration: Int) {
-        // insert the duration in the .xml configuration file, inside the <timeLimit steps="2000"/> tag
-
-        val modifiedFilePath = inputPath.replace("..", ".")
-
-        val document = parseXmlFile(modifiedFilePath)
-
-
-        // Modify the value of timeLimit steps
-        modifyTimeLimitSteps(document, duration)
-
-    }
-
-    private fun parseXmlFile(filePath: String): Document {
-
-        val factory = DocumentBuilderFactory.newInstance()
-        factory.setFeature("http://apache.org/xml/features/nonvalidating/load-external-dtd", false)
-        val builder = factory.newDocumentBuilder()
-        return builder.parse(File(filePath))
-    }
-
-    private fun modifyTimeLimitSteps(document: Document, newValue: Int) {
-        val experimentsNode = document.getElementsByTagName("experiments").item(0)
-        if (experimentsNode.nodeType == Node.ELEMENT_NODE) {
-            val experimentElement = experimentsNode as Element
-            val timeLimitNode = experimentElement.getElementsByTagName("timeLimit").item(0) as Element
-            val stepsAttr = timeLimitNode.getAttributeNode("steps")
-            stepsAttr.nodeValue = newValue.toString()
-        }
     }
 }

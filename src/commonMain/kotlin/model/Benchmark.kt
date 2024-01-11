@@ -16,7 +16,6 @@ enum class VisualisationType {
     LIST_OF_VALUES
 }
 
-
 @Serializable
 data class Benchmark(val strategy: Strategy,
                      val simulators: List<Simulator>)

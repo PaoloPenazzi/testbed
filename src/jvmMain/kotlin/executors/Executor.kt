@@ -5,6 +5,11 @@ import java.io.BufferedReader
 import java.io.InputStreamReader
 
 interface Executor {
+    /**
+     * Runs the scenario.
+     * @param simulatorPath the path to the simulator
+     * @param scenario the scenario to run
+     */
     fun run(simulatorPath: String, scenario: Scenario) {
         try {
             val processBuilder = getCommand(simulatorPath, scenario)
@@ -22,5 +27,10 @@ interface Executor {
         }
     }
 
+    /**
+     * Returns a ProcessBuilder with the command to run the simulation.
+     * @param simulatorPath the path to the simulator
+     * @param scenario the scenario to run
+     */
     fun getCommand(simulatorPath: String, scenario: Scenario): ProcessBuilder
 }

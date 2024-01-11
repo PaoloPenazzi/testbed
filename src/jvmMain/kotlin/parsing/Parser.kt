@@ -9,17 +9,21 @@ interface Parser {
 }
 
 class ParserImpl : Parser {
+    /**
+     * Parses the YAML file containing the benchmark.
+     *
+     * @param path the path to the YAML file
+     * @return the benchmark
+     */
     override fun parse(path: String): Benchmark {
         val inputFile = File(path)
         val benchmark = Yaml.default.decodeFromString(Benchmark.serializer(), inputFile.readText())
         benchmark.simulators.forEach { simulator ->
-            val configFileHandler = when (simulator.name) {
-                "Alchemist" -> AlchemistConfigFileHandler()
-                "NetLogo" -> NetLogoConfigFileHandler()
-                else -> throw IllegalArgumentException("Simulator ${simulator.name} not found")
-            }
-            simulator.scenarios.forEach { scenario ->
-                configFileHandler.editConfigurationFile(scenario)
+            if (simulator.name == "Alchemist") {
+                val configFileHandler = AlchemistConfigFileHandler()
+                simulator.scenarios.forEach { scenario ->
+                    configFileHandler.editConfigurationFile(scenario)
+                }
             }
         }
         return benchmark
