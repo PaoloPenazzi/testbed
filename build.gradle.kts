@@ -17,7 +17,7 @@ plugins {
     alias(libs.plugins.npm.publish)
     alias(libs.plugins.publishOnCentral)
     alias(libs.plugins.taskTree)
-    kotlin("plugin.serialization") version "1.9.21"
+    kotlin("plugin.serialization") version "1.9.22"
 }
 
 group = "org.danilopianini"
