@@ -1,18 +1,9 @@
 package parsing
 
 import model.Scenario
-import org.w3c.dom.Document
-import org.w3c.dom.Element
-import org.w3c.dom.Node
-import org.w3c.dom.NodeList
 import org.yaml.snakeyaml.Yaml
-import java.io.File
 import java.io.FileReader
 import java.io.FileWriter
-import javax.xml.parsers.DocumentBuilderFactory
-import javax.xml.transform.TransformerFactory
-import javax.xml.transform.dom.DOMSource
-import javax.xml.transform.stream.StreamResult
 
 interface ConfigFileHandler {
     fun editConfigurationFile(scenario: Scenario) {}

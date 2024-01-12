@@ -13,9 +13,9 @@ return BenchmarkModel
 
 loop for each scenario in BenchmarkModel
 
-Controller -> Executor : run(scenario)
+Controller -> Executor : run scenario
 activate Executor
-Executor -> Simulators : launchSimulator
+Executor -> : launchSimulator
 deactivate Executor
 
 ...wait for test run to finish...
@@ -25,10 +25,9 @@ activate Listener
 return output
 
 end
-
+Controller -> Controller : process output
 Controller -> View : render(output)
 
-collections Simulators
 deactivate Controller
 
 
