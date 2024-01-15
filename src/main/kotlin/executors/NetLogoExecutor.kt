@@ -15,7 +15,7 @@ class NetLogoExecutor : Executor {
             "--table",
             "../export.csv",
         )
-        .directory(File(simulatorPath))
-        .redirectErrorStream(true)
+            .directory(File(simulatorPath))
+            .redirectErrorStream(true)
     }
 }

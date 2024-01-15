@@ -64,8 +64,8 @@ class ControllerImpl : Controller {
 
     private fun createReader(simulatorName: String): Listener {
         val reader: Listener = when (simulatorName) {
-            "Alchemist" -> listeners.AlchemistListenerImpl()
-            "NetLogo" -> listeners.NetLogoListenerImpl()
+            "Alchemist" -> listeners.AlchemistListener()
+            "NetLogo" -> listeners.NetLogoListener()
             else -> throw IllegalArgumentException("Simulator $simulatorName not found")
         }
         return reader
