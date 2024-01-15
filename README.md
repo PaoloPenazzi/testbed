@@ -1,8 +1,3 @@
-# A template for Kotlin multiplatform projects 
+# Testbed
 
-## Features
-* Automatic publish on Maven Central
-* Automatic QA
-* Pre-configured Kotest multiplatform
-* Pre-configured Renovate
-* Pre-configured semantic release for conventional commits
+This is an open benchmarking platform for CAS.
