@@ -1,9 +1,10 @@
 var publishCmd = `
-./gradlew -PstagingRepositoryId=\${process.env.STAGING_REPO_ID} releaseStagingRepositoryOnMavenCentral || exit 3
-./gradlew publishJsPackageToNpmjsRegistry || exit 4
+git tag -a -f \${nextRelease.version} \${nextRelease.version} -F CHANGELOG.md || exit 1
+git push --force origin \${nextRelease.version} || exit 2
+./gradlew uploadKotlin release || exit 3
+./gradlew publishKotlinOSSRHPublicationToGithubRepository || true
 `
 var config = require('semantic-release-preconfigured-conventional-commits');
-
 config.plugins.push(
     [
         "@semantic-release/exec",
