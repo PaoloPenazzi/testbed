@@ -1,168 +1,66 @@
-import org.danilopianini.gradle.mavencentral.JavadocJar
-import org.gradle.internal.impldep.org.apache.commons.compress.archivers.tar.TarArchiveInputStream
-import org.gradle.internal.os.OperatingSystem
-import org.jetbrains.kotlin.gradle.plugin.mpp.KotlinNativeTarget
-import java.net.URL
-import java.nio.file.Files
-import java.nio.file.Paths
-import java.util.zip.GZIPInputStream
-
+@Suppress("DSL_SCOPE_VIOLATION")
 plugins {
-    alias(libs.plugins.kotlin.multiplatform)
-    alias(libs.plugins.kotest.multiplatform)
     alias(libs.plugins.dokka)
     alias(libs.plugins.gitSemVer)
+    alias(libs.plugins.kotlin.jvm)
     alias(libs.plugins.kotlin.qa)
-    alias(libs.plugins.multiJvmTesting)
-    alias(libs.plugins.npm.publish)
     alias(libs.plugins.publishOnCentral)
+    alias(libs.plugins.multiJvmTesting)
     alias(libs.plugins.taskTree)
     kotlin("plugin.serialization") version "1.9.21"
 }
 
-group = "org.danilopianini"
+group = "io.github.paolopenazzi"
 
 repositories {
-    google()
     mavenCentral()
 }
 
+dependencies {
+    implementation(libs.kotlin.stdlib)
+    testImplementation(libs.bundles.kotlin.testing)
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.2")
+    implementation("org.jetbrains.kotlinx:kotlinx-io-core:0.3.0")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.8.0-RC2")
+    implementation("org.yaml:snakeyaml:2.2")
+    implementation("com.charleskorn.kaml:kaml:0.55.0")
+    implementation("com.opencsv:opencsv:5.9")
+}
+
 kotlin {
-    jvm {
-        compilations.all {
-            kotlinOptions.jvmTarget = "1.8"
-        }
-        testRuns["test"].executionTask.configure {
-            useJUnitPlatform()
-        }
-    }
-
-    sourceSets {
-        val commonMain by getting {
-            dependencies {
-                implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.2")
-                implementation("org.jetbrains.kotlinx:kotlinx-io-core:0.3.0")
-                implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.8.0-RC2")
-            }
-        }
-        val commonTest by getting {
-            dependencies {
-                implementation(libs.bundles.kotlin.testing.common)
-                implementation(libs.bundles.kotest.common)
-            }
-        }
-        val jvmMain by getting {
-            dependencies {
-                implementation("org.yaml:snakeyaml:2.2")
-                implementation("com.charleskorn.kaml:kaml:0.55.0")
-                implementation("com.opencsv:opencsv:5.9")
-            }
-        }
-        val jvmTest by getting {
-            dependencies {
-                implementation(libs.kotest.runner.junit5)
-            }
-        }
-        val nativeMain by creating {
-            dependsOn(commonMain)
-        }
-        val nativeTest by creating {
-            dependsOn(commonTest)
-        }
-    }
-
-    js(IR) {
-        browser()
-        nodejs()
-        binaries.library()
-    }
-
-    val nativeSetup: KotlinNativeTarget.() -> Unit = {
-        compilations["main"].defaultSourceSet.dependsOn(kotlin.sourceSets["nativeMain"])
-        compilations["test"].defaultSourceSet.dependsOn(kotlin.sourceSets["nativeTest"])
-        binaries {
-            executable()
-            sharedLib()
-            staticLib()
-        }
-    }
-
-    applyDefaultHierarchyTemplate()
-    /*
-     * Linux 64
-     */
-    linuxX64(nativeSetup)
-    linuxArm64(nativeSetup)
-    /*
-     * Win 64
-     */
-    mingwX64(nativeSetup)
-    /*
-     * Apple OSs
-     */
-    macosX64(nativeSetup)
-    macosArm64(nativeSetup)
-
-    targets.all {
+    target {
         compilations.all {
             kotlinOptions {
                 allWarningsAsErrors = true
-                freeCompilerArgs += listOf("-Xexpect-actual-classes")
-            }
-        }
-    }
-
-    val os = OperatingSystem.current()
-    val excludeTargets = when {
-        os.isLinux -> kotlin.targets.filterNot { "linux" in it.name }
-        os.isWindows -> kotlin.targets.filterNot { "mingw" in it.name }
-        os.isMacOsX -> kotlin.targets.filter { "linux" in it.name || "mingw" in it.name }
-        else -> emptyList()
-    }.mapNotNull { it as? KotlinNativeTarget }
-
-    configure(excludeTargets) {
-        compilations.configureEach {
-            cinterops.configureEach { tasks[interopProcessingTaskName].enabled = false }
-            compileTaskProvider.get().enabled = false
-            tasks[processResourcesTaskName].enabled = false
-        }
-        binaries.configureEach { linkTask.enabled = false }
-
-        mavenPublication {
-            tasks.withType<AbstractPublishToMaven>().configureEach {
-                onlyIf { publication != this@mavenPublication }
-            }
-            tasks.withType<GenerateModuleMetadata>().configureEach {
-                onlyIf { publication.get() != this@mavenPublication }
+                freeCompilerArgs = listOf("-opt-in=kotlin.RequiresOptIn")
             }
         }
     }
 }
 
-tasks.dokkaJavadoc {
-    enabled = false
-}
-
-tasks.withType<JavadocJar>().configureEach {
-    val dokka = tasks.dokkaHtml.get()
-    dependsOn(dokka)
-    from(dokka.outputDirectory)
+tasks.test {
+    useJUnitPlatform()
+    testLogging {
+        showStandardStreams = true
+        showCauses = true
+        showStackTraces = true
+        events(*org.gradle.api.tasks.testing.logging.TestLogEvent.values())
+        exceptionFormat = org.gradle.api.tasks.testing.logging.TestExceptionFormat.FULL
+    }
 }
 
 signing {
-    if (System.getenv("CI") == "true") {
-        val signingKey: String? by project
-        val signingPassword: String? by project
-        useInMemoryPgpKeys(signingKey, signingPassword)
-    }
+    val signingKey: String? by project
+    val signingPassword: String? by project
+    useInMemoryPgpKeys(signingKey, signingPassword)
 }
 
 publishOnCentral {
-    projectLongName.set("Template for Kotlin Multiplatform Project")
-    projectDescription.set("A template repository for Kotlin Multiplatform projects")
-    repository("https://maven.pkg.github.com/danysk/${rootProject.name}".lowercase()) {
-        user.set("DanySK")
-        password.set(System.getenv("GITHUB_TOKEN"))
+    projectLongName.set("Testbed")
+    projectDescription.set("An open benchmarking platform for Collective Adaptive Systems")
+    repository("https://maven.pkg.github.com/paolopenazzi/${rootProject.name}".lowercase()) {
+        user.set("paolopenazzi")
+        password.set(System.getenv("GH_TOKEN"))
     }
     publishing {
         publications {
@@ -170,33 +68,12 @@ publishOnCentral {
                 pom {
                     developers {
                         developer {
-                            name.set("Danilo Pianini")
-                            email.set("danilo.pianini@gmail.com")
-                            url.set("http://www.danilopianini.org/")
+                            id.set("paolopenazzi")
+                            name.set("Paolo Penazzi")
+                            email.set("paolo.penazzi@studio.unibo.it")
                         }
                     }
                 }
-            }
-        }
-    }
-}
-
-npmPublish {
-    registries {
-        register("npmjs") {
-            uri.set("https://registry.npmjs.org")
-            val npmToken: String? by project
-            authToken.set(npmToken)
-            dry.set(npmToken.isNullOrBlank())
-        }
-    }
-}
-
-publishing {
-    publications {
-        publications.withType<MavenPublication>().configureEach {
-            if ("OSSRH" !in name) {
-                artifact(tasks.javadocJar)
             }
         }
     }
