@@ -58,7 +58,6 @@ class ControllerImpl : Controller {
                 }
             }
         }
-        println("[TESTBED] Benchmark Output: $benchmarkOutput")
         val output = process(benchmarkOutput)
         val view: View = view.ViewImpl(output)
         view.render()
@@ -70,7 +69,6 @@ class ControllerImpl : Controller {
             "NetLogo" -> executors.NetLogoExecutor()
             else -> throw IllegalArgumentException("Simulator $simulatorName not found")
         }
-        println("[TESTBED] Running $simulatorName")
         executor.run(simulatorPath, scenario)
     }
 
