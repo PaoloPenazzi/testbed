@@ -1,0 +1,34 @@
+@startuml
+skinparam sequenceMessageAlign center
+
+
+
+ -> Controller : run(configFile)
+activate Controller
+
+
+Controller -> Parser : parse(configFile)
+activate Parser
+return BenchmarkModel
+
+loop for each scenario in BenchmarkModel
+
+Controller -> Executor : run scenario
+activate Executor
+Executor -> : launchSimulator
+deactivate Executor
+
+...wait for test run to finish...
+
+Controller -> Listener : readOutput
+activate Listener
+return output
+
+end
+Controller -> Controller : process output
+Controller -> View : render(output)
+
+deactivate Controller
+
+
+@enduml

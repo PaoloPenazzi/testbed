@@ -6,6 +6,7 @@ import model.ScenarioResult
 import model.VisualisationType
 import java.math.RoundingMode
 
+@Suppress("UndocumentedPublicProperty")
 val process: (BenchmarkOutput) -> BenchmarkResult = { benchmarkOutput ->
     val averageNumberOfWolvesPerRun = averageNumberOfWolvesPerRun(benchmarkOutput)
 
@@ -18,8 +19,8 @@ val process: (BenchmarkOutput) -> BenchmarkResult = { benchmarkOutput ->
     listOf(averageNumberOfWolvesPerRun, timeResult)
 }
 
-fun averageNumberOfWolvesPerRun(benchmarkOutput: BenchmarkOutput): ScenarioResult {
-    val netlogoRunsNumber = 3
+private fun averageNumberOfWolvesPerRun(benchmarkOutput: BenchmarkOutput): ScenarioResult {
+    val netlogoRunsNumber = 2
     var wolvesAverageList = listOf<Double>()
     for (i in 1..netlogoRunsNumber) {
         val wolvesCounter = benchmarkOutput["NetLogo-Tutorial-$i"]?.get("count wolves")
@@ -30,6 +31,7 @@ fun averageNumberOfWolvesPerRun(benchmarkOutput: BenchmarkOutput): ScenarioResul
                 else -> throw IllegalArgumentException("Unexpected type")
             }
         }.average()
+        println(wolvesAverage)
         wolvesAverageList =
             wolvesAverageList + wolvesAverage.toBigDecimal().setScale(2, RoundingMode.HALF_UP).toDouble()
     }

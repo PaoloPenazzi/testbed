@@ -18,6 +18,9 @@ interface View {
     fun render()
 }
 
+/**
+ * A basic implementation of the View interface that simply prints the benchmark result to the console.
+ */
 class ViewImpl(override val benchmarkResult: BenchmarkResult) : View {
     override fun render() {
         benchmarkResult.forEach { result ->

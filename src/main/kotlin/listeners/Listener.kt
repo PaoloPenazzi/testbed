@@ -5,8 +5,11 @@ import model.ScenarioOutput
 import java.io.File
 import java.io.FileReader
 
+/**
+ * The interface for the listener component.
+ * The listener is responsible for reading the CSV file containing the simulation results.
+ */
 interface Listener {
-
     /**
      * Reads the CSV file containing the simulation results.
      *
@@ -27,7 +30,9 @@ interface Listener {
             var record: Array<String>?
             while (csvReader.readNext().also { record = it } != null) {
                 for (i in headers.indices) {
+                    @Suppress("UnsafeCallOnNullableType")
                     if (i < record!!.size) {
+                        @Suppress("UnsafeCallOnNullableType")
                         csvDataMap[headers[i]]?.add(record!![i])
                     } else {
                         csvDataMap[headers[i]]?.add("") // Empty string for missing values

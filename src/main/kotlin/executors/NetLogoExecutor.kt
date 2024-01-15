@@ -3,6 +3,9 @@ package executors
 import model.Scenario
 import java.io.File
 
+/**
+ * An executor for NetLogo.
+ */
 class NetLogoExecutor : Executor {
     override fun getCommand(simulatorPath: String, scenario: Scenario): ProcessBuilder {
         return ProcessBuilder(

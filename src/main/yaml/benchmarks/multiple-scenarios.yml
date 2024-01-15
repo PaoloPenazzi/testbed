@@ -1,0 +1,24 @@
+strategy:
+  multiThreaded: false
+  executionOrder:
+    - Alchemist-Protelis
+    - NetLogo-Tutorial
+
+simulators:
+  - name: NetLogo
+    simulatorPath: "./NetLogo 6.4.0"
+    scenarios:
+      - name: NetLogo-Tutorial
+        description: A tutorial to NetLogo
+        input: "../src/main/resources/netlogo/netlogo-tutorial.xml"
+        modelPath: "./models/IABM Textbook/chapter 4/Wolf Sheep Simple 5.nlogo"
+        repetitions: 1
+
+  - name: Alchemist
+    simulatorPath: "./"
+    scenarios:
+      - name: Alchemist-Protelis
+        description: A tutorial to Alchemist and Protelis incarnation
+        input: "src/main/resources/alchemist/protelis-tutorial.yml"
+        repetitions: 3
+        duration: 10
