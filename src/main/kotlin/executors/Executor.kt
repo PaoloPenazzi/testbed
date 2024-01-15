@@ -4,6 +4,9 @@ import model.Scenario
 import java.io.BufferedReader
 import java.io.InputStreamReader
 
+/**
+ * The interface for the executors.
+ */
 interface Executor {
     /**
      * Runs the scenario.
@@ -11,20 +14,16 @@ interface Executor {
      * @param scenario the scenario to run
      */
     fun run(simulatorPath: String, scenario: Scenario) {
-        try {
-            val processBuilder = getCommand(simulatorPath, scenario)
+        val processBuilder = getCommand(simulatorPath, scenario)
 
-            val process = processBuilder.start()
-            val reader = BufferedReader(InputStreamReader(process.inputStream))
+        val process = processBuilder.start()
+        val reader = BufferedReader(InputStreamReader(process.inputStream))
 
-            var line: String?
-            while (reader.readLine().also { line = it } != null) {
-                println(line)
-            }
-            process.waitFor()
-        } catch (e: Exception) {
-            e.printStackTrace()
+        var line: String?
+        while (reader.readLine().also { line = it } != null) {
+            println(line)
         }
+        process.waitFor()
     }
 
     /**

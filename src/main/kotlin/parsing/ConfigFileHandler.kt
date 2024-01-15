@@ -5,10 +5,20 @@ import org.yaml.snakeyaml.Yaml
 import java.io.FileReader
 import java.io.FileWriter
 
+/**
+ * The interface for the configuration file handlers.
+ */
 interface ConfigFileHandler {
+    /**
+     * Edits the configuration file.
+     * @param scenario the scenario to run
+     */
     fun editConfigurationFile(scenario: Scenario) {}
 }
 
+/**
+ * The configuration file handler for Alchemist simulator.
+ */
 class AlchemistConfigFileHandler : ConfigFileHandler {
     override fun editConfigurationFile(scenario: Scenario) {
         if (scenario.duration != 0) {

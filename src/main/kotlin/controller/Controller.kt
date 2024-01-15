@@ -11,10 +11,20 @@ import parsing.ParserImpl
 import processing.process
 import view.View
 
+/**
+ * The testbed controller.
+ */
 interface Controller {
+    /**
+     * Runs the benchmark.
+     * @param inputPath the path to the YAML file
+     */
     fun run(inputPath: String)
 }
 
+/**
+ * The implementation of the testbed controller.
+ */
 class ControllerImpl : Controller {
     private var benchmarkOutput: BenchmarkOutput = mapOf()
 
@@ -35,8 +45,10 @@ class ControllerImpl : Controller {
             }
             .toMap()
         scenarioNameOrder.forEach { scenarioName ->
-            val (simulator, scenario) = scenarioMap[scenarioName]!!
-            for (i in 1..scenarioMap[scenarioName]!!.third) {
+            val (simulator, scenario, repetitions) = scenarioMap.getOrElse(scenarioName) {
+                throw IllegalArgumentException("Scenario $scenarioName not found")
+            }
+            for (i in 1..repetitions) {
                 runBlocking {
                     createExecutor(simulator.name, simulator.simulatorPath, scenario)
                     val reader = createReader(simulator.name)

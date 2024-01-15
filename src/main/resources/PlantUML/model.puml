@@ -1,0 +1,38 @@
+@startuml
+
+class Benchmark {
+strategy: Strategy
+simulators: List<Simulator>
+}
+
+class Strategy {
+multiThreaded: Boolean
+executionOrder: List<String>
+}
+
+class Simulator {
+name: String
+version: String
+scenarios: List<Scenario>
+}
+
+class Scenario {
+name: String
+description: String
+input: String
+scenarioConfiguration: String
+programs: List<Program>
+}
+
+class Program {
+name: String
+description: String
+input: String
+}
+
+Benchmark ..|> Strategy
+Benchmark ..|> Simulator
+Simulator ..|> Scenario
+Scenario ..|> Program
+
+@enduml

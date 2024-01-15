@@ -4,12 +4,19 @@ import java.nio.charset.StandardCharsets
 import java.nio.file.Files
 import java.nio.file.Paths
 
+/**
+ * An implementation of the Listener interface for NetLogo.
+ */
 class NetLogoListener : Listener {
+    @Suppress("MagicNumber")
+    private val numbersOfLineToSkip = 6
+
     override fun clearCSV(outputFilePath: String) {
-        var lines = Files.readAllLines(Paths.get(outputFilePath), StandardCharsets.UTF_8)
-        repeat(6) {
-            lines.removeFirst()
-        }
-        Files.write(Paths.get(outputFilePath), lines, StandardCharsets.UTF_8)
+        val lines = Files.readAllLines(Paths.get(outputFilePath), StandardCharsets.UTF_8)
+        println(lines)
+        val modifiedLines = lines.drop(numbersOfLineToSkip)
+        println(modifiedLines)
+
+        Files.write(Paths.get(outputFilePath), modifiedLines, StandardCharsets.UTF_8)
     }
 }

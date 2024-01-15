@@ -1,0 +1,12 @@
+@startuml
+skinparam sequenceMessageAlign center
+actor User
+
+User -> Framework : Starts
+
+loop for each test run
+Framework -> Simulator : Launches
+Framework <-- Simulator : Output
+end
+User <-- Framework : Results
+@enduml

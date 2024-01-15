@@ -1,8 +1,11 @@
 import controller.ControllerImpl
 
+/**
+ * Execute the benchmark.
+ * @param args the path to the YAML file
+ */
 fun main(args: Array<String>) {
-    args.forEach { println(it) }
+    args.forEach { _ -> println() }
     val controller = ControllerImpl()
-    controller.run("./src/commonMain/yaml/benchmarks/multiple-scenarios.yml")
-    // curl -L https://github.com/AlchemistSimulator/Alchemist/releases/download/29.0.0/alchemist-full-29.0.0-all.jar > Alchemist.jar
+    controller.run("./src/main/yaml/benchmarks/test-duration.yml")
 }
