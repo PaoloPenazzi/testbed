@@ -26,11 +26,14 @@ class ParserImpl : Parser {
         val inputFile = File(path)
         val benchmark = Yaml.default.decodeFromString(Benchmark.serializer(), inputFile.readText())
         benchmark.simulators.forEach { simulator ->
-            if (simulator.name == SupportedSimulator.ALCHEMIST) {
-                val configFileHandler = AlchemistConfigFileHandler()
-                simulator.scenarios.forEach { scenario ->
+            when (simulator.name) {
+                SupportedSimulator.ALCHEMIST -> {
+                    val configFileHandler = AlchemistConfigFileHandler()
+                    simulator.scenarios.forEach { scenario ->
                     configFileHandler.editConfigurationFile(scenario)
+                    }
                 }
+                SupportedSimulator.NETLOGO -> {}
             }
         }
         return benchmark
