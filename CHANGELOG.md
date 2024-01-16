@@ -1,3 +1,15 @@
+## [2.1.0](https://github.com/PaoloPenazzi/testbed/compare/2.0.0...2.1.0) (2024-01-16)
+
+
+### Features
+
+* add supportedSimulator enum ([13d4683](https://github.com/PaoloPenazzi/testbed/commit/13d4683091f5dac56188c669a4aef249b060cf5d))
+
+
+### General maintenance
+
+* revert node version change ([87012e6](https://github.com/PaoloPenazzi/testbed/commit/87012e67ab761c9ff30d3e5b2c1d4e1840360c91))
+
 ## [2.0.0](https://github.com/PaoloPenazzi/testbed/compare/1.0.0...2.0.0) (2024-01-16)
 
 
