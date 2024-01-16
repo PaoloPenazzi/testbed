@@ -1,3 +1,64 @@
+## [2.0.0](https://github.com/PaoloPenazzi/testbed/compare/1.0.0...2.0.0) (2024-01-16)
+
+
+### ⚠ BREAKING CHANGES
+
+* switch to kotlin-multiplatform
+
+### Features
+
+* add Alchemist output cleaning and reading ([b92a288](https://github.com/PaoloPenazzi/testbed/commit/b92a28856a7fc57cb8260f417018365a7fef0ec7))
+* add alchemist output post-processing ([26d5dfa](https://github.com/PaoloPenazzi/testbed/commit/26d5dfaba7cad517f9591a040241955ec50b027e))
+* add benchmark output processing ([6ee1339](https://github.com/PaoloPenazzi/testbed/commit/6ee133907285446e34160991a99979eeb0230983))
+* add mockup ResultReader for each sim supported ([3c9acb1](https://github.com/PaoloPenazzi/testbed/commit/3c9acb1c9a1fdb0ebb400c25082bd8b1f42fa704))
+* add resource files and refactor some code ([6eab4a5](https://github.com/PaoloPenazzi/testbed/commit/6eab4a578721b8ae363c702011ae8402ca00623d))
+* add result visualisation in the console ([f736757](https://github.com/PaoloPenazzi/testbed/commit/f7367572bfff23ad4275b646adf5a6c9da53c202))
+* add support for NetLogo output post processing ([d6b08f8](https://github.com/PaoloPenazzi/testbed/commit/d6b08f8376469bb0df10d5966fc953e2ad45ec3b))
+* add the possibility to specificy the simulator's path ([f81a36c](https://github.com/PaoloPenazzi/testbed/commit/f81a36c75879ba9f8fce046a1540ba0ba0b4148f))
+* delete the .csv file after the reading ([c3e1b0f](https://github.com/PaoloPenazzi/testbed/commit/c3e1b0f8aae1bd86003b32ce49be534b92e0ba31))
+* executors take the whole scenario as a parameter instead of a path ([bf02857](https://github.com/PaoloPenazzi/testbed/commit/bf0285756c156519f89104ec9e76540f311aedce))
+* provide a post-processing example. add sequence diagrams ([78e36cb](https://github.com/PaoloPenazzi/testbed/commit/78e36cb9a7792d5834fe942d62de48e435251f54))
+* remove gradle task definition ([7893cc3](https://github.com/PaoloPenazzi/testbed/commit/7893cc3d780994f9c800cfa4ef645494e755dc4b))
+* remove NetLogo duration handling ([d7c1542](https://github.com/PaoloPenazzi/testbed/commit/d7c1542dc86369335ffb5ce38a1697fdbfe98a7c))
+* remove some useless logs ([e78e8fa](https://github.com/PaoloPenazzi/testbed/commit/e78e8fa27b748496bb16cc2c0370dcf5f0d2c54f))
+* switch to kotlin-jvm. add documentation ([eb2f4ce](https://github.com/PaoloPenazzi/testbed/commit/eb2f4ceb3bfcfdf5bec06ac40c6bf7eaaf999fcb))
+* switch to kotlin-multiplatform ([0d19ae0](https://github.com/PaoloPenazzi/testbed/commit/0d19ae0dbd996b3402ce56a8b4f7e2938a73ece4))
+
+
+### Dependency updates
+
+* **deps:** update dependency gradle to v8.5 ([de0b7db](https://github.com/PaoloPenazzi/testbed/commit/de0b7dba633c2c44c5872a5717b5f981f346d0ed))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.79 ([36f7b75](https://github.com/PaoloPenazzi/testbed/commit/36f7b753ea098b6074fbfbf9b567fcc7867fc379))
+* **deps:** update node.js to 18.19 ([bfc87f8](https://github.com/PaoloPenazzi/testbed/commit/bfc87f819d9f46d10bbf2a452b4f7dc3bad5371a))
+* **deps:** update versions in package.json ([0c6504b](https://github.com/PaoloPenazzi/testbed/commit/0c6504b50ad2850c887796eff6a75fca6f8157af))
+
+
+### Build and continuous integration
+
+* remove publish ([4897e16](https://github.com/PaoloPenazzi/testbed/commit/4897e1643cdf2fc0f56ed88042af9609600dfbe9))
+* update build-and-deploy.yml ([7d25c1a](https://github.com/PaoloPenazzi/testbed/commit/7d25c1ac31bcd76c2fc536cac544b3fc4261a1f2))
+* update build.gradle.kts ([75f123f](https://github.com/PaoloPenazzi/testbed/commit/75f123f81095ecf9c7bc26e75652990ad5a4a7da))
+* update deploy action ([0a6a5e1](https://github.com/PaoloPenazzi/testbed/commit/0a6a5e17fc431c92d9f635ff353448030a88e0c1))
+* update maven user and password to use action secrets ([6d7b10a](https://github.com/PaoloPenazzi/testbed/commit/6d7b10a50d74d9ee959a41d7b9b87e0173e98516))
+* update release configuration ([547286e](https://github.com/PaoloPenazzi/testbed/commit/547286ec4639c11b7aedfbc3bcb2d94770b094b9))
+* update release.config.js ([21a2289](https://github.com/PaoloPenazzi/testbed/commit/21a2289d4788465fdeaddfb5b745eea2dc4d7359))
+* update workflow to use the correct secrets ([dd4fb50](https://github.com/PaoloPenazzi/testbed/commit/dd4fb5003a053bfb026d233e882ab4fedfb24060))
+
+
+### General maintenance
+
+* add release branch to semantic release conf ([7031fd7](https://github.com/PaoloPenazzi/testbed/commit/7031fd7d9bb5b04cdddf17f08069a8791baeecdd))
+* revert release branch name change ([d0d9c41](https://github.com/PaoloPenazzi/testbed/commit/d0d9c41c4131fbd5577e9cad2eda3a783e9c554e))
+* update .gitignore to avoid .csv file tracking ([1fb7f8d](https://github.com/PaoloPenazzi/testbed/commit/1fb7f8dbf4c980b2aae09387a4dab5eac1d5083d))
+* update build.gradle.kts ([00fd4ff](https://github.com/PaoloPenazzi/testbed/commit/00fd4ff74993932ca7584cadcc36b8358474f31c))
+* update gitignore to avoid tracking NetLogo ([702f844](https://github.com/PaoloPenazzi/testbed/commit/702f84479e4d6e7bcb81fe78252c9861944ccf93))
+
+
+### Refactoring
+
+* change class name to better reflect their purpose ([8d26647](https://github.com/PaoloPenazzi/testbed/commit/8d26647721093d731c471db029612df7b018b579))
+* change interface name to match their purpose ([ee83eeb](https://github.com/PaoloPenazzi/testbed/commit/ee83eeb18ca742fc3fb9c9d8edc46abff5f3ae49))
+
 ## [0.1.21](https://github.com/DanySK/Template-for-Kotlin-Multiplatform-Projects/compare/0.1.20...0.1.21) (2023-11-23)
 
 
