@@ -30,7 +30,7 @@ class ParserImpl : Parser {
                 SupportedSimulator.ALCHEMIST -> {
                     val configFileHandler = AlchemistConfigFileHandler()
                     simulator.scenarios.forEach { scenario ->
-                    configFileHandler.editConfigurationFile(scenario)
+                        configFileHandler.editConfigurationFile(scenario)
                     }
                 }
                 SupportedSimulator.NETLOGO -> {}
