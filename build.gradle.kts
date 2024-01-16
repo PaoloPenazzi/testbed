@@ -1,3 +1,5 @@
+import com.github.jengelman.gradle.plugins.shadow.tasks.ShadowJar
+
 @Suppress("DSL_SCOPE_VIOLATION")
 plugins {
     application
@@ -8,11 +10,12 @@ plugins {
     alias(libs.plugins.publishOnCentral)
     alias(libs.plugins.multiJvmTesting)
     alias(libs.plugins.taskTree)
+    alias(libs.plugins.shadowJar)
     kotlin("plugin.serialization") version "1.9.21"
 }
 
 application {
-    mainClass = "Main"
+    mainClass = "testbed.TestbedKt"
 }
 
 group = "io.github.paolopenazzi"
@@ -21,11 +24,15 @@ repositories {
     mavenCentral()
 }
 
-tasks.jar {
+tasks.withType<ShadowJar> {
     archiveFileName.set("testbed.jar")
     manifest {
         attributes(
-            "Main-Class" to application.mainClass,
+            mapOf(
+                "Implementation-Title" to "Testbed",
+                "Implementation-Version" to rootProject.version.toString(),
+                "Main-Class" to "testbed.Testbed",
+            ),
         )
     }
 }
