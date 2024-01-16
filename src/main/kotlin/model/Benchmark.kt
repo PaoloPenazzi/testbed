@@ -32,10 +32,18 @@ data class Strategy(
  */
 @Serializable
 data class Simulator(
-    val name: String,
+    val name: SupportedSimulator,
     val simulatorPath: String = "",
     val scenarios: List<Scenario>,
 )
+
+/**
+ * The supported simulators.
+ */
+enum class SupportedSimulator {
+    ALCHEMIST,
+    NETLOGO,
+}
 
 /**
  * A scenario contains all the information needed to run a simulation.

@@ -7,6 +7,7 @@ import model.Benchmark
 import model.BenchmarkOutput
 import model.Scenario
 import model.Simulator
+import model.SupportedSimulator
 import parsing.ParserImpl
 import processing.process
 import view.View
@@ -31,6 +32,7 @@ class ControllerImpl : Controller {
     override fun run(inputPath: String) {
         val parser = ParserImpl()
         val benchmark = parser.parse(inputPath)
+        println("[Testbed] Parsing completed")
         executeBenchmark(benchmark)
     }
 
@@ -50,6 +52,7 @@ class ControllerImpl : Controller {
             }
             for (i in 1..repetitions) {
                 runBlocking {
+                    println("[Testbed] Running scenario $scenarioName in ${simulator.name} simulator. Run number $i")
                     createExecutor(simulator.name, simulator.simulatorPath, scenario)
                     val reader = createReader(simulator.name)
                     val runName = "$scenarioName-$i"
@@ -63,20 +66,18 @@ class ControllerImpl : Controller {
         view.render()
     }
 
-    private fun createExecutor(simulatorName: String, simulatorPath: String, scenario: Scenario) {
-        val executor: Executor = when (simulatorName) {
-            "Alchemist" -> executors.AlchemistExecutor()
-            "NetLogo" -> executors.NetLogoExecutor()
-            else -> throw IllegalArgumentException("Simulator $simulatorName not found")
+    private fun createExecutor(simulator: SupportedSimulator, simulatorPath: String, scenario: Scenario) {
+        val executor: Executor = when (simulator) {
+            SupportedSimulator.ALCHEMIST -> executors.AlchemistExecutor()
+            SupportedSimulator.NETLOGO -> executors.NetLogoExecutor()
         }
         executor.run(simulatorPath, scenario)
     }
 
-    private fun createReader(simulatorName: String): Listener {
-        val reader: Listener = when (simulatorName) {
-            "Alchemist" -> listeners.AlchemistListener()
-            "NetLogo" -> listeners.NetLogoListener()
-            else -> throw IllegalArgumentException("Simulator $simulatorName not found")
+    private fun createReader(simulator: SupportedSimulator): Listener {
+        val reader: Listener = when (simulator) {
+            SupportedSimulator.ALCHEMIST -> listeners.AlchemistListener()
+            SupportedSimulator.NETLOGO -> listeners.NetLogoListener()
         }
         return reader
     }

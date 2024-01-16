@@ -7,5 +7,5 @@ import controller.ControllerImpl
 fun main(args: Array<String>) {
     args.forEach { _ -> println() }
     val controller = ControllerImpl()
-    controller.run("./src/main/yaml/benchmarks/test-duration.yml")
+    controller.run("./src/main/yaml/benchmarks/multiple-scenarios.yml")
 }

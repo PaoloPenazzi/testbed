@@ -4,7 +4,7 @@ strategy:
     - NetLogo-Tutorial
 
 simulators:
-  - name: NetLogo
+  - name: NETLOGO
     simulatorPath: "./NetLogo 6.4.0"
     scenarios:
       - name: NetLogo-Tutorial

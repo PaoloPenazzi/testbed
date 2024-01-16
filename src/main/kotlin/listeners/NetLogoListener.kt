@@ -13,10 +13,7 @@ class NetLogoListener : Listener {
 
     override fun clearCSV(outputFilePath: String) {
         val lines = Files.readAllLines(Paths.get(outputFilePath), StandardCharsets.UTF_8)
-        println(lines)
         val modifiedLines = lines.drop(numbersOfLineToSkip)
-        println(modifiedLines)
-
         Files.write(Paths.get(outputFilePath), modifiedLines, StandardCharsets.UTF_8)
     }
 }

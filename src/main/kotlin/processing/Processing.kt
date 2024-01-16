@@ -20,7 +20,7 @@ val process: (BenchmarkOutput) -> BenchmarkResult = { benchmarkOutput ->
 }
 
 private fun averageNumberOfWolvesPerRun(benchmarkOutput: BenchmarkOutput): ScenarioResult {
-    val netlogoRunsNumber = 2
+    val netlogoRunsNumber = 3
     var wolvesAverageList = listOf<Double>()
     for (i in 1..netlogoRunsNumber) {
         val wolvesCounter = benchmarkOutput["NetLogo-Tutorial-$i"]?.get("count wolves")
@@ -31,7 +31,6 @@ private fun averageNumberOfWolvesPerRun(benchmarkOutput: BenchmarkOutput): Scena
                 else -> throw IllegalArgumentException("Unexpected type")
             }
         }.average()
-        println(wolvesAverage)
         wolvesAverageList =
             wolvesAverageList + wolvesAverage.toBigDecimal().setScale(2, RoundingMode.HALF_UP).toDouble()
     }
