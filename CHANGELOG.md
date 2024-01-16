@@ -1,3 +1,10 @@
+## [2.2.0](https://github.com/PaoloPenazzi/testbed/compare/2.1.1...2.2.0) (2024-01-16)
+
+
+### Features
+
+* switch to shadowJar plugin to generate jar file ([1abcc5a](https://github.com/PaoloPenazzi/testbed/commit/1abcc5ab76866d2be0c67a601905f16d74e311c3))
+
 ## [2.1.1](https://github.com/PaoloPenazzi/testbed/compare/2.1.0...2.1.1) (2024-01-16)
 
 
