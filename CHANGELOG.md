@@ -1,3 +1,10 @@
+## [2.1.1](https://github.com/PaoloPenazzi/testbed/compare/2.1.0...2.1.1) (2024-01-16)
+
+
+### Bug Fixes
+
+* change asset name in release config ([10c136e](https://github.com/PaoloPenazzi/testbed/commit/10c136e13cdc6b7d7297efbab48ec1463f305136))
+
 ## [2.1.0](https://github.com/PaoloPenazzi/testbed/compare/2.0.0...2.1.0) (2024-01-16)
 
 
