@@ -1,3 +1,20 @@
+## [2.2.1](https://github.com/PaoloPenazzi/testbed/compare/2.2.0...2.2.1) (2024-01-16)
+
+
+### Dependency updates
+
+* **core-deps:** update plugin org.jetbrains.kotlin.plugin.serialization to v1.9.22 ([bd5227b](https://github.com/PaoloPenazzi/testbed/commit/bd5227b23d61356125a522b3c6a1583211da0718))
+
+
+### General maintenance
+
+* update Readme file ([2b886e1](https://github.com/PaoloPenazzi/testbed/commit/2b886e1d42cf9f724f5993ac321ea6b9bd1c95ec))
+
+
+### Refactoring
+
+* fix indentation inside foreach ([09ec898](https://github.com/PaoloPenazzi/testbed/commit/09ec898b9c15bdbcdb913dbdb49b89b77b2f2295))
+
 ## [2.2.0](https://github.com/PaoloPenazzi/testbed/compare/2.1.1...2.2.0) (2024-01-16)
 
 
