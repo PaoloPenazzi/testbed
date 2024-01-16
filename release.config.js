@@ -15,7 +15,7 @@ config.plugins.push(
         "@semantic-release/github",
         {
             "assets": [
-                {"path": "build/libs/testbed-\${nextRelease.version}.jar"},
+                {"path": "build/libs/testbed.jar"},
             ]
         }],
     "@semantic-release/github",
