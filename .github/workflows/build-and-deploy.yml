@@ -15,25 +15,8 @@ jobs:
     steps:
       - name: Checkout
         uses: DanySK/action-checkout@0.2.14
-      - uses: DanySK/build-check-deploy-gradle-action@2.2.13
-        with:
-          #Dry-deployment
-          deploy-command: >-
-            ./gradlew uploadKotlin close --parallel
-          should-run-codecov: ${{ runner.os == 'Linux' }}
-          should-deploy: >-
-            ${{
-              runner.os == 'Linux'
-              && !github.event.repository.fork
-              && (
-                github.event_name != 'pull_request'
-                || github.event.pull_request.head.repo.full_name == github.repository
-              )
-            }}
-          maven-central-username: ${{ secrets.MAVEN_CENTRAL_USERNAME }}
-          maven-central-password: ${{ secrets.MAVEN_CENTRAL_PASSWORD }}
-          signing-key: ${{ secrets.SIGNING_KEY }}
-          signing-password: ${{ secrets.SIGNING_PASSWORD }}
+      - name: Test
+        run: ./gradlew test
   release:
     concurrency:
       # Only one release job at a time. Strictly sequential.
@@ -59,20 +42,12 @@ jobs:
         uses: actions/setup-node@v4.0.1
         with:
           node-version: ${{ steps.node-version.outputs.version }}
-      - uses: DanySK/build-check-deploy-gradle-action@2.2.13
-        with:
-          build-command: true
-          check-command: true
-          deploy-command: |
-            npm install
-            npx semantic-release
-          should-run-codecov: false
-          should-deploy: false
-          github-token: ${{ secrets.GH_TOKEN }}
-          maven-central-username: ${{ secrets.MAVEN_CENTRAL_USERNAME }}
-          maven-central-password: ${{ secrets.MAVEN_CENTRAL_PASSWORD }}
-          signing-key: ${{ secrets.SIGNING_KEY }}
-          signing-password: ${{ secrets.SIGNING_PASSWORD }}
+      - name: Release
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+        run: |
+          npm install
+          npx semantic-release
   success:
     runs-on: ubuntu-22.04
     needs:
