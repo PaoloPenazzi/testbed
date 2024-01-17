@@ -1,3 +1,25 @@
+## [2.3.0](https://github.com/PaoloPenazzi/testbed/compare/2.2.1...2.3.0) (2024-01-17)
+
+
+### Features
+
+* add some integrity checks and console log ([ea3370b](https://github.com/PaoloPenazzi/testbed/commit/ea3370b1024fcef8c5dfb0c8c532af2bd9ba3abc))
+* now the output .csv file is read from the simulator folder ([812c0dc](https://github.com/PaoloPenazzi/testbed/commit/812c0dcf239f3fe07fbe0110dc45ed2e4e1367db))
+
+
+### Dependency updates
+
+* **deps:** update dependency com.charleskorn.kaml:kaml to v0.57.0 ([b32514a](https://github.com/PaoloPenazzi/testbed/commit/b32514ab5c83f0cc63b6360ca9bafcbf6d5c61fb))
+* **deps:** update dependency org.mockito:mockito-core to v5.9.0 ([f899fb9](https://github.com/PaoloPenazzi/testbed/commit/f899fb99837243728655e873fb729487e55683b1))
+* **deps:** update node.js to 20.11 ([d87aba4](https://github.com/PaoloPenazzi/testbed/commit/d87aba4d8fa6d71ba50a3ac66d71c61d35ac8254))
+* **deps:** update plugin org.gradle.toolchains.foojay-resolver-convention to v0.8.0 ([b160918](https://github.com/PaoloPenazzi/testbed/commit/b160918f505ab675cbcbf6993807cc54887a7146))
+
+
+### Refactoring
+
+* add some missing spaces ([e44826f](https://github.com/PaoloPenazzi/testbed/commit/e44826f243278fc0d46e2b3d84309040bd0405fe))
+* split model classes in two different files ([fa605d8](https://github.com/PaoloPenazzi/testbed/commit/fa605d8751c9e127556cd2f4b403635816252e85))
+
 ## [2.2.1](https://github.com/PaoloPenazzi/testbed/compare/2.2.0...2.2.1) (2024-01-16)
 
 
