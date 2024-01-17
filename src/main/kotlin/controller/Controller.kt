@@ -95,8 +95,8 @@ class ControllerImpl : Controller {
 
     // Check all the path in the benchmark
     private fun checkPaths(benchmark: Benchmark) {
-        benchmark.simulators.forEach {simulator ->
-            simulator.scenarios.forEach {scenario ->
+        benchmark.simulators.forEach { simulator ->
+            simulator.scenarios.forEach { scenario ->
                 if (!isFilePathValid(simulator.simulatorPath + scenario.modelPath)) {
                     throw IllegalArgumentException("Model path not found. No model was found at ${scenario.modelPath}")
                 }
