@@ -3,19 +3,18 @@ package processing
 import model.BenchmarkOutput
 import model.BenchmarkResult
 import model.ScenarioResult
-import model.VisualisationType
+import view.VisualisationType
 import java.math.RoundingMode
 
 @Suppress("UndocumentedPublicProperty")
 val process: (BenchmarkOutput) -> BenchmarkResult = { benchmarkOutput ->
+    // NetLogo processing
     val averageNumberOfWolvesPerRun = averageNumberOfWolvesPerRun(benchmarkOutput)
-
     // Alchemist processing
     val alchemistMetric = benchmarkOutput["Alchemist-Protelis-1"]
     val timeCounter = alchemistMetric?.get("time ")
     val timeResult = ScenarioResult("Alchemist time steps: ", timeCounter.orEmpty(), VisualisationType.LIST_OF_VALUES)
-
-    // Return the list of results
+    // Return the results
     listOf(averageNumberOfWolvesPerRun, timeResult)
 }
 
