@@ -7,7 +7,11 @@ import controller.ControllerImpl
  * @param args the path to the YAML file
  */
 fun main(args: Array<String>) {
-    args.forEach { println(it) }
+    when (args.size) {
+        0 -> throw IllegalArgumentException("No input file provided")
+        1 -> println("[TESTBED] Starting..")
+        else -> throw IllegalArgumentException("Too many arguments")
+    }
     val controller = ControllerImpl()
-    controller.run("./src/main/yaml/benchmarks/multiple-scenarios.yml")
+    controller.run(args[0])
 }

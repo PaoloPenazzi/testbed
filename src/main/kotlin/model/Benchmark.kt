@@ -15,12 +15,10 @@ data class Benchmark(
 
 /**
  * The strategy defines how the benchmark is run.
- * @param multiThreaded if true, the benchmark is run in parallel
  * @param executionOrder the order in which the scenarios are run
  */
 @Serializable
 data class Strategy(
-    val multiThreaded: Boolean = false,
     val executionOrder: List<String> = emptyList(),
 )
 
@@ -50,9 +48,9 @@ enum class SupportedSimulator {
  * @param name the name of the scenario. This parameter is mandatory.
  * @param description a description of the scenario
  * @param input the input file of the scenario
- * @param modelPath the path to the model used in the scenario. This is needed only for NetLogo simulations.
+ * @param modelPath the path to the model used in the scenario. Supported by NetLogo.
  * @param repetitions the number of times the scenario is run. Default is 1.
- * @param duration the duration of the simulation.
+ * @param duration the duration of the simulation. Supported by Alchemist.
  */
 @Serializable
 data class Scenario(

@@ -1,5 +1,4 @@
 strategy:
-  multiThreaded: false
   executionOrder:
     - Alchemist-Protelis
     - NetLogo-Tutorial

@@ -11,6 +11,7 @@ import model.SupportedSimulator
 import parsing.ParserImpl
 import processing.process
 import view.View
+import java.io.File
 
 /**
  * The testbed controller.
@@ -31,8 +32,13 @@ class ControllerImpl : Controller {
 
     override fun run(inputPath: String) {
         val parser = ParserImpl()
+        if (!isFilePathValid(inputPath)) {
+            throw IllegalArgumentException("Input file not found. No input file was found at $inputPath")
+        }
+        println("[TESTBED] Parsing started")
         val benchmark = parser.parse(inputPath)
-        println("[Testbed] Parsing completed")
+        println("[TESTBED] Parsing completed")
+        checkPaths(benchmark)
         executeBenchmark(benchmark)
     }
 
@@ -52,7 +58,7 @@ class ControllerImpl : Controller {
             }
             for (i in 1..repetitions) {
                 runBlocking {
-                    println("[Testbed] Running scenario $scenarioName in ${simulator.name} simulator. Run number $i")
+                    println("[TESTBED] Running scenario $scenarioName in ${simulator.name} simulator. Run number $i")
                     createExecutor(simulator.name, simulator.simulatorPath, scenario)
                     val reader = createReader(simulator.name)
                     val runName = "$scenarioName-$i"
@@ -80,5 +86,24 @@ class ControllerImpl : Controller {
             SupportedSimulator.NETLOGO -> listeners.NetLogoListener()
         }
         return reader
+    }
+
+    private fun isFilePathValid(filePath: String): Boolean {
+        val file = File(filePath)
+        return file.exists()
+    }
+
+    // Check all the path in the benchmark
+    private fun checkPaths(benchmark: Benchmark) {
+        benchmark.simulators.forEach {simulator ->
+            simulator.scenarios.forEach {scenario ->
+                if (!isFilePathValid(simulator.simulatorPath + scenario.modelPath)) {
+                    throw IllegalArgumentException("Model path not found. No model was found at ${scenario.modelPath}")
+                }
+                if (!isFilePathValid(simulator.simulatorPath + scenario.input)) {
+                    throw IllegalArgumentException("Input path not found. No input was found at ${scenario.input}")
+                }
+            }
+        }
     }
 }

@@ -32,7 +32,7 @@ interface View {
  */
 class ViewImpl(override val benchmarkResult: BenchmarkResult) : View {
     override fun render() {
-        println("[Testbed] Results:")
+        println("[TESTBED] Results:")
         benchmarkResult.forEach { result ->
             when (result.visualisationType) {
                 VisualisationType.SINGLE_VALUE -> println(result.description + result.value[0])
