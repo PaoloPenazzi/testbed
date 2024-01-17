@@ -7,6 +7,7 @@ import controller.ControllerImpl
  * @param args the path to the YAML file
  */
 fun main(args: Array<String>) {
+    args.forEach { println(it) }
     val controller = ControllerImpl()
-    controller.run(args[0])
+    controller.run("./src/main/yaml/benchmarks/multiple-scenarios.yml")
 }

@@ -16,7 +16,7 @@ class NetLogoExecutor : Executor {
             "--setup-file",
             scenario.input,
             "--table",
-            "../export.csv",
+            "./export.csv",
         )
             .directory(File(simulatorPath))
             .redirectErrorStream(true)

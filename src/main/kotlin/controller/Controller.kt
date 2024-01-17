@@ -56,7 +56,7 @@ class ControllerImpl : Controller {
                     createExecutor(simulator.name, simulator.simulatorPath, scenario)
                     val reader = createReader(simulator.name)
                     val runName = "$scenarioName-$i"
-                    val metric = reader.readCsv("./export.csv")
+                    val metric = reader.readCsv(simulator.simulatorPath + "export.csv")
                     benchmarkOutput = benchmarkOutput + mapOf(runName to metric)
                 }
             }
