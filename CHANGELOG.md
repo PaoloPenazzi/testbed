@@ -1,3 +1,16 @@
+## [2.3.1](https://github.com/PaoloPenazzi/testbed/compare/2.3.0...2.3.1) (2024-02-02)
+
+
+### Dependency updates
+
+* **core-deps:** update dependency org.jetbrains.kotlinx:kotlinx-io-core to v0.3.1 ([fe56847](https://github.com/PaoloPenazzi/testbed/commit/fe56847b8d1858d2daa8fceed13c40cd3bffb732))
+* **deps:** update dependency org.mockito:mockito-core to v5.10.0 ([be2445d](https://github.com/PaoloPenazzi/testbed/commit/be2445dfa355bad53d5b815ba64575c9c249f9d7))
+* **deps:** update plugin com.gradle.enterprise to v3.16.2 ([c3b67c6](https://github.com/PaoloPenazzi/testbed/commit/c3b67c660b200e40c855b4cee3df759aa297d624))
+* **deps:** update plugin gitsemver to v3 ([06edf08](https://github.com/PaoloPenazzi/testbed/commit/06edf08895a253ee50995a7ae92fc046a60dd5ab))
+* **deps:** update plugin gitsemver to v3.1.0 ([ac12d8f](https://github.com/PaoloPenazzi/testbed/commit/ac12d8f3ebf22585892028c118f9a65d006d0b85))
+* **deps:** update plugin kotlin-qa to v0.59.0 ([071852c](https://github.com/PaoloPenazzi/testbed/commit/071852cb45fcfc8e1dff598a748d56306f6ac997))
+* **deps:** update plugin multijvmtesting to v0.5.8 ([7387df6](https://github.com/PaoloPenazzi/testbed/commit/7387df6d6a9b0f0ccb68bb34304268b779400fb2))
+
 ## [2.3.0](https://github.com/PaoloPenazzi/testbed/compare/2.2.1...2.3.0) (2024-01-17)
 
 
