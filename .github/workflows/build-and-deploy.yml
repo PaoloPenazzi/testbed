@@ -39,7 +39,11 @@ jobs:
         id: node-version
         run: echo "version=$(jq -r .engines.node package.json)" >> $GITHUB_OUTPUT
       - name: Install Node
+<<<<<<< HEAD
         uses: actions/setup-node@v4.0.2
+=======
+        uses: actions/setup-node@v4.0.1
+>>>>>>> b71c7d5 (fix: add broken files)
         with:
           node-version: ${{ steps.node-version.outputs.version }}
       - name: Release

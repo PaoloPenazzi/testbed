@@ -1,0 +1,12 @@
+strategy:
+  executionOrder:
+    - Alchemist-test
+
+simulators:
+  - name: ALCHEMIST
+    simulatorPath: "./"
+    scenarios:
+      - name: Alchemist-test
+        description: Testing the parser
+        input:
+          - "protelis-tutorial.yml"
