@@ -16,7 +16,11 @@ interface Listener {
      * @param path The path of the CSV file.
      * @return A map with the column names as keys and the values as a list of values.
      */
+<<<<<<< HEAD
     fun readCsv(path: String): ScenarioOutput {
+=======
+    fun read(path: String = ""): ScenarioOutput {
+>>>>>>> b71c7d5 (fix: add broken files)
         val csvDataMap = mutableMapOf<String, MutableList<Any>>()
 
         clearCSV(path)

@@ -1,0 +1,32 @@
+strategy:
+  executionOrder:
+    - Alchemist-Protelis
+    - NetLogo-Tutorial
+    - Alchemist-Sapere
+
+simulators:
+  - name: NETLOGO
+    simulatorPath: "./NetLogo 6.4.0/"
+    scenarios:
+      - name: NetLogo-Tutorial
+        description: A tutorial to NetLogo
+        input:
+          - "./netlogo/netlogo-tutorial.xml"
+          - "./models/wolf-sheep.nlogo"
+        repetitions: 3
+
+  - name: ALCHEMIST
+    simulatorPath: "./"
+    scenarios:
+      - name: Alchemist-Protelis
+        description: A tutorial to Alchemist and Protelis incarnation
+        input:
+          - "./src/main/resources/alchemist/protelis-tutorial.yml"
+        repetitions: 1
+        duration: 10
+      - name: Alchemist-Sapere
+        description: A tutorial to Alchemist and Sapere incarnation
+        input:
+          - "./src/main/resources/alchemist/sapere-tutorial.yml"
+        repetitions: 5
+        duration: 100

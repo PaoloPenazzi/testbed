@@ -1,2 +1,2 @@
-[*.{kt,kts}]
+[*{.gradle.kts,.kt,.kts,.main.kts}]
 max_line_length=120

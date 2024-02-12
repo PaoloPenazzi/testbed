@@ -1,6 +1,10 @@
 strategy:
   executionOrder:
+<<<<<<< HEAD
     - Alchemist-Protelis
+=======
+    - Alchemist-Sapere
+>>>>>>> b71c7d5 (fix: add broken files)
     - NetLogo-Tutorial
 
 simulators:
@@ -9,15 +13,30 @@ simulators:
     scenarios:
       - name: NetLogo-Tutorial
         description: A tutorial to NetLogo
+<<<<<<< HEAD
         input: "../src/main/resources/netlogo/netlogo-tutorial.xml"
         modelPath: "./models/IABM Textbook/chapter 4/Wolf Sheep Simple 5.nlogo"
+=======
+        input:
+          - "../src/main/resources/netlogo/netlogo-tutorial.xml"
+          - "./models/IABM Textbook/chapter 4/Wolf Sheep Simple 5.nlogo"
+>>>>>>> b71c7d5 (fix: add broken files)
         repetitions: 3
 
   - name: ALCHEMIST
     simulatorPath: "./"
     scenarios:
+<<<<<<< HEAD
       - name: Alchemist-Protelis
         description: A tutorial to Alchemist and Protelis incarnation
         input: "src/main/resources/alchemist/protelis-tutorial.yml"
         repetitions: 1
         duration: 10
+=======
+      - name: Alchemist-Sapere
+        description: A tutorial to Alchemist and Protelis incarnation
+        input:
+          - "src/main/resources/alchemist/sapere-tutorial.yml"
+        repetitions: 1
+        duration: 10
+>>>>>>> b71c7d5 (fix: add broken files)
