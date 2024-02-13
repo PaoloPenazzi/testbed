@@ -12,4 +12,4 @@ local.properties
 NetLogo 6.4.0/
 
 *.csv
-*.jar
+*mist.jar
