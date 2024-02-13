@@ -60,12 +60,7 @@ enum class SupportedSimulator {
 data class Scenario(
     val name: String,
     val description: String = "",
-<<<<<<< HEAD
-    val input: String = "",
-    val modelPath: String = "",
-=======
     val input: List<String> = listOf(),
->>>>>>> b71c7d5 (fix: add broken files)
     val repetitions: Int = 1,
     val duration: Int = 0,
 )

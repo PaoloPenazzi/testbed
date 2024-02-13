@@ -19,15 +19,9 @@ class NetLogoExecutor : Executor {
             "./NetLogo_Console",
             "--headless",
             "--model",
-<<<<<<< HEAD
-            scenario.modelPath,
-            "--setup-file",
-            scenario.input,
-=======
             scenario.input[1],
             "--setup-file",
             scenario.input[0],
->>>>>>> b71c7d5 (fix: add broken files)
             "--table",
             "./export.csv",
         )

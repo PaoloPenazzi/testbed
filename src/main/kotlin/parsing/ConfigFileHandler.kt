@@ -21,14 +21,9 @@ interface ConfigFileHandler {
  */
 class AlchemistConfigFileHandler : ConfigFileHandler {
     override fun editConfigurationFile(scenario: Scenario) {
-<<<<<<< HEAD
-        if (scenario.duration != 0) {
-            insertDuration(scenario.input, scenario.duration)
-=======
         require(scenario.input.isNotEmpty()) { "No input file provided for scenario ${scenario.name}" }
         if (scenario.duration != 0) {
             insertDuration(scenario.input[0], scenario.duration)
->>>>>>> b71c7d5 (fix: add broken files)
         }
     }
 
