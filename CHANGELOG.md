@@ -1,3 +1,34 @@
+## [2.3.2](https://github.com/PaoloPenazzi/testbed/compare/2.3.1...2.3.2) (2024-02-13)
+
+
+### Dependency updates
+
+* **deps:** update dependency gradle to v8.6 ([481ec92](https://github.com/PaoloPenazzi/testbed/commit/481ec926d4770cd9d4c93aa5edca71c9f445eb1c))
+* **deps:** update plugin gitsemver to v3.1.1 ([b22ef5d](https://github.com/PaoloPenazzi/testbed/commit/b22ef5dda8423a837dac6bbc318afabaa40e25f0))
+* **deps:** update plugin kotlin-qa to v0.59.1 ([b57d3ba](https://github.com/PaoloPenazzi/testbed/commit/b57d3ba4ee81a51499350cbfd13ae95b5951ce6c))
+* **deps:** update plugin kotlin-qa to v0.60.0 ([99d4d5d](https://github.com/PaoloPenazzi/testbed/commit/99d4d5dea00e3b71b80e065210662374b9030547))
+* **deps:** update plugin kotlin-qa to v0.60.1 ([354f3f3](https://github.com/PaoloPenazzi/testbed/commit/354f3f31f481f463bf4eb527b3506327acf71874))
+* **deps:** update plugin org.danilopianini.gradle-pre-commit-git-hooks to v2.0.1 ([f2fa1dd](https://github.com/PaoloPenazzi/testbed/commit/f2fa1ddb19238468a13272723843daa0b1c41289))
+* **deps:** update plugin publishoncentral to v5.0.23 ([cbe3b8a](https://github.com/PaoloPenazzi/testbed/commit/cbe3b8a8ab9fcf37af696e0be3f4522c0c0f68dd))
+
+
+### Bug Fixes
+
+* add broken files ([574b131](https://github.com/PaoloPenazzi/testbed/commit/574b13189500370747017e67303a7d23f84621de))
+* change gitignore to allow track of gradle wrapper ([67c32b8](https://github.com/PaoloPenazzi/testbed/commit/67c32b8d21d56d380e582bce0aa3f1ec349556f9))
+* solve rebase conflicts ([d434f9a](https://github.com/PaoloPenazzi/testbed/commit/d434f9aa076716a7295fcf0ebada04a6dd707856))
+
+
+### Tests
+
+* remove integration tests ([2204775](https://github.com/PaoloPenazzi/testbed/commit/22047759239e033423414fb8303fe47c9bf41269))
+
+
+### Build and continuous integration
+
+* **deps:** update actions/setup-node action to v4.0.2 ([09032d0](https://github.com/PaoloPenazzi/testbed/commit/09032d083671487d977cf20b5c8b14e2f13d50b6))
+* fix typo in workflow ([abcb6db](https://github.com/PaoloPenazzi/testbed/commit/abcb6db66072211b969a7c0a501b7e6e95a9ca8e))
+
 ## [2.3.1](https://github.com/PaoloPenazzi/testbed/compare/2.3.0...2.3.1) (2024-02-02)
 
 
