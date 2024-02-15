@@ -1,3 +1,10 @@
+## [2.3.3](https://github.com/PaoloPenazzi/testbed/compare/2.3.2...2.3.3) (2024-02-15)
+
+
+### Dependency updates
+
+* **core-deps:** update dependency org.jetbrains.kotlinx:kotlinx-coroutines-core to v1.8.0 ([8172776](https://github.com/PaoloPenazzi/testbed/commit/81727764ebd00d8d61689f9fc51eaeb039a26716))
+
 ## [2.3.2](https://github.com/PaoloPenazzi/testbed/compare/2.3.1...2.3.2) (2024-02-13)
 
 
