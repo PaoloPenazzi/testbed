@@ -24,6 +24,11 @@ deployments:
 export:
 - type: CSVExporter
   parameters: {fileNameRoot: export, interval: 5, exportPath: ./}
-  data: [time]
+  data:
+  - time
+  - molecule: gradient, Noooooooooooooooooooooooooooooooooooooooooooo
+    property: Noooooooooooooooooooooooooooooooooooooooooooo
+    aggregators: [mean]
+    value-filter: onlyfinite
 terminate:
-- {type: AfterTime, parameters: 100}
+- {type: AfterTime, parameters: 10}
