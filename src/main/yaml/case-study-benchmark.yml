@@ -1,0 +1,12 @@
+strategy:
+  executionOrder:
+    - Alchemist-SAPERE-gradient
+
+simulators:
+  - name: ALCHEMIST
+    simulatorPath: "./"
+    scenarios:
+      - name: Alchemist-SAPERE-gradient
+        description: A benchmark to test the gradient computation in the Sapere incarnation
+        input: ["src/main/yaml/sapere-gradient.yml"]
+        repetitions: 1

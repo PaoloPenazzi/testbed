@@ -8,19 +8,29 @@ import java.math.RoundingMode
 
 @Suppress("UndocumentedPublicProperty")
 val process: (BenchmarkOutput) -> BenchmarkResult = { benchmarkOutput ->
-    // NetLogo processing
-    val averageNumberOfWolvesPerRun = averageNumberOfWolvesPerRun(benchmarkOutput)
-    // Alchemist processing
+    caseStudyProcessing(benchmarkOutput)
+}
+
+private fun caseStudyProcessing(benchmarkOutput: BenchmarkOutput): BenchmarkResult {
+    println(benchmarkOutput)
+    return emptyList()
+}
+
+private fun benchmarkProcessing(benchmarkOutput: BenchmarkOutput): BenchmarkResult {
+    val averageNumberOfWolvesPerRun = benchmarkProcessingNetlogo(benchmarkOutput)
+    val timeResult = benchmarkProcessingAlchemist(benchmarkOutput)
+    return listOf(averageNumberOfWolvesPerRun, timeResult)
+}
+
+private fun benchmarkProcessingAlchemist(benchmarkOutput: BenchmarkOutput): ScenarioResult {
     val alchemistMetric = benchmarkOutput["Alchemist-Protelis-1"]
     println(alchemistMetric)
     val timeCounter = alchemistMetric?.get("time ").orEmpty()
     val timeCounterDouble = timeCounter.map { it.toString().toDouble() }
-    val timeResult = ScenarioResult("Alchemist time steps: ", timeCounterDouble, VisualisationType.LIST_OF_VALUES)
-    // Return the results
-    listOf(averageNumberOfWolvesPerRun, timeResult)
+    return ScenarioResult("Alchemist time steps: ", timeCounterDouble, VisualisationType.LIST_OF_VALUES)
 }
 
-private fun averageNumberOfWolvesPerRun(benchmarkOutput: BenchmarkOutput): ScenarioResult {
+private fun benchmarkProcessingNetlogo(benchmarkOutput: BenchmarkOutput): ScenarioResult {
     val netlogoRunsNumber = 3
     var wolvesAverageList = listOf<Double>()
     for (i in 1..netlogoRunsNumber) {

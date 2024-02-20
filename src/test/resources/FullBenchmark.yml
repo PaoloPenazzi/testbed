@@ -27,6 +27,6 @@ simulators:
       - name: Alchemist-Sapere
         description: A tutorial to Alchemist and Sapere incarnation
         input:
-          - "./src/main/resources/alchemist/sapere-tutorial.yml"
+          - "./src/main/resources/alchemist/sapere-gradient.yml"
         repetitions: 5
         duration: 100
