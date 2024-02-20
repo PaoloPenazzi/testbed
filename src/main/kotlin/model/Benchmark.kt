@@ -47,12 +47,7 @@ enum class SupportedSimulator {
  * A scenario contains all the information needed to run a simulation.
  * @param name the name of the scenario. This parameter is mandatory.
  * @param description a description of the scenario
-<<<<<<< HEAD
- * @param input the input file of the scenario
- * @param modelPath the path to the model used in the scenario. Supported by NetLogo.
-=======
  * @param input the list of all the input files for the scenario. Default is empty.
->>>>>>> b71c7d5 (fix: add broken files)
  * @param repetitions the number of times the scenario is run. Default is 1.
  * @param duration the duration of the simulation. Supported by Alchemist.
  */
@@ -61,6 +56,7 @@ data class Scenario(
     val name: String,
     val description: String = "",
     val input: List<String> = listOf(),
+    val postProcessing: String = "",
     val repetitions: Int = 1,
     val duration: Int = 0,
 )

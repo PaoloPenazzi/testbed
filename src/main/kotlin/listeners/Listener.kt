@@ -17,7 +17,7 @@ interface Listener {
      * @return A map with the column names as keys and the values as a list of values.
      */
     fun read(path: String = ""): ScenarioOutput {
-        val csvDataMap = mutableMapOf<String, MutableList<Any>>()
+        val csvDataMap = linkedMapOf<String, List<String>>()
 
         clearCSV(path)
 
@@ -30,12 +30,11 @@ interface Listener {
             var record: Array<String>?
             while (csvReader.readNext().also { record = it } != null) {
                 for (i in headers.indices) {
-                    @Suppress("UnsafeCallOnNullableType")
                     if (i < record!!.size) {
                         @Suppress("UnsafeCallOnNullableType")
-                        csvDataMap[headers[i]]?.add(record!![i])
+                        csvDataMap[headers[i]] = csvDataMap[headers[i]]!! + record!![i]
                     } else {
-                        csvDataMap[headers[i]]?.add("") // Empty string for missing values
+                        csvDataMap[headers[i]] = csvDataMap[headers[i]]!! + "" // Empty string for missing values
                     }
                 }
             }

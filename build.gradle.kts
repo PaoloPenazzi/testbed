@@ -46,6 +46,7 @@ dependencies {
     implementation("org.yaml:snakeyaml:2.2")
     implementation("com.charleskorn.kaml:kaml:0.57.0")
     implementation("com.opencsv:opencsv:5.9")
+    implementation(kotlin("script-runtime"))
 }
 
 kotlin {
