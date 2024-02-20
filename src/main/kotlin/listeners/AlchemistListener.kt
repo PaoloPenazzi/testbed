@@ -35,6 +35,24 @@ class AlchemistListener : Listener {
             val modifiedLine = line.replace(Regex("# "), "")
             modifiedLine
         }
-        Files.write(Paths.get(path), modifiedLines, StandardCharsets.UTF_8)
+        val finalLines = modifiedLines.map { line ->
+            if (modifiedLines.indexOf(line) == 0) {
+                val headers = line.split(" ").filter {
+                    it.contains("time") || it.contains("[")
+                }
+                headers
+            } else {
+                line
+            }
+        }
+        val commaLines = finalLines.map { line ->
+            println(line)
+            val doubleSpace = line.toString().replace(Regex(", "), ",")
+            println(doubleSpace)
+            val modifiedLine = doubleSpace.replace(Regex(" "), ",")
+            println(modifiedLine)
+            modifiedLine
+        }
+        Files.write(Paths.get(path), commaLines, StandardCharsets.UTF_8)
     }
 }

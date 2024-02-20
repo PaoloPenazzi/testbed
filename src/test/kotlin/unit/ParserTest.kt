@@ -76,7 +76,7 @@ private fun fullBenchmarkBuilder(): Benchmark {
     val sapereScenario: Scenario = Scenario(
         name = "Alchemist-Sapere",
         description = "A tutorial to Alchemist and Sapere incarnation",
-        input = listOf("./src/main/resources/alchemist/sapere-tutorial.yml"),
+        input = listOf("./src/main/resources/alchemist/sapere-gradient.yml"),
         repetitions = 5,
         duration = 100,
     )
