@@ -46,11 +46,8 @@ class AlchemistListener : Listener {
             }
         }
         val commaLines = finalLines.map { line ->
-            println(line)
             val doubleSpace = line.toString().replace(Regex(", "), ",")
-            println(doubleSpace)
             val modifiedLine = doubleSpace.replace(Regex(" "), ",")
-            println(modifiedLine)
             modifiedLine
         }
         Files.write(Paths.get(path), commaLines, StandardCharsets.UTF_8)

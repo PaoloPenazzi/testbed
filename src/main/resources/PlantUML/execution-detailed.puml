@@ -1,11 +1,8 @@
 @startuml
 skinparam sequenceMessageAlign center
 
-
-
  -> Controller : run(configFile)
 activate Controller
-
 
 Controller -> Parser : parse(configFile)
 activate Parser
@@ -20,15 +17,21 @@ deactivate Executor
 
 ...wait for test run to finish...
 
+alt no scripting file specified
+
 Controller -> Listener : readOutput
 activate Listener
 return output
+Controller -> Controller : process output
+
+else scripting file specified
+Controller -> : execute script
+Controller -> Controller : read JSON
 
 end
-Controller -> Controller : process output
+end
+
 Controller -> View : render(output)
 
 deactivate Controller
-
-
 @enduml
