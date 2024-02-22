@@ -1,3 +1,17 @@
+## [2.4.0](https://github.com/PaoloPenazzi/testbed/compare/2.3.4...2.4.0) (2024-02-22)
+
+
+### Features
+
+* add case study example ([1dc8b58](https://github.com/PaoloPenazzi/testbed/commit/1dc8b58df922044437ad3d83946acbc45dd8698d))
+* add the possibility to define an externa processing script ([64a7350](https://github.com/PaoloPenazzi/testbed/commit/64a7350cf1539abf7ff6b5b54ecb664e98b373e5))
+* enable external output processing ([e29e348](https://github.com/PaoloPenazzi/testbed/commit/e29e348822920d07ac380c5ff20cc9082f3efcfb))
+
+
+### Tests
+
+* fix broken path in Parser tests ([d85f4c3](https://github.com/PaoloPenazzi/testbed/commit/d85f4c390b2b3958f130a3cdcf7fd7bab1e5c320))
+
 ## [2.3.4](https://github.com/PaoloPenazzi/testbed/compare/2.3.3...2.3.4) (2024-02-16)
 
 
