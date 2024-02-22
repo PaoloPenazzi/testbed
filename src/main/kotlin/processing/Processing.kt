@@ -12,8 +12,40 @@ val process: (BenchmarkOutput) -> BenchmarkResult = { benchmarkOutput ->
 }
 
 private fun caseStudyProcessing(benchmarkOutput: BenchmarkOutput): BenchmarkResult {
-    println(benchmarkOutput)
-    return emptyList()
+    val timeValues = benchmarkOutput["Alchemist-SAPERE-gradient-1"]!!["[time"]
+    val timeValuesDouble =
+        timeValues?.map { it.toString().toBigDecimal().setScale(2, RoundingMode.HALF_UP).toDouble() }!!
+    println()
+    println("Time values: $timeValuesDouble")
+    val gradientValues =
+        benchmarkOutput["Alchemist-SAPERE-gradient-1"]!!["Noooooooooooooooooooooooooooooooooooooooooooo[mean]]"]
+    val gradientValuesNoNaN = gradientValues?.map { it.toString().replace("NaN", "0") }
+    val gradientValuesDouble =
+        gradientValuesNoNaN?.map { it.toBigDecimal().setScale(2, RoundingMode.HALF_UP).toDouble() }!!
+    println("Gradient values: $gradientValuesDouble")
+    println()
+    val timeToStabilize = gradientValuesDouble.reversed().foldRight(Triple(0.00, 0, 0)) { value, acc ->
+        if (acc.second == 0) {
+            if (value == acc.first && value != 0.00) {
+                Triple(
+                    acc.first,
+                    gradientValuesDouble.indexOf(acc.first),
+                    acc.third - 1,
+                )
+            } else {
+                Triple(value, 0, acc.third + 1)
+            }
+        } else {
+            acc
+        }
+    }
+    return listOf(
+        ScenarioResult(
+            "Time to stabilize: ",
+            listOf(timeValuesDouble[timeToStabilize.third]),
+            VisualisationType.SINGLE_VALUE,
+        ),
+    )
 }
 
 private fun benchmarkProcessing(benchmarkOutput: BenchmarkOutput): BenchmarkResult {

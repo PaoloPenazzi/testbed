@@ -7,11 +7,11 @@ network-model:
   type: ConnectWithinDistance
   parameters: [0.35]
 _send: &id001
-- {time-distribution: 0.1, program: '{source} --> {source} {gradient, 0}'}
-- {time-distribution: 1, program: '{gradient, N} --> {gradient, N} *{gradient, N+#D}'}
+- {time-distribution: 1, program: '{source} --> {source} {gradient, 0}'}
+- {time-distribution: 2, program: '{gradient, N} --> {gradient, N} *{gradient, N+#D}'}
 - program: |
     {gradient, N}{gradient, def: N2>=N} --> {gradient, N}
-- time-distribution: 0.1
+- time-distribution: 1
   program: |
     {gradient, N} --> {gradient, N + 1}
 - program: "{gradient, def: N > 30} --> "
