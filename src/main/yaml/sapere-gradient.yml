@@ -1,8 +1,6 @@
 incarnation: sapere
 launcher: {type: HeadlessSimulationLauncher}
-seeds:
-  scenario: 1
-  simulation: 1
+seeds: {scenario: 1, simulation: 1}
 network-model:
   type: ConnectWithinDistance
   parameters: [0.35]
@@ -14,7 +12,7 @@ _send: &id001
 - time-distribution: 1
   program: |
     {gradient, N} --> {gradient, N + 1}
-- program: "{gradient, def: N > 30} --> "
+- {program: '{gradient, def: N > 30} --> '}
 deployments:
   type: Grid
   parameters: [-5, -5, 5, 5, 0.25, 0.25, 0.1, 0.1]
@@ -29,9 +27,9 @@ export:
   parameters: {fileNameRoot: export, interval: 5, exportPath: ./}
   data:
   - time
-  - molecule: "gradient, Noooooooooooooooooooooooooooooooooooooooooooo"
-    property: "Noooooooooooooooooooooooooooooooooooooooooooo"
+  - molecule: gradient, Noooooooooooooooooooooooooooooooooooooooooooo
+    property: Noooooooooooooooooooooooooooooooooooooooooooo
     aggregators: [mean]
     value-filter: onlyfinite
 terminate:
-- {type: AfterTime, parameters: 50}
+- {type: AfterTime, parameters: 100}

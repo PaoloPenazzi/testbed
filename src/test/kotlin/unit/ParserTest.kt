@@ -63,7 +63,8 @@ private fun fullBenchmarkBuilder(): Benchmark {
     val protelisScenario: Scenario = Scenario(
         name = "Alchemist-Protelis",
         description = "A tutorial to Alchemist and Protelis incarnation",
-        input = listOf("./src/main/resources/alchemist/protelis-tutorial.yml"),
+        input = listOf("./src/main/yaml/protelis-tutorial.yml"),
+        postProcessing = "",
         repetitions = 1,
         duration = 10,
     )
@@ -71,12 +72,14 @@ private fun fullBenchmarkBuilder(): Benchmark {
         name = "NetLogo-Tutorial",
         description = "A tutorial to NetLogo",
         input = listOf("./netlogo/netlogo-tutorial.xml", "./models/wolf-sheep.nlogo"),
+        postProcessing = "",
         repetitions = 3,
     )
     val sapereScenario: Scenario = Scenario(
         name = "Alchemist-Sapere",
         description = "A tutorial to Alchemist and Sapere incarnation",
-        input = listOf("./src/main/resources/alchemist/sapere-gradient.yml"),
+        input = listOf("./src/main/yaml/sapere-gradient.yml"),
+        postProcessing = "",
         repetitions = 5,
         duration = 100,
     )
