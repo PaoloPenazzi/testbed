@@ -1,3 +1,15 @@
+## [2.4.1](https://github.com/PaoloPenazzi/testbed/compare/2.4.0...2.4.1) (2024-03-04)
+
+
+### Dependency updates
+
+* **deps:** update dependency org.mockito:mockito-core to v5.11.0 ([4f032a8](https://github.com/PaoloPenazzi/testbed/commit/4f032a8e85a0f9283653ab818c61138a75204954))
+
+
+### Documentation
+
+* **deps:** update plugin dokka to v1.9.20 ([ca1e817](https://github.com/PaoloPenazzi/testbed/commit/ca1e8178d8878b55570101980575ac60decfa0ae))
+
 ## [2.4.0](https://github.com/PaoloPenazzi/testbed/compare/2.3.4...2.4.0) (2024-02-22)
 
 
