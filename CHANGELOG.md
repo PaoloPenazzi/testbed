@@ -1,3 +1,14 @@
+## [2.4.2](https://github.com/PaoloPenazzi/testbed/compare/2.4.1...2.4.2) (2024-03-07)
+
+
+### Dependency updates
+
+* **core-deps:** update dependency org.jetbrains.kotlin.jvm to v1.9.23 ([3c7a563](https://github.com/PaoloPenazzi/testbed/commit/3c7a5632c0d4522c739793a9a478f47f8ffe160b))
+* **deps:** update plugin gitsemver to v3.1.2 ([699041e](https://github.com/PaoloPenazzi/testbed/commit/699041ed06dd3c9c96132f2e52fa116b874c235c))
+* **deps:** update plugin kotlin-qa to v0.60.2 ([6e4970e](https://github.com/PaoloPenazzi/testbed/commit/6e4970ed1ff05f2782a4da6ad781934b9dacb9db))
+* **deps:** update plugin org.danilopianini.gradle-pre-commit-git-hooks to v2.0.2 ([69db21d](https://github.com/PaoloPenazzi/testbed/commit/69db21d01b7158feefd58b726f6cf972c191c50d))
+* **deps:** update plugin publishoncentral to v5.0.24 ([76127a5](https://github.com/PaoloPenazzi/testbed/commit/76127a5772659df71104e34b4df18056fc60db18))
+
 ## [2.4.1](https://github.com/PaoloPenazzi/testbed/compare/2.4.0...2.4.1) (2024-03-04)
 
 
