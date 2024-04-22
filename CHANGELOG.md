@@ -1,3 +1,28 @@
+## [2.4.5](https://github.com/PaoloPenazzi/testbed/compare/2.4.4...2.4.5) (2024-04-22)
+
+
+### Dependency updates
+
+* **core-deps:** update dependency org.jetbrains.kotlinx:kotlinx-io-core to v0.3.3 ([f3c913c](https://github.com/PaoloPenazzi/testbed/commit/f3c913cd4a1ab0fdd279c848eba357451c54cab4))
+* **deps:** update dependency gradle to v8.7 ([6fde411](https://github.com/PaoloPenazzi/testbed/commit/6fde41191fb6a520cf217715609c5b9370ae39ed))
+* **deps:** update node.js to 20.12 ([e4e1169](https://github.com/PaoloPenazzi/testbed/commit/e4e116915fc19679ffdc28b27f539dbf87cd00e6))
+* **deps:** update plugin com.gradle.enterprise to v3.17 ([6d49cd6](https://github.com/PaoloPenazzi/testbed/commit/6d49cd6900e0c247e295cc6215f9d5601b53c394))
+* **deps:** update plugin com.gradle.enterprise to v3.17.1 ([1f83084](https://github.com/PaoloPenazzi/testbed/commit/1f83084cdf2f2df5b3b17abbc55c1f01c8060bee))
+* **deps:** update plugin com.gradle.enterprise to v3.17.2 ([84def52](https://github.com/PaoloPenazzi/testbed/commit/84def5243f09cdca01eaa6e446e565a17a649149))
+* **deps:** update plugin gitsemver to v3.1.4 ([e905420](https://github.com/PaoloPenazzi/testbed/commit/e90542036f8b0edb146e88b5a6ef127e347e5f36))
+* **deps:** update plugin kotlin-qa to v0.60.4 ([fb002c9](https://github.com/PaoloPenazzi/testbed/commit/fb002c92cfa7ac132750a3d9ff9a59121254814e))
+* **deps:** update plugin kotlin-qa to v0.61.0 ([adbb050](https://github.com/PaoloPenazzi/testbed/commit/adbb050f0391ce8c89a1a4ec69da6f5cf71d1252))
+* **deps:** update plugin org.danilopianini.gradle-pre-commit-git-hooks to v2.0.4 ([43c13a7](https://github.com/PaoloPenazzi/testbed/commit/43c13a7d42592a7d473ea6f707b6d8425018aa2d))
+* **deps:** update plugin publishoncentral to v5.0.26 ([33ce934](https://github.com/PaoloPenazzi/testbed/commit/33ce934919721c50827f7f51d31cb82b7020188c))
+* **deps:** update plugin publishoncentral to v5.1.0 ([838d119](https://github.com/PaoloPenazzi/testbed/commit/838d1197e41f689aae8c300e2e8eca3d6074aec7))
+* **deps:** update plugin tasktree to v3 ([f753702](https://github.com/PaoloPenazzi/testbed/commit/f7537026ac553d42f55bbce914a495fb055f2eac))
+
+
+### Build and continuous integration
+
+* **deps:** update dependency macos github actions runner to v13 ([45d5e4c](https://github.com/PaoloPenazzi/testbed/commit/45d5e4c3ee0f443baaf9d1bfd61147a1b88d001c))
+* **deps:** update dependency macos github actions runner to v14 ([c8aae6a](https://github.com/PaoloPenazzi/testbed/commit/c8aae6a11e5d4b959b86289fb4f8ba778b276463))
+
 ## [2.4.4](https://github.com/PaoloPenazzi/testbed/compare/2.4.3...2.4.4) (2024-03-18)
 
 
