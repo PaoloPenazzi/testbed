@@ -1,3 +1,18 @@
+## [2.4.6](https://github.com/PaoloPenazzi/testbed/compare/2.4.5...2.4.6) (2024-05-07)
+
+
+### Dependency updates
+
+* **core-deps:** update kotlin monorepo to v1.9.24 ([5a330e4](https://github.com/PaoloPenazzi/testbed/commit/5a330e4d19bb7c539bf903846b7221dbb1366acc))
+
+
+### Build and continuous integration
+
+* **deps:** update actions/checkout action to v4.1.3 ([8d991f4](https://github.com/PaoloPenazzi/testbed/commit/8d991f4065ea250486472ea4903cf55af1b0172b))
+* **deps:** update actions/checkout action to v4.1.4 ([652118b](https://github.com/PaoloPenazzi/testbed/commit/652118b430770f0fffa96f726c224041cf55726a))
+* **deps:** update danysk/action-checkout action to v0.2.15 ([7ad58b5](https://github.com/PaoloPenazzi/testbed/commit/7ad58b5a09020982b3a1e847913942e272713226))
+* **deps:** update danysk/action-checkout action to v0.2.16 ([1b18c40](https://github.com/PaoloPenazzi/testbed/commit/1b18c401c845af2fff646c2996d294f0be73ed3f))
+
 ## [2.4.5](https://github.com/PaoloPenazzi/testbed/compare/2.4.4...2.4.5) (2024-04-22)
 
 
