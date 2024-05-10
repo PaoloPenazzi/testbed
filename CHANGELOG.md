@@ -1,3 +1,19 @@
+## [2.4.9](https://github.com/PaoloPenazzi/testbed/compare/2.4.8...2.4.9) (2024-05-10)
+
+
+### Dependency updates
+
+* **core-deps:** update dependency org.jetbrains.kotlinx:kotlinx-coroutines-core to v1.8.1 ([dff7323](https://github.com/PaoloPenazzi/testbed/commit/dff7323344e57bbd7dcb72d63e7a4c19713a44c2))
+* **deps:** update kotest to v5.9.0 ([df05d07](https://github.com/PaoloPenazzi/testbed/commit/df05d07e003907f75878616737c86d58306c6cbf))
+* **deps:** update node.js to 20.13 ([f35f85a](https://github.com/PaoloPenazzi/testbed/commit/f35f85a8246441d6718ca1e63fefd94caa9f14c9))
+* **deps:** update plugin com.gradle.enterprise to v3.17.3 ([b53eb0d](https://github.com/PaoloPenazzi/testbed/commit/b53eb0db2107b7a8a616fd8dfcacc71918e5ed80))
+
+
+### Build and continuous integration
+
+* **deps:** update actions/checkout action to v4.1.5 ([4d1adb3](https://github.com/PaoloPenazzi/testbed/commit/4d1adb368667f75af3796a6a0cdd890330db0bdb))
+* **deps:** update danysk/action-checkout action to v0.2.17 ([f6fc0fc](https://github.com/PaoloPenazzi/testbed/commit/f6fc0fc3cfda65d8e5144db3fd9f3b1ca6aa74c7))
+
 ## [2.4.8](https://github.com/PaoloPenazzi/testbed/compare/2.4.7...2.4.8) (2024-05-08)
 
 
