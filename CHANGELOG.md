@@ -1,3 +1,17 @@
+## [2.4.10](https://github.com/PaoloPenazzi/testbed/compare/2.4.9...2.4.10) (2024-05-17)
+
+
+### Dependency updates
+
+* **core-deps:** update dependency org.jetbrains.kotlinx:kotlinx-io-core to v0.3.5 ([1960c9f](https://github.com/PaoloPenazzi/testbed/commit/1960c9f2c16720f06313de5c0f457421efe9b11b))
+* **deps:** update dependency org.mockito:mockito-core to v5.12.0 ([4a106fc](https://github.com/PaoloPenazzi/testbed/commit/4a106fc7efcd76e40283abdca6ec02ba6eb5c5ba))
+
+
+### Build and continuous integration
+
+* **deps:** update actions/checkout action to v4.1.6 ([32fc1b2](https://github.com/PaoloPenazzi/testbed/commit/32fc1b290f8b36f82cba17e72db7f60c3f8e5a4f))
+* **deps:** update danysk/action-checkout action to v0.2.18 ([122f15e](https://github.com/PaoloPenazzi/testbed/commit/122f15e95b2edc6c74ae155340b91b81a05c06c3))
+
 ## [2.4.9](https://github.com/PaoloPenazzi/testbed/compare/2.4.8...2.4.9) (2024-05-10)
 
 
