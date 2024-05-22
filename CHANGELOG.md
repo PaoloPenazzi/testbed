@@ -1,3 +1,12 @@
+## [2.4.12](https://github.com/PaoloPenazzi/testbed/compare/2.4.11...2.4.12) (2024-05-22)
+
+
+### Dependency updates
+
+* **core-deps:** update plugin org.jetbrains.kotlin.plugin.serialization to v2 ([81506ee](https://github.com/PaoloPenazzi/testbed/commit/81506eeb159dd1fe8f28ef92479597f0a06bb2a5))
+* **deps:** update plugin gitsemver to v3.1.6 ([abe1d76](https://github.com/PaoloPenazzi/testbed/commit/abe1d764a7d3be00df982344764cfb9408fb0fd7))
+* **deps:** update plugin org.danilopianini.gradle-pre-commit-git-hooks to v2.0.6 ([b331b8b](https://github.com/PaoloPenazzi/testbed/commit/b331b8b6e36b2b4ded9872cf859be88e24e90d0b))
+
 ## [2.4.11](https://github.com/PaoloPenazzi/testbed/compare/2.4.10...2.4.11) (2024-05-22)
 
 
