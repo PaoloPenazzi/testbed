@@ -1,3 +1,11 @@
+## [2.4.11](https://github.com/PaoloPenazzi/testbed/compare/2.4.10...2.4.11) (2024-05-22)
+
+
+### Dependency updates
+
+* **core-deps:** update dependency org.jetbrains.kotlin.jvm to v2 ([425a2b1](https://github.com/PaoloPenazzi/testbed/commit/425a2b1e6f70d32773b705f4e0884111491a8a23))
+* **deps:** update plugin com.gradle.enterprise to v3.17.4 ([a96a247](https://github.com/PaoloPenazzi/testbed/commit/a96a2471ef5b9c3a2b9f56fe3fd35770e69a2d34))
+
 ## [2.4.10](https://github.com/PaoloPenazzi/testbed/compare/2.4.9...2.4.10) (2024-05-17)
 
 
