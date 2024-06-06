@@ -1,3 +1,10 @@
+## [2.4.14](https://github.com/PaoloPenazzi/testbed/compare/2.4.13...2.4.14) (2024-06-06)
+
+
+### Dependency updates
+
+* **core-deps:** update dependency org.jetbrains.kotlinx:kotlinx-serialization-json to v1.7.0 ([3658c45](https://github.com/PaoloPenazzi/testbed/commit/3658c4572cec5ae7e6b14c5383089ad0649bc0c6))
+
 ## [2.4.13](https://github.com/PaoloPenazzi/testbed/compare/2.4.12...2.4.13) (2024-06-06)
 
 
