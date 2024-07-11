@@ -1,3 +1,21 @@
+## [2.4.15](https://github.com/PaoloPenazzi/testbed/compare/2.4.14...2.4.15) (2024-07-11)
+
+### Dependency updates
+
+* **core-deps:** update dependency org.jetbrains.kotlinx:kotlinx-serialization-json to v1.7.1 ([a40bd2e](https://github.com/PaoloPenazzi/testbed/commit/a40bd2eaa8a163e633c4d1286f88705e95cdbb10))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.86 ([d3d49cb](https://github.com/PaoloPenazzi/testbed/commit/d3d49cb825619ec78caff07034699bf605a01cb1))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.87 ([6279478](https://github.com/PaoloPenazzi/testbed/commit/627947826acf2d9f0f0aaf5e5d04a7f42a27c485))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.89 ([ccdb11a](https://github.com/PaoloPenazzi/testbed/commit/ccdb11a028bc2931baaa72737590a0a941131a76))
+* **deps:** update node.js to 20.15 ([58d2bb3](https://github.com/PaoloPenazzi/testbed/commit/58d2bb3d169145981240d615a0a30486a15a228f))
+* **deps:** update plugin com.gradle.enterprise to v3.17.5 ([eeab962](https://github.com/PaoloPenazzi/testbed/commit/eeab9623bd6931e89d948940946d3a752dfecf57))
+* **deps:** update plugin tasktree to v4 ([0cef351](https://github.com/PaoloPenazzi/testbed/commit/0cef3514488fe68da580f54e2e80a80dd8730eca))
+
+### Build and continuous integration
+
+* **deps:** update actions/checkout action to v4.1.7 ([e02dc6e](https://github.com/PaoloPenazzi/testbed/commit/e02dc6e50f369cb4a261133764c7ab3567f96dbb))
+* **deps:** update actions/setup-node action to v4.0.3 ([5d42344](https://github.com/PaoloPenazzi/testbed/commit/5d42344053000610fcd3dd51d84ae2da63dfc4cf))
+* **deps:** update danysk/action-checkout action to v0.2.19 ([7d6f609](https://github.com/PaoloPenazzi/testbed/commit/7d6f6099ba74fd5feb0b07f55503e93c7465b64e))
+
 ## [2.4.14](https://github.com/PaoloPenazzi/testbed/compare/2.4.13...2.4.14) (2024-06-06)
 
 
