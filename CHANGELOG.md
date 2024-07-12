@@ -1,3 +1,11 @@
+## [2.4.16](https://github.com/PaoloPenazzi/testbed/compare/2.4.15...2.4.16) (2024-07-12)
+
+### Dependency updates
+
+* **core-deps:** update dependency org.jetbrains.kotlinx:kotlinx-io-core to v0.5.0 ([508535d](https://github.com/PaoloPenazzi/testbed/commit/508535d126787a08d8fe95f3889ef9b9b0a4885b))
+* **deps:** update dependency gradle to v8.9 ([6ccf433](https://github.com/PaoloPenazzi/testbed/commit/6ccf433025805bd1df264234175cd5b12c77b02c))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.90 ([24e9195](https://github.com/PaoloPenazzi/testbed/commit/24e9195ce76f6924023d6868c765bd716b96dc2b))
+
 ## [2.4.15](https://github.com/PaoloPenazzi/testbed/compare/2.4.14...2.4.15) (2024-07-11)
 
 ### Dependency updates
