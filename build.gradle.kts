@@ -41,7 +41,7 @@ dependencies {
     implementation(libs.kotlin.stdlib)
     testImplementation(libs.bundles.kotlin.testing)
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.7.1")
-    implementation("org.jetbrains.kotlinx:kotlinx-io-core:0.5.1")
+    implementation("org.jetbrains.kotlinx:kotlinx-io-core:0.5.2")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.8.1")
     implementation("org.yaml:snakeyaml:2.2")
     implementation("com.charleskorn.kaml:kaml:0.57.0")
