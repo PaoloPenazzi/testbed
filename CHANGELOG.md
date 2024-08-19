@@ -1,3 +1,11 @@
+## [2.4.21](https://github.com/PaoloPenazzi/testbed/compare/2.4.20...2.4.21) (2024-08-19)
+
+### Dependency updates
+
+* **core-deps:** update dependency org.jetbrains.kotlinx:kotlinx-io-core to v0.5.3 ([0b2c512](https://github.com/PaoloPenazzi/testbed/commit/0b2c512b2efd45e85f40338a2235e41fd46ac783))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.96 ([d7dbc8d](https://github.com/PaoloPenazzi/testbed/commit/d7dbc8df0c8bd6d42d9ae4e2604d6eae45880771))
+* **deps:** update plugin com.gradle.enterprise to v3.18 ([d954bb1](https://github.com/PaoloPenazzi/testbed/commit/d954bb13b98056b228457872b06ab4dfbd2625bf))
+
 ## [2.4.20](https://github.com/PaoloPenazzi/testbed/compare/2.4.19...2.4.20) (2024-08-16)
 
 ### Dependency updates
