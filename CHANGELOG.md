@@ -1,3 +1,11 @@
+## [2.4.22](https://github.com/PaoloPenazzi/testbed/compare/2.4.21...2.4.22) (2024-08-22)
+
+### Dependency updates
+
+* **core-deps:** update dependency org.jetbrains.kotlin.jvm to v2.0.20 ([7f3743d](https://github.com/PaoloPenazzi/testbed/commit/7f3743d52434291ead9ba02b5f6a364d6b0de564))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.97 ([16f7868](https://github.com/PaoloPenazzi/testbed/commit/16f786832cf47332610556f853ee263e99b0502e))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.98 ([83c25e1](https://github.com/PaoloPenazzi/testbed/commit/83c25e1b9db1532a238adcda1ec2eb43527decb7))
+
 ## [2.4.21](https://github.com/PaoloPenazzi/testbed/compare/2.4.20...2.4.21) (2024-08-19)
 
 ### Dependency updates
