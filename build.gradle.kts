@@ -40,7 +40,7 @@ tasks.withType<ShadowJar> {
 dependencies {
     implementation(libs.kotlin.stdlib)
     testImplementation(libs.bundles.kotlin.testing)
-    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.7.1")
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.7.2")
     implementation("org.jetbrains.kotlinx:kotlinx-io-core:0.5.3")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.8.1")
     implementation("org.yaml:snakeyaml:2.2")
