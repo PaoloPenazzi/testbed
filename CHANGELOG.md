@@ -1,3 +1,13 @@
+## [2.4.24](https://github.com/PaoloPenazzi/testbed/compare/2.4.23...2.4.24) (2024-08-28)
+
+### Dependency updates
+
+* **core-deps:** update dependency org.jetbrains.kotlinx:kotlinx-serialization-json to v1.7.2 ([3e03d42](https://github.com/PaoloPenazzi/testbed/commit/3e03d42716da442c4c3b7b88e016eff880332828))
+* **deps:** update dependency org.mockito:mockito-core to v5.13.0 ([21ec121](https://github.com/PaoloPenazzi/testbed/commit/21ec1215cd577af10fd4f9acb5b6fef9bea8a6a1))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.101 ([22b4e21](https://github.com/PaoloPenazzi/testbed/commit/22b4e21990ecf19b5ba562b8a5699070c402bf3f))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.99 ([2b5bb64](https://github.com/PaoloPenazzi/testbed/commit/2b5bb64dd61952fae0a642d889b8f041abd5460b))
+* **deps:** update node.js to 20.17 ([c879ab5](https://github.com/PaoloPenazzi/testbed/commit/c879ab5393127bed26ad7df5ccfff5754ec5f022))
+
 ## [2.4.23](https://github.com/PaoloPenazzi/testbed/compare/2.4.22...2.4.23) (2024-08-22)
 
 ### Dependency updates
