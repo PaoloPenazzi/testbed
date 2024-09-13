@@ -1,3 +1,23 @@
+## [2.4.25](https://github.com/PaoloPenazzi/testbed/compare/2.4.24...2.4.25) (2024-09-13)
+
+### Dependency updates
+
+* **core-deps:** update dependency org.jetbrains.kotlinx:kotlinx-coroutines-core to v1.9.0 ([3ad98eb](https://github.com/PaoloPenazzi/testbed/commit/3ad98ebf0247ce766592dfa70672b329d000a4e1))
+* **deps:** update dependency gradle to v8.10.1 ([24ed580](https://github.com/PaoloPenazzi/testbed/commit/24ed5804a04b4132316ba7c61f5ac711cf17bfe1))
+* **deps:** update dependency org.yaml:snakeyaml to v2.3 ([5c04fc0](https://github.com/PaoloPenazzi/testbed/commit/5c04fc0759df90a9dec7ed5094f8747b0cd3e5fb))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.102 ([a476a49](https://github.com/PaoloPenazzi/testbed/commit/a476a491869c8027a2cec5f793678aa6426c3c0c))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.103 ([f6283cc](https://github.com/PaoloPenazzi/testbed/commit/f6283cc601baf0a0a5e37e98c60b7a365d1d53e6))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.104 ([3e91245](https://github.com/PaoloPenazzi/testbed/commit/3e91245abdbaf89f58a47876f1203d7a5eff584b))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.105 ([436605c](https://github.com/PaoloPenazzi/testbed/commit/436605ce4e1134daa997808e5833f5b9b46fda2f))
+* **deps:** update plugin com.gradle.enterprise to v3.18.1 ([5bdfc2a](https://github.com/PaoloPenazzi/testbed/commit/5bdfc2a9a0297f3c36333c503f74b944a0ffc6d1))
+* **deps:** update plugin kotlin-qa to v0.66.0 ([34e3cc2](https://github.com/PaoloPenazzi/testbed/commit/34e3cc25c327cf2c401501a44d19539db098c284))
+* **deps:** update plugin kotlin-qa to v0.66.1 ([8e54e38](https://github.com/PaoloPenazzi/testbed/commit/8e54e388afe19652b5911b3966d8ec242b3bd8bc))
+* **deps:** update plugin kotlin-qa to v0.67.0 ([ee9855d](https://github.com/PaoloPenazzi/testbed/commit/ee9855d68a0bad3a299e55ff378c789516590cfe))
+* **deps:** update plugin kotlin-qa to v0.67.1 ([32a6579](https://github.com/PaoloPenazzi/testbed/commit/32a6579072caba40441198f4211cbf387c4f62f8))
+* **deps:** update plugin kotlin-qa to v0.67.2 ([a9efb5d](https://github.com/PaoloPenazzi/testbed/commit/a9efb5da0587b0e7ed6d4b7773306e6c5f007a8b))
+* **deps:** update plugin org.danilopianini.gradle-pre-commit-git-hooks to v2.0.10 ([2126e15](https://github.com/PaoloPenazzi/testbed/commit/2126e15fd937baf60ab38676a165b4f5d93e4b97))
+* **deps:** update plugin org.danilopianini.gradle-pre-commit-git-hooks to v2.0.12 ([9103e48](https://github.com/PaoloPenazzi/testbed/commit/9103e480a2ce057c9f01404ee3a05f22bf540070))
+
 ## [2.4.24](https://github.com/PaoloPenazzi/testbed/compare/2.4.23...2.4.24) (2024-08-28)
 
 ### Dependency updates
