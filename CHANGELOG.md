@@ -1,3 +1,11 @@
+## [2.4.26](https://github.com/PaoloPenazzi/testbed/compare/2.4.25...2.4.26) (2024-09-18)
+
+### Dependency updates
+
+* **core-deps:** update dependency org.jetbrains.kotlinx:kotlinx-io-core to v0.5.4 ([06b2bbe](https://github.com/PaoloPenazzi/testbed/commit/06b2bbead1a31efd39c228ef32a382a4e0255970))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.106 ([ce10566](https://github.com/PaoloPenazzi/testbed/commit/ce10566d6fdf44184a25389af370cfc69f8da597))
+* **deps:** update plugin publishoncentral to v5.1.7 ([42b0a8a](https://github.com/PaoloPenazzi/testbed/commit/42b0a8ad962d47ed95d674cbaadd5c4cdf34f617))
+
 ## [2.4.25](https://github.com/PaoloPenazzi/testbed/compare/2.4.24...2.4.25) (2024-09-13)
 
 ### Dependency updates
