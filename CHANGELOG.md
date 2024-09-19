@@ -1,3 +1,9 @@
+## [2.4.27](https://github.com/PaoloPenazzi/testbed/compare/2.4.26...2.4.27) (2024-09-19)
+
+### Dependency updates
+
+* **core-deps:** update dependency org.jetbrains.kotlinx:kotlinx-serialization-json to v1.7.3 ([af712bf](https://github.com/PaoloPenazzi/testbed/commit/af712bfdeec6bd58b5abc58b76892b6057ab3d66))
+
 ## [2.4.26](https://github.com/PaoloPenazzi/testbed/compare/2.4.25...2.4.26) (2024-09-18)
 
 ### Dependency updates
