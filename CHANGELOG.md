@@ -1,3 +1,18 @@
+## [2.4.29](https://github.com/PaoloPenazzi/testbed/compare/2.4.28...2.4.29) (2024-11-27)
+
+### Dependency updates
+
+* **core-deps:** update dependency org.jetbrains.kotlin.jvm to v2.1.0 ([#315](https://github.com/PaoloPenazzi/testbed/issues/315)) ([4b5d439](https://github.com/PaoloPenazzi/testbed/commit/4b5d439b44c0b317cb80fc2a9907c0c188a0e457))
+* **deps:** update dependency com.charleskorn.kaml:kaml to v0.66.0 ([#313](https://github.com/PaoloPenazzi/testbed/issues/313)) ([e0b7a1b](https://github.com/PaoloPenazzi/testbed/commit/e0b7a1b43bc7a8eef8a33e535141917955400d21))
+* **deps:** update dependency gradle to v8.11.1 ([#306](https://github.com/PaoloPenazzi/testbed/issues/306)) ([a1e2656](https://github.com/PaoloPenazzi/testbed/commit/a1e2656e58f98f462d03d41a1acdb19bd614bc1b))
+* **deps:** update plugin kotlin-qa to v0.70.2 ([#309](https://github.com/PaoloPenazzi/testbed/issues/309)) ([df5f09c](https://github.com/PaoloPenazzi/testbed/commit/df5f09cb7e5f61afa9bec1e4e4c7e696d1664411))
+* **deps:** update plugin kotlin-qa to v0.71.0 ([#310](https://github.com/PaoloPenazzi/testbed/issues/310)) ([2df48ad](https://github.com/PaoloPenazzi/testbed/commit/2df48adbbd94c67b1da1f783f4e5a86f5dc8579e))
+* **deps:** update plugin kotlin-qa to v0.72.0 ([#311](https://github.com/PaoloPenazzi/testbed/issues/311)) ([12f561c](https://github.com/PaoloPenazzi/testbed/commit/12f561cdfce99f26320939f8af79acea45daee73))
+* **deps:** update plugin kotlin-qa to v0.73.0 ([#312](https://github.com/PaoloPenazzi/testbed/issues/312)) ([8908eb2](https://github.com/PaoloPenazzi/testbed/commit/8908eb2340bf754adabe85a726c6ab149e5eb948))
+* **deps:** update plugin kotlin-qa to v0.74.0 ([#314](https://github.com/PaoloPenazzi/testbed/issues/314)) ([8ab0dc4](https://github.com/PaoloPenazzi/testbed/commit/8ab0dc4fffa4dd465a0011e2378af5480f6566da))
+* **deps:** update plugin org.danilopianini.gradle-pre-commit-git-hooks to v2.0.15 ([#307](https://github.com/PaoloPenazzi/testbed/issues/307)) ([6a2a53c](https://github.com/PaoloPenazzi/testbed/commit/6a2a53cfd042e6bca230421e581504a2de3e4ed2))
+* **deps:** update plugin publishoncentral to v5.1.11 ([#308](https://github.com/PaoloPenazzi/testbed/issues/308)) ([e0b8985](https://github.com/PaoloPenazzi/testbed/commit/e0b89857fa7b7418474d27169fa487a99f002e2a))
+
 ## [2.4.28](https://github.com/PaoloPenazzi/testbed/compare/2.4.27...2.4.28) (2024-11-20)
 
 ### Dependency updates
