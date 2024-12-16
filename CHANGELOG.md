@@ -1,3 +1,25 @@
+## [2.4.31](https://github.com/PaoloPenazzi/testbed/compare/2.4.30...2.4.31) (2024-12-16)
+
+### Dependency updates
+
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.116 ([#328](https://github.com/PaoloPenazzi/testbed/issues/328)) ([804224b](https://github.com/PaoloPenazzi/testbed/commit/804224b977e8f43f3a1c2e81fc5bc408dbae0784))
+* **deps:** update node.js to 22.12 ([#321](https://github.com/PaoloPenazzi/testbed/issues/321)) ([4c5844c](https://github.com/PaoloPenazzi/testbed/commit/4c5844cbe65ae77782e6a36de06b3bcf8227d3a9))
+* **deps:** update plugin com.gradle.enterprise to v3.19 ([#332](https://github.com/PaoloPenazzi/testbed/issues/332)) ([39b9bc1](https://github.com/PaoloPenazzi/testbed/commit/39b9bc16a1e33bcff590aa694ffa6b4ba6860803))
+* **deps:** update plugin kotlin-qa to v0.75.0 ([#318](https://github.com/PaoloPenazzi/testbed/issues/318)) ([8d5a232](https://github.com/PaoloPenazzi/testbed/commit/8d5a232b2e745a9950c9437b62380b84a3763d4f))
+* **deps:** update plugin kotlin-qa to v0.76.0 ([#323](https://github.com/PaoloPenazzi/testbed/issues/323)) ([7bb5bfc](https://github.com/PaoloPenazzi/testbed/commit/7bb5bfc52530a08d0fac2e2274499c0bfe03d710))
+* **deps:** update plugin kotlin-qa to v0.77.0 ([#324](https://github.com/PaoloPenazzi/testbed/issues/324)) ([84bbcbe](https://github.com/PaoloPenazzi/testbed/commit/84bbcbe31dbd4a0da8e46c735c8fe8bcb39a245c))
+* **deps:** update plugin kotlin-qa to v0.77.1 ([#325](https://github.com/PaoloPenazzi/testbed/issues/325)) ([0183816](https://github.com/PaoloPenazzi/testbed/commit/0183816c318a516fb2d212786b072f6ed1b1b3d8))
+* **deps:** update plugin kotlin-qa to v0.78.0 ([#330](https://github.com/PaoloPenazzi/testbed/issues/330)) ([3da0002](https://github.com/PaoloPenazzi/testbed/commit/3da0002407792ecb770ee31544b3cc6d7e520c1f))
+* **deps:** update plugin org.danilopianini.gradle-pre-commit-git-hooks to v2.0.16 ([#331](https://github.com/PaoloPenazzi/testbed/issues/331)) ([f3eec62](https://github.com/PaoloPenazzi/testbed/commit/f3eec624f75cc20f82e07588be2fb743dcb40f72))
+* **deps:** update plugin org.gradle.toolchains.foojay-resolver-convention to v0.9.0 ([#319](https://github.com/PaoloPenazzi/testbed/issues/319)) ([2366349](https://github.com/PaoloPenazzi/testbed/commit/2366349a7ed97a94e542134b7172c438812d0a4c))
+* **deps:** update plugin publishoncentral to v6 ([#320](https://github.com/PaoloPenazzi/testbed/issues/320)) ([96c94a4](https://github.com/PaoloPenazzi/testbed/commit/96c94a45b13c0115aa66e53005328dade38d5fc7))
+* **deps:** update plugin publishoncentral to v6.0.1 ([#327](https://github.com/PaoloPenazzi/testbed/issues/327)) ([e8c4124](https://github.com/PaoloPenazzi/testbed/commit/e8c41243ae5afc92f5f622c73f72a1b4ca91d955))
+* **deps:** update plugin publishoncentral to v7 ([#329](https://github.com/PaoloPenazzi/testbed/issues/329)) ([2d0d752](https://github.com/PaoloPenazzi/testbed/commit/2d0d7520bfbfdd2cb54d72e25c25726f2b70b45f))
+
+### Documentation
+
+* **deps:** update plugin dokka to v2 ([#333](https://github.com/PaoloPenazzi/testbed/issues/333)) ([d1a90b1](https://github.com/PaoloPenazzi/testbed/commit/d1a90b17aaf5a94343f6dd6d2283fb741a1e76e2))
+
 ## [2.4.30](https://github.com/PaoloPenazzi/testbed/compare/2.4.29...2.4.30) (2024-11-28)
 
 ### Dependency updates
