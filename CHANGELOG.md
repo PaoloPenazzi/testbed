@@ -1,3 +1,11 @@
+## [2.4.33](https://github.com/PaoloPenazzi/testbed/compare/2.4.32...2.4.33) (2024-12-20)
+
+### Dependency updates
+
+* **core-deps:** update dependency org.jetbrains.kotlinx:kotlinx-coroutines-core to v1.10.1 ([#340](https://github.com/PaoloPenazzi/testbed/issues/340)) ([92dfccf](https://github.com/PaoloPenazzi/testbed/commit/92dfccf5a4b7b67057dd0db2f50d4df3f14d886c))
+* **deps:** update dependency com.charleskorn.kaml:kaml to v0.67.0 ([#338](https://github.com/PaoloPenazzi/testbed/issues/338)) ([24c3a79](https://github.com/PaoloPenazzi/testbed/commit/24c3a799af1dad4940aea5fd393f99e4ab72d592))
+* **deps:** update plugin publishoncentral to v7.0.3 ([#339](https://github.com/PaoloPenazzi/testbed/issues/339)) ([7898897](https://github.com/PaoloPenazzi/testbed/commit/7898897d6d5657ece4e2c6d91946c5bde5ae8f2e))
+
 ## [2.4.32](https://github.com/PaoloPenazzi/testbed/compare/2.4.31...2.4.32) (2024-12-20)
 
 ### Dependency updates
