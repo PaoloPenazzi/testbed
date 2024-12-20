@@ -1,3 +1,12 @@
+## [2.4.32](https://github.com/PaoloPenazzi/testbed/compare/2.4.31...2.4.32) (2024-12-20)
+
+### Dependency updates
+
+* **core-deps:** update dependency org.jetbrains.kotlinx:kotlinx-coroutines-core to v1.10.0 ([#337](https://github.com/PaoloPenazzi/testbed/issues/337)) ([d9133bf](https://github.com/PaoloPenazzi/testbed/commit/d9133bf179b635295b2ea7d3d48e64eab3c476d9))
+* **deps:** update plugin org.danilopianini.gradle-pre-commit-git-hooks to v2.0.17 ([#334](https://github.com/PaoloPenazzi/testbed/issues/334)) ([effd029](https://github.com/PaoloPenazzi/testbed/commit/effd02945431a4828ebbe3754b7d7c1c937cea10))
+* **deps:** update plugin publishoncentral to v7.0.1 ([#335](https://github.com/PaoloPenazzi/testbed/issues/335)) ([af0f850](https://github.com/PaoloPenazzi/testbed/commit/af0f8502a43017361d40308c4977c94da2f49e88))
+* **deps:** update plugin publishoncentral to v7.0.2 ([#336](https://github.com/PaoloPenazzi/testbed/issues/336)) ([467fbf6](https://github.com/PaoloPenazzi/testbed/commit/467fbf6c6b7dbbdb4c8cf6ab02fada15b9c0fa83))
+
 ## [2.4.31](https://github.com/PaoloPenazzi/testbed/compare/2.4.30...2.4.31) (2024-12-16)
 
 ### Dependency updates
