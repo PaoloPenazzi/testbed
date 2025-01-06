@@ -1,3 +1,14 @@
+## [2.4.34](https://github.com/PaoloPenazzi/testbed/compare/2.4.33...2.4.34) (2025-01-06)
+
+### Dependency updates
+
+* **core-deps:** update dependency org.jetbrains.kotlinx:kotlinx-serialization-json to v1.8.0 ([#346](https://github.com/PaoloPenazzi/testbed/issues/346)) ([2fed2e7](https://github.com/PaoloPenazzi/testbed/commit/2fed2e7f754c86b3671dbb819d634c92707318d0))
+* **deps:** update dependency gradle to v8.12 ([#341](https://github.com/PaoloPenazzi/testbed/issues/341)) ([23459e9](https://github.com/PaoloPenazzi/testbed/commit/23459e9c651308efd68187f0cb057be208ceeeef))
+* **deps:** update dependency org.mockito:mockito-core to v5.15.2 ([#345](https://github.com/PaoloPenazzi/testbed/issues/345)) ([f9c5767](https://github.com/PaoloPenazzi/testbed/commit/f9c5767a840bb8c6c8fb00f8d54165af851a34b7))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.117 ([#344](https://github.com/PaoloPenazzi/testbed/issues/344)) ([5aceec1](https://github.com/PaoloPenazzi/testbed/commit/5aceec15a73309013a5e0b9839919be63ca64b5f))
+* **deps:** update plugin org.danilopianini.gradle-pre-commit-git-hooks to v2.0.18 ([#343](https://github.com/PaoloPenazzi/testbed/issues/343)) ([3efa7ef](https://github.com/PaoloPenazzi/testbed/commit/3efa7efc8d90edcf9f4ae729aa3b8e185cd79193))
+* **deps:** update plugin publishoncentral to v7.0.4 ([#342](https://github.com/PaoloPenazzi/testbed/issues/342)) ([0dfaa17](https://github.com/PaoloPenazzi/testbed/commit/0dfaa179f64262acfb96452bcc68c9a49e473843))
+
 ## [2.4.33](https://github.com/PaoloPenazzi/testbed/compare/2.4.32...2.4.33) (2024-12-20)
 
 ### Dependency updates
