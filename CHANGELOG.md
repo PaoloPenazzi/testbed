@@ -1,3 +1,9 @@
+## [2.4.36](https://github.com/PaoloPenazzi/testbed/compare/2.4.35...2.4.36) (2025-01-27)
+
+### Dependency updates
+
+* **core-deps:** update plugin org.jetbrains.kotlin.plugin.serialization to v2.1.10 ([#361](https://github.com/PaoloPenazzi/testbed/issues/361)) ([80968d3](https://github.com/PaoloPenazzi/testbed/commit/80968d34c75bab495d37f8047ffc3fb8649d6971))
+
 ## [2.4.35](https://github.com/PaoloPenazzi/testbed/compare/2.4.34...2.4.35) (2025-01-27)
 
 ### Dependency updates
