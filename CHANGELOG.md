@@ -1,3 +1,24 @@
+## [2.4.35](https://github.com/PaoloPenazzi/testbed/compare/2.4.34...2.4.35) (2025-01-27)
+
+### Dependency updates
+
+* **core-deps:** update dependency org.jetbrains.kotlin.jvm to v2.1.10 ([#359](https://github.com/PaoloPenazzi/testbed/issues/359)) ([c4e754c](https://github.com/PaoloPenazzi/testbed/commit/c4e754c08ba8bd039c4a0e4bd480c083b492ea0a))
+* **deps:** update dependency com.opencsv:opencsv to v5.10 ([#352](https://github.com/PaoloPenazzi/testbed/issues/352)) ([1d14b02](https://github.com/PaoloPenazzi/testbed/commit/1d14b0209732d16a95e449211b32906ceda70178))
+* **deps:** update dependency gradle to v8.12.1 ([#354](https://github.com/PaoloPenazzi/testbed/issues/354)) ([c3bc0f3](https://github.com/PaoloPenazzi/testbed/commit/c3bc0f35c00a6b0e539b1646870c439dce355cad))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.118 ([#349](https://github.com/PaoloPenazzi/testbed/issues/349)) ([0953a98](https://github.com/PaoloPenazzi/testbed/commit/0953a9880eb4a3d4270036defff2bca47ea3c96c))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.119 ([#351](https://github.com/PaoloPenazzi/testbed/issues/351)) ([9f853b2](https://github.com/PaoloPenazzi/testbed/commit/9f853b29d0e5d25a7dc45ee227f5a42c9dfb4345))
+* **deps:** update node.js to 22.13 ([#347](https://github.com/PaoloPenazzi/testbed/issues/347)) ([b396ca6](https://github.com/PaoloPenazzi/testbed/commit/b396ca6eef82b6b068d3afd9f11d5fd233a0664d))
+* **deps:** update plugin com.gradle.enterprise to v3.19.1 ([#353](https://github.com/PaoloPenazzi/testbed/issues/353)) ([ee723c8](https://github.com/PaoloPenazzi/testbed/commit/ee723c812d85fad0cbc83066b202bc7a071c9f5b))
+* **deps:** update plugin gitsemver to v3.1.9 ([#357](https://github.com/PaoloPenazzi/testbed/issues/357)) ([fb0b279](https://github.com/PaoloPenazzi/testbed/commit/fb0b279107b60cddd7a53f184557a54790eb2cc8))
+* **deps:** update plugin org.danilopianini.gradle-pre-commit-git-hooks to v2.0.19 ([#355](https://github.com/PaoloPenazzi/testbed/issues/355)) ([ebe33c4](https://github.com/PaoloPenazzi/testbed/commit/ebe33c4884df892bb40bf57aa2017eb9d7380dc8))
+* **deps:** update plugin publishoncentral to v8 ([#348](https://github.com/PaoloPenazzi/testbed/issues/348)) ([2e3a9fb](https://github.com/PaoloPenazzi/testbed/commit/2e3a9fbccf6fe0eacc928094c246edb2875120dc))
+* **deps:** update plugin publishoncentral to v8.0.1 ([#350](https://github.com/PaoloPenazzi/testbed/issues/350)) ([c5ec8cd](https://github.com/PaoloPenazzi/testbed/commit/c5ec8cdd7a09a1898d196195b0e5507c159df189))
+* **deps:** update plugin publishoncentral to v8.0.2 ([#356](https://github.com/PaoloPenazzi/testbed/issues/356)) ([247eb17](https://github.com/PaoloPenazzi/testbed/commit/247eb17d07051defc3a6e531d2d7fddcc450045e))
+
+### Build and continuous integration
+
+* **deps:** update actions/setup-node action to v4.2.0 ([#358](https://github.com/PaoloPenazzi/testbed/issues/358)) ([b4640a2](https://github.com/PaoloPenazzi/testbed/commit/b4640a289944106be1747de018ffab3e7e03708c))
+
 ## [2.4.34](https://github.com/PaoloPenazzi/testbed/compare/2.4.33...2.4.34) (2025-01-06)
 
 ### Dependency updates
