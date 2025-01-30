@@ -44,7 +44,7 @@ dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-io-core:0.6.0")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.10.1")
     implementation("org.yaml:snakeyaml:2.3")
-    implementation("com.charleskorn.kaml:kaml:0.67.0")
+    implementation("com.charleskorn.kaml:kaml:0.67.1")
     implementation("com.opencsv:opencsv:5.10")
     implementation(kotlin("script-runtime"))
 }
