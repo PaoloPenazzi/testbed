@@ -1,3 +1,29 @@
+## [2.4.37](https://github.com/PaoloPenazzi/testbed/compare/2.4.36...2.4.37) (2025-02-27)
+
+### Dependency updates
+
+* **core-deps:** update dependency org.jetbrains.kotlinx:kotlinx-io-core to v0.7.0 ([#382](https://github.com/PaoloPenazzi/testbed/issues/382)) ([7a35aae](https://github.com/PaoloPenazzi/testbed/commit/7a35aae1411de580d9c9fa0273bbf6b9444b78cb))
+* **deps:** update dependency com.charleskorn.kaml:kaml to v0.67.1 ([#365](https://github.com/PaoloPenazzi/testbed/issues/365)) ([bc2960b](https://github.com/PaoloPenazzi/testbed/commit/bc2960b73aa4635c83b9a6181bbc739e97a06d8a))
+* **deps:** update dependency com.charleskorn.kaml:kaml to v0.68.0 ([#367](https://github.com/PaoloPenazzi/testbed/issues/367)) ([492ca43](https://github.com/PaoloPenazzi/testbed/commit/492ca433cda07bc381e781e508731f67cc88b6f0))
+* **deps:** update dependency com.charleskorn.kaml:kaml to v0.69.0 ([#368](https://github.com/PaoloPenazzi/testbed/issues/368)) ([a1459f6](https://github.com/PaoloPenazzi/testbed/commit/a1459f6e2cfc439d46bfa6c94ef52458901e1662))
+* **deps:** update dependency com.charleskorn.kaml:kaml to v0.70.0 ([#369](https://github.com/PaoloPenazzi/testbed/issues/369)) ([a07bdf0](https://github.com/PaoloPenazzi/testbed/commit/a07bdf0b0cb1ece2c4be0d27edaf9f48d6cc8615))
+* **deps:** update dependency com.charleskorn.kaml:kaml to v0.71.0 ([#372](https://github.com/PaoloPenazzi/testbed/issues/372)) ([16d751a](https://github.com/PaoloPenazzi/testbed/commit/16d751af286aabd263c227d3517fa38450aaf488))
+* **deps:** update dependency com.charleskorn.kaml:kaml to v0.72.0 ([#373](https://github.com/PaoloPenazzi/testbed/issues/373)) ([e105047](https://github.com/PaoloPenazzi/testbed/commit/e10504767d8552ad86d7fc26d96456f4a58e7e0f))
+* **deps:** update dependency gradle to v8.13 ([#381](https://github.com/PaoloPenazzi/testbed/issues/381)) ([6ed8321](https://github.com/PaoloPenazzi/testbed/commit/6ed8321a32ad6e0a98c418a34f46236d48d1f59b))
+* **deps:** update dependency org.yaml:snakeyaml to v2.4 ([#375](https://github.com/PaoloPenazzi/testbed/issues/375)) ([f0f9020](https://github.com/PaoloPenazzi/testbed/commit/f0f902047d5694182ddc02c87c8f026c6f8195cc))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.121 ([#370](https://github.com/PaoloPenazzi/testbed/issues/370)) ([68ab90f](https://github.com/PaoloPenazzi/testbed/commit/68ab90f2d82f48fa0514b10838224745274ccfe1))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.122 ([#371](https://github.com/PaoloPenazzi/testbed/issues/371)) ([89a0a62](https://github.com/PaoloPenazzi/testbed/commit/89a0a621842836d05e7b464d1618a8f3366d94e1))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.123 ([#376](https://github.com/PaoloPenazzi/testbed/issues/376)) ([12b0a17](https://github.com/PaoloPenazzi/testbed/commit/12b0a171e22321b47c068167438a4c4391b5871e))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.124 ([#377](https://github.com/PaoloPenazzi/testbed/issues/377)) ([1bc3f4f](https://github.com/PaoloPenazzi/testbed/commit/1bc3f4f600780992eef893b0c56c23ca1f251279))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.125 ([#379](https://github.com/PaoloPenazzi/testbed/issues/379)) ([fd7fe5e](https://github.com/PaoloPenazzi/testbed/commit/fd7fe5ec5c645f27a3e57f3592fc5f54bcc71bc0))
+* **deps:** update node.js to 22.14 ([#374](https://github.com/PaoloPenazzi/testbed/issues/374)) ([c0401fd](https://github.com/PaoloPenazzi/testbed/commit/c0401fd055569a0a380e8a79e4f4063d85afa3c2))
+* **deps:** update plugin com.gradle.enterprise to v3.19.2 ([#378](https://github.com/PaoloPenazzi/testbed/issues/378)) ([b003e4d](https://github.com/PaoloPenazzi/testbed/commit/b003e4db477647945a9e278f30190e2fb1fa03c0))
+* **deps:** update plugin gitsemver to v3.1.10 ([#362](https://github.com/PaoloPenazzi/testbed/issues/362)) ([cbd9e11](https://github.com/PaoloPenazzi/testbed/commit/cbd9e11abff2c6324c70b7c40680a2f6b033cec8))
+* **deps:** update plugin gitsemver to v4 ([#363](https://github.com/PaoloPenazzi/testbed/issues/363)) ([77150ad](https://github.com/PaoloPenazzi/testbed/commit/77150adbe4da3c5dca8cc00f6a974bf5bf1bdb5b))
+* **deps:** update plugin org.danilopianini.gradle-pre-commit-git-hooks to v2.0.20 ([#364](https://github.com/PaoloPenazzi/testbed/issues/364)) ([38e7c49](https://github.com/PaoloPenazzi/testbed/commit/38e7c495aab7fd557080b63c835c515152f359bc))
+* **deps:** update plugin org.danilopianini.gradle-pre-commit-git-hooks to v2.0.21 ([#380](https://github.com/PaoloPenazzi/testbed/issues/380)) ([15127bf](https://github.com/PaoloPenazzi/testbed/commit/15127bfe1ec57afdff5e8deed83527d6b76671e2))
+* **deps:** update plugin publishoncentral to v8.0.3 ([#366](https://github.com/PaoloPenazzi/testbed/issues/366)) ([5a26823](https://github.com/PaoloPenazzi/testbed/commit/5a268233cd39d853acc35b9540d7177d2ea79819))
+
 ## [2.4.36](https://github.com/PaoloPenazzi/testbed/compare/2.4.35...2.4.36) (2025-01-27)
 
 ### Dependency updates
