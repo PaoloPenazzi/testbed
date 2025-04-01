@@ -1,3 +1,24 @@
+## [2.4.38](https://github.com/PaoloPenazzi/testbed/compare/2.4.37...2.4.38) (2025-04-01)
+
+### Dependency updates
+
+* **core-deps:** update dependency org.jetbrains.kotlinx:kotlinx-serialization-json to v1.8.1 ([#402](https://github.com/PaoloPenazzi/testbed/issues/402)) ([e89cd0e](https://github.com/PaoloPenazzi/testbed/commit/e89cd0ed2b100615649700a856b64a89b3db1628))
+* **deps:** update dependency com.charleskorn.kaml:kaml to v0.73.0 ([#389](https://github.com/PaoloPenazzi/testbed/issues/389)) ([423dd63](https://github.com/PaoloPenazzi/testbed/commit/423dd637f3b2adc56c8403c0f4ed190eaac56a23))
+* **deps:** update dependency com.charleskorn.kaml:kaml to v0.74.0 ([#401](https://github.com/PaoloPenazzi/testbed/issues/401)) ([257d7d1](https://github.com/PaoloPenazzi/testbed/commit/257d7d173401e5475f67b9be8bc7c9929d4f78eb))
+* **deps:** update dependency org.mockito:mockito-core to v5.16.0 ([#384](https://github.com/PaoloPenazzi/testbed/issues/384)) ([fa1f59c](https://github.com/PaoloPenazzi/testbed/commit/fa1f59c2683d0ac86653662a97fda1c4b252964d))
+* **deps:** update dependency org.mockito:mockito-core to v5.16.1 ([#386](https://github.com/PaoloPenazzi/testbed/issues/386)) ([1c08858](https://github.com/PaoloPenazzi/testbed/commit/1c0885869101d039ed230526165fac18ef1c8c47))
+* **deps:** update plugin kotlin-qa to v0.78.3 ([#394](https://github.com/PaoloPenazzi/testbed/issues/394)) ([925a8a2](https://github.com/PaoloPenazzi/testbed/commit/925a8a2853503f4a6a5d5eccf11727c3b607d12e))
+* **deps:** update plugin kotlin-qa to v0.79.0 ([#395](https://github.com/PaoloPenazzi/testbed/issues/395)) ([d9e0025](https://github.com/PaoloPenazzi/testbed/commit/d9e0025f773743bc1d23592976e3eaf184a23cc8))
+* **deps:** update plugin kotlin-qa to v0.81.1 ([#396](https://github.com/PaoloPenazzi/testbed/issues/396)) ([447ab59](https://github.com/PaoloPenazzi/testbed/commit/447ab596655689c9f36dd08789374903bcecf389))
+* **deps:** update plugin kotlin-qa to v0.82.0 ([#397](https://github.com/PaoloPenazzi/testbed/issues/397)) ([df7d668](https://github.com/PaoloPenazzi/testbed/commit/df7d6687295e3c06360b1461f5335629640c4ee1))
+* **deps:** update plugin org.danilopianini.gradle-pre-commit-git-hooks to v2.0.22 ([#393](https://github.com/PaoloPenazzi/testbed/issues/393)) ([ce4de3a](https://github.com/PaoloPenazzi/testbed/commit/ce4de3a5f8d6453f7a9508583b73f91080fe9ede))
+* **deps:** update plugin publishoncentral to v8.0.4 ([#383](https://github.com/PaoloPenazzi/testbed/issues/383)) ([210c0da](https://github.com/PaoloPenazzi/testbed/commit/210c0da1ff912e50f6faa0309f05dae9909324c3))
+* **deps:** update plugin tasktree to v4.0.1 ([#385](https://github.com/PaoloPenazzi/testbed/issues/385)) ([a902403](https://github.com/PaoloPenazzi/testbed/commit/a902403b51e16a6dc5e8edc363a7fcb2220ddb85))
+
+### Build and continuous integration
+
+* **deps:** update actions/setup-node action to v4.3.0 ([#387](https://github.com/PaoloPenazzi/testbed/issues/387)) ([3426816](https://github.com/PaoloPenazzi/testbed/commit/3426816366677f80592ae5df9b57595eabcde5ab))
+
 ## [2.4.37](https://github.com/PaoloPenazzi/testbed/compare/2.4.36...2.4.37) (2025-02-27)
 
 ### Dependency updates
