@@ -1,3 +1,10 @@
+## [2.4.39](https://github.com/PaoloPenazzi/testbed/compare/2.4.38...2.4.39) (2025-04-08)
+
+### Dependency updates
+
+* **core-deps:** update dependency org.jetbrains.kotlinx:kotlinx-coroutines-core to v1.10.2 ([#404](https://github.com/PaoloPenazzi/testbed/issues/404)) ([cfa0582](https://github.com/PaoloPenazzi/testbed/commit/cfa0582e15c5d755300565ece766880e51f8ecf1))
+* **deps:** update dependency org.mockito:mockito-core to v5.17.0 ([#403](https://github.com/PaoloPenazzi/testbed/issues/403)) ([cc378bf](https://github.com/PaoloPenazzi/testbed/commit/cc378bf4e7b5382c621867c3e05d8521afb007eb))
+
 ## [2.4.38](https://github.com/PaoloPenazzi/testbed/compare/2.4.37...2.4.38) (2025-04-01)
 
 ### Dependency updates
