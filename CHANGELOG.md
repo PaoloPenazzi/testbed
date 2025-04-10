@@ -1,3 +1,16 @@
+## [2.4.40](https://github.com/PaoloPenazzi/testbed/compare/2.4.39...2.4.40) (2025-04-10)
+
+### Dependency updates
+
+* **core-deps:** update dependency org.jetbrains.kotlin.jvm to v2.1.20 ([#390](https://github.com/PaoloPenazzi/testbed/issues/390)) ([9256cec](https://github.com/PaoloPenazzi/testbed/commit/9256cec29c08168fdc1c201a0d6dec962bf0aefc))
+* **deps:** update dependency com.charleskorn.kaml:kaml to v0.75.0 ([#405](https://github.com/PaoloPenazzi/testbed/issues/405)) ([c751124](https://github.com/PaoloPenazzi/testbed/commit/c75112482fd8ac38fa3f1f00e9d01afd915f4bf7))
+* **deps:** update plugin multijvmtesting to v1 ([#205](https://github.com/PaoloPenazzi/testbed/issues/205)) ([cffec5f](https://github.com/PaoloPenazzi/testbed/commit/cffec5fbf88fc281402c438db816c946e39c47cc))
+* **deps:** update plugin multijvmtesting to v3 ([#326](https://github.com/PaoloPenazzi/testbed/issues/326)) ([012303a](https://github.com/PaoloPenazzi/testbed/commit/012303ab64612bfbee55c41d75c5df13ac108aed))
+
+### Build and continuous integration
+
+* **deps:** update dependency windows github actions runner to v2025 ([#406](https://github.com/PaoloPenazzi/testbed/issues/406)) ([f04345b](https://github.com/PaoloPenazzi/testbed/commit/f04345b80db1c98413fcadd9f915e8882f549a48))
+
 ## [2.4.39](https://github.com/PaoloPenazzi/testbed/compare/2.4.38...2.4.39) (2025-04-08)
 
 ### Dependency updates
