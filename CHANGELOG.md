@@ -1,3 +1,33 @@
+## [2.4.42](https://github.com/PaoloPenazzi/testbed/compare/2.4.41...2.4.42) (2025-05-13)
+
+### Dependency updates
+
+* **core-deps:** update dependency org.jetbrains.kotlin.jvm to v2.1.21 ([#424](https://github.com/PaoloPenazzi/testbed/issues/424)) ([708a333](https://github.com/PaoloPenazzi/testbed/commit/708a3333ebbd4681bad041fa1f40276cac1d5df5))
+* **deps:** update dependency com.charleskorn.kaml:kaml to v0.76.0 ([#407](https://github.com/PaoloPenazzi/testbed/issues/407)) ([2f928d9](https://github.com/PaoloPenazzi/testbed/commit/2f928d939dd2b50d0aaabd6f895b480ea7b16e4f))
+* **deps:** update dependency com.charleskorn.kaml:kaml to v0.77.0 ([#410](https://github.com/PaoloPenazzi/testbed/issues/410)) ([1fbc340](https://github.com/PaoloPenazzi/testbed/commit/1fbc340742f018180276f72812bf161b92f3843b))
+* **deps:** update dependency com.charleskorn.kaml:kaml to v0.77.1 ([#419](https://github.com/PaoloPenazzi/testbed/issues/419)) ([f91069a](https://github.com/PaoloPenazzi/testbed/commit/f91069a0685a76511d40d5a359fb121743c92d46))
+* **deps:** update dependency com.opencsv:opencsv to v5.11 ([#423](https://github.com/PaoloPenazzi/testbed/issues/423)) ([a7513b6](https://github.com/PaoloPenazzi/testbed/commit/a7513b6696bad7c2f12aca9e32d079d364582c10))
+* **deps:** update dependency gradle to v8.14 ([#416](https://github.com/PaoloPenazzi/testbed/issues/416)) ([a164fd1](https://github.com/PaoloPenazzi/testbed/commit/a164fd1e03cc2023971bdca004d49551d6080797))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.126 ([#420](https://github.com/PaoloPenazzi/testbed/issues/420)) ([f53e5af](https://github.com/PaoloPenazzi/testbed/commit/f53e5af71792934f6d39f745b9823d7bac8bf2a5))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.127 ([#421](https://github.com/PaoloPenazzi/testbed/issues/421)) ([a0e49e2](https://github.com/PaoloPenazzi/testbed/commit/a0e49e204201232c50dfe0a1118283f9900f6ad9))
+* **deps:** update node.js to 22.15 ([#413](https://github.com/PaoloPenazzi/testbed/issues/413)) ([c1ea09f](https://github.com/PaoloPenazzi/testbed/commit/c1ea09ff9618620077013d3e8c301db19dbb9dc7))
+* **deps:** update plugin gitsemver to v5 ([#411](https://github.com/PaoloPenazzi/testbed/issues/411)) ([59c64e3](https://github.com/PaoloPenazzi/testbed/commit/59c64e3c7b041518241427080046bf18dec8a964))
+* **deps:** update plugin gitsemver to v5.1.2 ([#414](https://github.com/PaoloPenazzi/testbed/issues/414)) ([c274f05](https://github.com/PaoloPenazzi/testbed/commit/c274f05cad0230c0eb714f3f8eb026865575d40b))
+* **deps:** update plugin kotlin-qa to v0.83.1 ([#398](https://github.com/PaoloPenazzi/testbed/issues/398)) ([28f034a](https://github.com/PaoloPenazzi/testbed/commit/28f034a05137b0118e933becbbb24cc7913531c4))
+* **deps:** update plugin kotlin-qa to v0.84.1 ([#399](https://github.com/PaoloPenazzi/testbed/issues/399)) ([78bad36](https://github.com/PaoloPenazzi/testbed/commit/78bad367f4f524c7167a5b882aeaacd35c1d9e1a))
+* **deps:** update plugin kotlin-qa to v0.85.0 ([#400](https://github.com/PaoloPenazzi/testbed/issues/400)) ([5986d65](https://github.com/PaoloPenazzi/testbed/commit/5986d656b3feb1ee6814ec657553b388fc16428d))
+* **deps:** update plugin kotlin-qa to v0.86.1 ([#417](https://github.com/PaoloPenazzi/testbed/issues/417)) ([6208622](https://github.com/PaoloPenazzi/testbed/commit/62086222dadae2e3276826345a58b1c3bde0243e))
+* **deps:** update plugin multijvmtesting to v3.4.0 ([#412](https://github.com/PaoloPenazzi/testbed/issues/412)) ([08dfacc](https://github.com/PaoloPenazzi/testbed/commit/08dfacca8aa91f590e9717c5d92365dd4a0510d6))
+* **deps:** update plugin multijvmtesting to v3.4.1 ([#415](https://github.com/PaoloPenazzi/testbed/issues/415)) ([52bf836](https://github.com/PaoloPenazzi/testbed/commit/52bf836aafeb823a88c36c5d3ce93b801bc140d7))
+* **deps:** update plugin org.danilopianini.gradle-pre-commit-git-hooks to v2.0.23 ([#418](https://github.com/PaoloPenazzi/testbed/issues/418)) ([e976bcf](https://github.com/PaoloPenazzi/testbed/commit/e976bcf3e8f90a22119f69ccac4ea40272919df9))
+* **deps:** update plugin org.gradle.toolchains.foojay-resolver-convention to v0.10.0 ([#408](https://github.com/PaoloPenazzi/testbed/issues/408)) ([cd61935](https://github.com/PaoloPenazzi/testbed/commit/cd619354054a2f837c1d8b44324ca290bd0bb9e6))
+* **deps:** update plugin publishoncentral to v8.0.6 ([#392](https://github.com/PaoloPenazzi/testbed/issues/392)) ([dc30c91](https://github.com/PaoloPenazzi/testbed/commit/dc30c915ecbec2d2d417b50cf791548690e71657))
+* **deps:** update plugin publishoncentral to v8.0.7 ([#422](https://github.com/PaoloPenazzi/testbed/issues/422)) ([b1b7eaf](https://github.com/PaoloPenazzi/testbed/commit/b1b7eafc785b026c079a8350119a788d43d2b8bf))
+
+### Build and continuous integration
+
+* **deps:** update actions/setup-node action to v4.4.0 ([#409](https://github.com/PaoloPenazzi/testbed/issues/409)) ([845cdba](https://github.com/PaoloPenazzi/testbed/commit/845cdba2674bccfb0918fd0cad27784adc2d69be))
+
 ## [2.4.41](https://github.com/PaoloPenazzi/testbed/compare/2.4.40...2.4.41) (2025-04-10)
 
 ### Dependency updates
