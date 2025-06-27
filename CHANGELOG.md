@@ -1,3 +1,11 @@
+## [2.4.45](https://github.com/PaoloPenazzi/testbed/compare/2.4.44...2.4.45) (2025-06-27)
+
+### Dependency updates
+
+* **core-deps:** update dependency org.jetbrains.kotlinx:kotlinx-serialization-json to v1.9.0 ([#469](https://github.com/PaoloPenazzi/testbed/issues/469)) ([b98ab95](https://github.com/PaoloPenazzi/testbed/commit/b98ab95f1e29e3e039cf46fdfc4f50f8d8ab4f4f))
+* **deps:** update node.js to 22.17 ([#468](https://github.com/PaoloPenazzi/testbed/issues/468)) ([2da0282](https://github.com/PaoloPenazzi/testbed/commit/2da0282ddd093fb34424285e088bd1a13ff00649))
+* **deps:** update plugin publishoncentral to v9.0.5 ([#465](https://github.com/PaoloPenazzi/testbed/issues/465)) ([e2d72c9](https://github.com/PaoloPenazzi/testbed/commit/e2d72c9235d63ea6fe190f7b10f72c79e882de01))
+
 ## [2.4.44](https://github.com/PaoloPenazzi/testbed/compare/2.4.43...2.4.44) (2025-06-25)
 
 ### Dependency updates
